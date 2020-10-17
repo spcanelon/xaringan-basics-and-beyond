@@ -2000,6 +2000,346 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
   
   </script>
   
+  <style type="text/css">
+  /* base variables */
+  
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+  
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+  
+  
+  
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+  
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+  
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+  
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+  
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+  
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+  
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+  
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">
+  /* base variables */
+  
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+  
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+  
+  /* Fonts                                                     */
+  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+  
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #122140;
+    --header-color:    #122140;
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    "Lora", sans-serif;
+    --mono-font:       "Fira Code", monospace;
+    --body-font:       "Source Sans Pro", sans-serif;
+    --navbar-font:     "Lora", sans-serif;  /* websites + blogs only */
+  }
+  
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.9rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       1rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+  
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+  
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+  
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+  
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        16px;
+    --hover-color:      white;
+    --bkgd-color:       #122140;
+  }
+  
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+  
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  
+  /* Change bullets */
+  ul > li::marker {
+    font-size: 1.125em;
+    color: #e5bf00;
+  }
+  
+  /* Change link appearance */
+  d-article a {
+    border-bottom: 1.5px solid #e5bf00;
+    text-decoration: none;
+  }
+  
+  /* Change navbar header appearance */
+  .distill-site-header {
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+  
+  .distill-site-header a:hover {
+    text-decoration: underline;
+  }
+  
+  d-title p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  d-byline a:hover {
+    text-decoration: underline;
+  }
+  
+  d-byline .byline h3 {
+    font-family: 'Lora';
+    letter-spacing: 0.07em;
+  }</style>
+  <style type="text/css">
+  /* base style */
+  
+  /* FONT FAMILIES */
+  
+  :root {
+    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  body,
+  .posts-list .post-preview p,
+  .posts-list .description p {
+    font-family: var(--body-font), var(--body-default);
+  }
+  
+  h1, h2, h3, h4, h5, h6,
+  .posts-list .post-preview h2,
+  .posts-list .description h2 {
+    font-family: var(--heading-font), var(--heading-default);
+  }
+  
+  d-article div.sourceCode code,
+  d-article pre code {
+  	font-family: var(--mono-font), var(--mono-default);
+  }
+  
+  
+  /*-- TITLE --*/
+  d-title h1,
+  .posts-list > h1 {
+    color: var(--title-color, black);
+  }
+  
+  d-title h1 {
+    font-size: var(--title-size, 50px);
+  }
+  
+  /*-- HEADERS --*/
+  d-article h1,
+  d-article h2,
+  d-article h3,
+  d-article h4,
+  d-article h5,
+  d-article h6 {
+    color: var(--header-color, rgba(0, 0, 0, 0.8));
+  }
+  
+  /*-- BODY --*/
+  /* only text inside of <p> tags */
+  d-article > p {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 1.06rem);
+  }
+  
+  /*-- CODE --*/
+  d-article div.sourceCode code,
+  d-article pre code {
+  	font-size: var(--code-size, 14px);
+  }
+  
+  /*-- ASIDE --*/
+  d-article aside {
+  	font-size: var(--aside-size, 12px);
+  	color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  }
+  
+  /*-- FIGURE CAPTIONS --*/
+  figure .caption,
+  figure figcaption,
+  .figure .caption {
+  	font-size: var(--fig-cap-size, 13px);
+  	color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  }
+  
+  /*-- METADATA --*/
+  d-byline h3 {
+  	font-size: var(--heading-size, 0.6rem);
+  	color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  }
+  
+  d-byline {
+  	font-size: var(--body-size, 0.8rem);
+  	color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+  
+  d-byline a,
+  d-article d-byline a {
+  	color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+  
+  /*-- TABLE OF CONTENTS --*/
+  .d-contents nav h3 {
+  	font-size: var(--heading-size, 18px);
+  }
+  
+  .d-contents nav a {
+  	font-size: var(--contents-size, 13px);
+  }
+  
+  /*-- APPENDIX --*/
+  d-appendix h3 {
+    font-size: var(--heading-size, 15px);
+  	color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  }
+  
+  d-appendix {
+    font-size: var(--text-size, 0.8em);
+  	color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+  
+  d-appendix d-footnote-list a.footnote-backlink {
+  	color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+  
+  /*-- WEBSITE HEADER + FOOTER --*/
+  .distill-site-header .title {
+  	font-size: var(--title-size, 18px);
+  	font-family: var(--navbar-font), var(--heading-default);
+  }
+  
+  .distill-site-header a {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+  
+  .distill-site-header a:hover {
+  	color: var(--hover-color, white);
+  }
+  
+  .distill-site-header {
+  	font-size: var(--text-size, 15px);
+  	color: var(--text-color, rgba(255, 255, 255, 0.8));
+  	background-color: var(--bkgd-color, #0F2E3D);
+  }
+  
+  .distill-site-footer {
+  	font-size: var(--text-size, 15px);
+  	color: var(--text-color, rgba(255, 255, 255, 0.8));
+  	background-color: var(--bkgd-color, #0F2E3D);
+  }
+  
+  .distill-site-footer a:hover {
+  	color: var(--hover-color, white);
+  }</style>
   <!--/radix_placeholder_distill-->
   <meta name="description" content=""/>
   <meta name="generator" content="xaringan and remark.js"/>
@@ -2045,7 +2385,10 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
-<a href="about.html">About</a>
+<a href="https://nhsrcommunity.com/nhsr-conference-2020/">2020 NHS-R Conference</a>
+<a href="https://github.com/spcanelon/xaringan-basics-and-beyond">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>

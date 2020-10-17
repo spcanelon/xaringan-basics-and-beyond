@@ -1,12 +1,15 @@
 name: "xaringan-basics-and-beyond"
 title: "Sharing Your Work with Xaringan"
 description: |
-  Sharing Your Work with Xaringan
+  An Introduction to Slides with Xaringan: The Basics and Beyond
 output_dir: "docs"
+theme: theme.css
 navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "2020 NHS-R Conference"
+      href: "https://nhsrcommunity.com/nhsr-conference-2020/"
+    - icon: fab fa-github
+      href: https://github.com/spcanelon/xaringan-basics-and-beyond
 output: distill::distill_article
