@@ -12,4 +12,7 @@ navbar:
       href: "https://nhsrcommunity.com/nhsr-conference-2020/"
     - icon: fab fa-github
       href: https://github.com/spcanelon/xaringan-basics-and-beyond
-output: distill::distill_article
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
