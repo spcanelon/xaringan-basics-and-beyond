@@ -1,8 +1,17 @@
 ---
 title: "Sharing Your Work with Xaringan"
+author: 
+- name: Silvia Canelón, Ph.D.
+  url: https://silvia.rbind.io
+  affiliation: University of Pennsylvania
+  affiliation_url: https://www.dbei.med.upenn.edu
+date: "`r Sys.Date()`"
 description: |
-  Welcome to the website. I hope you enjoy it!
-site: distill::distill_website
+  An Introduction to Xaringan for Presentations: The Basics and Beyond
+site: 
+  distill::distill_website:
+    toc: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
@@ -16,3 +25,72 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+```{r meta, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
+  meta_social(
+    title = "Sharing Your Work with Xaringan",
+    url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
+    image = "",
+    image_alt = "",
+    og_type = "website",
+    twitter_card_type = "summary_large_image"
+  )
+```
+
+# Welcome
+
+Thank you for registering for this workshop! This is the course site for the _Sharing Your Work with Xaringan_ workshop created by Dr. Silvia Canelón for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/).
+
+This four-hour hands-on workshop will be a gentle introduction to the [xaringan](https://github.com/yihui/xaringan#xaringan) package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.
+
+- **Day 1** will cover the nuts and bolts of creating presentation slides using [xaringan](https://github.com/yihui/xaringan#xaringan) and deploying them in HTML format for easy sharing with others.
+
+<aside>
+Tuesday, Nov. 3<br/>3-5pm BST ([check your time zone](https://www.worldtimebuddy.com/?qm=1&lid=2643743,5128581&h=5128581&date=2020-11-3&sln=10-12))
+</aside>
+
+- **Day 2** will cover how to take your slides to the next level with the [xaringanExtra](https://github.com/gadenbuie/xaringanExtra#xaringanextra) package and how to customize slides with CSS.
+
+<aside>
+Thursday, Nov. 5<br/>3-5pm BST ([check your time zone](https://www.worldtimebuddy.com/?qm=1&lid=2643743,5128581&h=5128581&date=2020-11-5&sln=10-12))
+</aside>
+
+This workshop is designed for R users already familiar with R Markdown and GitHub.
+
+# Prework
+
+## Essential
+
+- The workshop will take place within an RStudio Cloud project, please sign up for a free RStudio Cloud account here: https://rstudio.cloud.
+- We will be utilizing Zoom for this workshop, please download and install [the latest version beforehand](https://zoom.us/download).
+
+## Optional
+
+We will use the software listed below only as an important backup in the event we experience technical difficulties with RStudio Cloud.
+
+- Install [R](https://cloud.r-project.org/) and [RStudio Desktop](https://rstudio.com/products/rstudio/download/) on your computer. 
+
+You can find step-by-step instructions for installing these here: [macOS](https://www.youtube.com/watch?v=GM88tYlEy_g), [Windows](https://www.youtube.com/watch?v=JRKmZK5-6aE).
+
+<aside>
+Thanks to<br/>Stephan Kadauke
+</aside>
+
+# Links
+
+- Link to this website: [spcanelon.github.io/xaringan-basics-and-beyond](spcanelon.github.io/xaringan-basics-and-beyond)
+- [RStudio Cloud workspace (_coming soon!_)]()
+- [Day 1 slides: The Basics (_coming soon!_)]()
+- [Day 2 slides: The Beyond (_coming soon!_)]()
+
+# Acknowledgments {.appendix}
+
+This workshop draws from various sources, most notably Alison Hill’s [Making Slides with R Markdown](https://arm.rbind.io/slides/xaringan.html) and Greg Wilson's [Teaching Tech Together](http://teachtogether.tech/en/). 
+
+This website was made with the [distill package](https://rstudio.github.io/distill/) and a custom theme designed by Silvia Canelón.
