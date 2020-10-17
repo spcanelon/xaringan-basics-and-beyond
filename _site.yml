@@ -6,10 +6,10 @@ output_dir: "docs"
 theme: theme.css
 navbar:
   right:
-    - text: "Home"
-      href: index.html
     - text: "2020 NHS-R Conference"
       href: "https://nhsrcommunity.com/nhsr-conference-2020/"
+    - icon: fas fa-home
+      href: index.html
     - icon: fab fa-github
       href: https://github.com/spcanelon/xaringan-basics-and-beyond
 output:
