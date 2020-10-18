@@ -3,7 +3,7 @@ title: "NHS Template"
 subtitle: "Created for the NHS-R Community"
 author: "Silvia Canelón"
 institute: "University of Pennsylvania"
-date: '`r format(Sys.Date())`'
+date: "`r format(Sys.Date())`"
 output:
   xaringan::moon_reader:
     css: 
@@ -22,13 +22,15 @@ output:
       after_body: [css/insert-logo.html]
 ---
 class: title-slide, left, bottom
+background-image: url(img/logo-nhs-org-right.png)
+background-position: 850px 50px
+background-size: 300px
+top: 1em
+right: 1em
 
 # `r rmarkdown::metadata$title`
-
 ## `r rmarkdown::metadata$subtitle`
-
 ### `r rmarkdown::metadata$author`
-
 ### `r rmarkdown::metadata$date`
 
 ---
