@@ -8,10 +8,7 @@ author:
 date: "`r Sys.Date()`"
 description: |
   An Introduction to Xaringan for Presentations: The Basics and Beyond
-site: 
-  distill::distill_website:
-    toc: true
-    toc_float: true
+site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}

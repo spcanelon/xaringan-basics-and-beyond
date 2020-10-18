@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-weight: 300;
+  color: #2E3440;
+
+}
+
+.remark-slide-content {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+h1 {
+  font-family: 'Arial', serif;
+  font-weight: 700;
+  color: #005EB8FF;
+  font-size: 45px;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: #005EB8FF;
+}
+
+h3 {
+  font-family: 'Arial', sans-serif;
+  /*text-transform: uppercase;*/
+  font-weight: 500;
+  color: #005EB8FF;
+  font-size: 35px;
+}
+
+h4, h5, h6 {
+  font-family: 'Arial', serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #005EB8FF;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Fira Code', monospace;
+  color: #003087F}

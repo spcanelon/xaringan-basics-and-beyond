@@ -1,0 +1,102 @@
+h1, h2, h3 {
+  font-weight: normal;
+  color: #005EB8FF;
+}
+a, a > code {
+  color: #41B6E6FF;
+  border-bottom: 2px solid #41B6E6FF;
+}
+
+a:hover {
+  border-bottom: 0px solid black;
+}
+
+.inverse {
+  /*background-color: #2E3440;*/
+  background-color: #003087F;
+  text-shadow: none;
+}
+
+.inverse, .inverse h1, .inverse h2, .inverse h3, .inverse a, inverse a > code {
+  color: #ECEFF4;
+}
+
+/* title slide */
+.title-slide {
+  background-color: #FFFFFF;
+}
+.title-slide h1 {
+  color: #000000;
+  font-weight: 700;
+}
+.title-slide h2, .title-slide h3 {
+  color: #005EB8FF;
+  line-height: 1em;
+}
+
+/* about me slide */
+.about-me {
+  background-image: url(https://images.unsplash.com/photo-1505168125601-4ddfdea4c7e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80);
+  background-position: 52% 5%;
+  background-size: cover;
+  background-color: #181830;
+}
+.about-me h1 {
+  color: #562457;
+  opacity: 1;
+}
+.about-me h2, .about-me h3 {
+  color: #562457;
+  line-height: 1em;
+  font-weight: 400;
+}
+.about-me a {
+  color: #88398a;
+}
+
+
+/* footnotes */
+.footnote {
+  position: absolute;
+  bottom: 1em;
+  right: 5px;
+  padding-right: 1em;
+  font-size: 80%;
+}
+
+.small-text {
+  font-size: 80%;
+}
+
+/* inline code highlighting */
+/* https://github.com/yihui/xaringan/wiki/Inline-code-highlighting */
+
+.remark-code-line-highlighted {
+  background-color: #E8EDEE;
+}
+
+.remark-inline-code{
+  background: #E8EDEE;
+  border-radius: 0px;
+  padding: 0.5 0 0.5 0px;
+}
+
+.remark-slide-content {
+    line-height: 1.5;
+    margin-left: -00px;
+}
+
+/* code chunk background layer */
+pre {
+  /*border: 2px solid rgba(204, 189, 204, 0.8); /* code chunk border*/
+  border: none;
+  box-shadow: 2px 2px 2px 2px #eee;
+  padding: 0.1em;                     /* padding between code chunk and border */
+  background: none !important;
+  overflow-x: auto;
+  border-radius: 1px;                 /* modify rounding of corners*/
+}
+pre code {
+  background: none;
+  font-size: 1.3rem !important;
+}
