@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
 
 body {
   font-family: 'Arial', sans-serif;
@@ -34,7 +34,7 @@ h3 {
   font-size: 35px;
 }
 
-h4, h5, h6 {
+h4 {
   font-family: 'Arial', serif;
   font-weight: 500;
   font-size: 25px;
@@ -42,5 +42,8 @@ h4, h5, h6 {
 }
 
 .remark-code, .remark-inline-code {
-  font-family: 'Fira Code', monospace;
-  color: #003087F}
+  font-size: 95%;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  color: #003087F
+}

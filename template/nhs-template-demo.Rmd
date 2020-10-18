@@ -3,20 +3,25 @@ title: "NHS Template"
 subtitle: "Created for the NHS-R Community"
 author: "Silvia Canelón"
 institute: "University of Pennsylvania"
-date: "Date"
+date: '`r format(Sys.Date())`'
 output:
   xaringan::moon_reader:
-    css: ["default", "css/nhs-r.css", "css/nhs-r-fonts.css"]
+    css: 
+      - default
+      - css/nhs-r.css
+      - css/nhs-r-fonts.css
     lib_dir: libs
     seal: false
     nature:
-      highlightStyle: github
+      highlightStyle: googlecode
       highlightLines: true
       highlightLanguage: ["r", "css", "yaml"]
       countIncrementalSlides: true
       ratio: "16:9"
+    includes:
+      after_body: [css/insert-logo.html]
 ---
-class: title-slide, left, middle
+class: title-slide, left, bottom
 
 # `r rmarkdown::metadata$title`
 
@@ -27,25 +32,7 @@ class: title-slide, left, middle
 ### `r rmarkdown::metadata$date`
 
 ---
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
-
-???
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
-
----
-class: center, middle
-
-# xaringan
-
-### /ʃaː.'riŋ.ɡan/
-
----
-class: inverse, center, middle
+class: inverse, center, middle, hide-logo
 
 # Get Started
 
@@ -64,14 +51,12 @@ devtools::install_github("yihui/xaringan")
 You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
 
 - Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;<sup>1</sup>
-
 --
 
 - Click the `Knit` button to compile it;
-
 --
 
-- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
+- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides.
 
 .footnote[
 [1] 中文用户请看[这份教程](https://slides.yihui.org/xaringan/zh-CN.html)
@@ -82,7 +67,7 @@ You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rs
 ---
 background-image: url(`r xaringan:::karl`)
 background-position: 50% 50%
-class: center, bottom, inverse
+class: center, bottom, inverse, hide-logo
 
 # You only live once!
 
@@ -152,29 +137,19 @@ Some differences between using remark.js (left) and using **xaringan** (right):
 
 .pull-left[
 1. Start with a boilerplate HTML file;
-
 1. Plain Markdown;
-
 1. Write JavaScript to autoplay slides;
-
 1. Manually configure MathJax;
-
 1. Highlight code with `*`;
-
 1. Edit Markdown source and refresh browser to see updated slides;
 ]
 
 .pull-right[
 1. Start with an R Markdown document;
-
 1. R Markdown (can embed R/other code chunks);
-
 1. Provide an option `autoplay`;
-
 1. MathJax just works;<sup>*</sup>
-
 1. Highlight code with `{{}}`;
-
 1. The RStudio addin "Infinite Moon Reader" automatically refreshes slides on changes;
 ]
 
@@ -191,14 +166,6 @@ $$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
 ```
 
 $$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-
-Limitations:
-
-1. The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
-
-1. There should not be spaces after the opening `$` or before the closing `$`.
-
-1. Math does not work on the title slide (see [#61](https://github.com/yihui/xaringan/issues/61) for a workaround).
 
 ---
 
@@ -253,7 +220,7 @@ leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
 
 ```{r eval=require('DT'), tidy=FALSE}
 DT::datatable(
-  head(iris, 10),
+  head(iris, 5),
   fillContainer = FALSE, options = list(pageLength = 8)
 )
 ```
@@ -268,30 +235,6 @@ DT::datatable(
     output:
       xaringan::moon_reader:
         yolo: true
-    ```
-
----
-
-# Some Tips
-
-- Slides can be automatically played if you set the `autoplay` option under `nature`, e.g. go to the next slide every 30 seconds in a lightning talk:
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay: 30000
-    ```
-
-- If you want to restart the play after it reaches the last slide, you may set the sub-option `loop` to TRUE, e.g.,
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          autoplay:
-            interval: 30000
-            loop: true
     ```
 
 ---
@@ -333,23 +276,6 @@ DT::datatable(
       xaringan::moon_reader:
         seal: false
     ```
-
----
-
-# Some Tips
-
-- There are several ways to build incremental slides. See [this presentation](https://slides.yihui.org/xaringan/incremental.html) for examples.
-
-- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#<<`;
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          highlightLines: true
-    ```
-
-    See examples on the next page.
 
 ---
 
