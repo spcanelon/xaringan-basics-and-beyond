@@ -36,8 +36,6 @@ xaringanExtra::use_xaringan_extra(
   include = c("panelset", "tile_view", "share_again", "clipboard"))
 xaringanExtra::style_share_again(
   share_buttons = c("twitter", "linkedin", "pocket"))
-xaringanExtra::embed_xaringan(
-  url = "https://spcanelon.github.io/2020-rladies-chi-tidyverse", ratio = "16:9")
 ```
 
 class: title-slide, left, bottom
@@ -55,6 +53,8 @@ right: 1em
 ### `r rmarkdown::metadata$date`
 
 ---
+class: inverse
+
 # Workshop description
 
 ## Day 1
