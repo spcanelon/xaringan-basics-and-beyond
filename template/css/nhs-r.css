@@ -24,8 +24,23 @@ a:hover {
   color: #000000;
 }
 
+hr {
+  content: '';
+  display: block;
+  border: none;
+  background-color: #425563FF;
+  color: #425563FF;
+  height: 2px;
+}
+
 .inverse {
-  background-color: #231F20FF;
+  background-color: #005EB8FF;
+  color: 005EB8FF;
+  text-shadow: 0 0 0px #333;
+}
+
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #E8EDEE;
 }
 
 .footnote {
@@ -36,14 +51,9 @@ a:hover {
   line-height: 1em;
 }
 
-.remark-slide-content {
-  font-size: 25px;
-  /* line-height: 1.4em;*/
-}
-
 .remark-code, .remark-inline-code {
-  color: #231F20;
-  background: #E8EDEE;
+  color: #00A499FF;
+  background: #FFFFFF;
   border-radius: 3px;
   padding: 1px 1px 1px 1px;
   font-size: 90%;
@@ -51,6 +61,10 @@ a:hover {
 
 .remark-code-line-highlighted {
   background-color: #E8EDEE;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
 }
 
 /* code chunk background layer */
