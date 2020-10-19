@@ -1,5 +1,25 @@
 body {
   font-size: 1.1em;
+  font-weight: 300;
+  color: #2E3440;
+}
+
+h1 {
+  font-weight: 700;
+  color: #005EB8FF;
+  font-size: 45px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 35px;
+  color: #005EB8FF;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 25px;
+  color: #005EB8FF;
 }
 
 a {
@@ -12,16 +32,17 @@ a:hover {
 }
 
 .title-slide {
-  background-image: url(img/logo-nhs-org-right.png);
-  background-position: 1000px 50px;
-  background-size: 150px;
-  top: 1em;
-  right: 1em;
-  line-height: 1em;
+  background-image: url(../img/logo-nhs-org-right.png);
+  background-position: 95% 10%;
+  background-size: 300px;
 }
 
 .title-slide h1 {
   color: #000000;
+}
+
+.title-slide h2, .title-slide h3 {
+  line-height: 0.8em;
 }
 
 hr {
@@ -29,7 +50,6 @@ hr {
   display: block;
   border: none;
   background-color: #425563FF;
-  color: #425563FF;
   height: 2px;
 }
 
@@ -40,7 +60,7 @@ hr {
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
-  color: #E8EDEE;
+  color: #FFFFFF;
 }
 
 .footnote {
@@ -51,12 +71,19 @@ hr {
   line-height: 1em;
 }
 
+.remark-slide-content {
+    font-size: 25px;
+    font-weight: 300;
+}
+
 .remark-code, .remark-inline-code {
+  font-size: 90%;
+  font-weight: 400;
   color: #231F20FF;
   background: #E8EDEE;
   border-radius: 3px;
   padding: 1px 1px 1px 1px;
-  font-size: 90%;
+
 }
 
 .remark-code-line-highlighted {

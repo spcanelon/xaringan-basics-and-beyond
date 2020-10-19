@@ -1,15 +1,15 @@
 ---
-title: "NHS Template Title"
-subtitle: "NHS Template Subtitle"
+title: "NHS-R Template Title"
+subtitle: "NHS-R Template Subtitle"
 author: "Author Name"
 institute: "Author Institute"
-date: "October 19, 2020"
+date: "Presentation Date"
 output:
   xaringan::moon_reader:
     css: 
       - default
-      - css/nhs-r.css
-      - css/nhs-r-fonts.css
+      - css/nhsr.css
+      - css/nhsr-fonts.css
     lib_dir: libs
     seal: false
     nature:
@@ -22,16 +22,9 @@ output:
       after_body: [css/insert-logo.html]
 ---
 class: title-slide, left, bottom
-background-image: url(img/logo-nhs-org-right.png)
-background-position: 850px 50px
-background-size: 300px
-top: 1em
-right: 1em
 
 # `r rmarkdown::metadata$title`
-
------
-
+----
 ## **`r rmarkdown::metadata$subtitle`**
 ### `r rmarkdown::metadata$author`
 ### `r rmarkdown::metadata$date`
@@ -64,35 +57,6 @@ You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rs
 
 [2] And this is another.
 ]
-
----
-
-# xaringan
-
-Provides an R Markdown output format `xaringan::moon_reader` as a wrapper for remark.js, and you can use it in the YAML metadata, e.g.
-
-```yaml
----
-title: "A Cool Presentation"
-output:
-  xaringan::moon_reader:
-    yolo: true
-    nature:
-      autoplay: 30000
----
-```
-
-See the help page `?xaringan::moon_reader` for all possible options that you can use.
-
----
-
-# Tables
-
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
-
-```{r}
-knitr::kable(head(iris), format = 'html')
-```
 
 ---
 
