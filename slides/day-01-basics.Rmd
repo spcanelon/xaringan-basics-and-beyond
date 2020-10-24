@@ -1,0 +1,238 @@
+---
+title: "Sharing Your Work with Xaringan"
+subtitle: "The Basics and Beyond"
+author: "Silvia Canelón, Ph.D."
+institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
+date: "Nov. 3rd and 5th, 2020"
+output:
+  xaringan::moon_reader:
+    css: 
+      - default
+      - css/mytheme.css
+      - css/mytheme-fonts.css
+    lib_dir: libs
+    seal: false
+    self_contained: TRUE
+    nature:
+      highlightStyle: googlecode
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "macros.js"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+---
+
+```{r meta, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "An Introduction to Xaringan for Presentations: The Basics and Beyond",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
+  meta_social(
+    title = "Sharing Your Work with Xaringan",
+    url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
+    image = "",
+    image_alt = "",
+    og_type = "website",
+    twitter_card_type = "summary_large_image"
+  )
+```
+
+```{r setup, include = FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+library(xaringanExtra)
+library(nhsrtheme)
+library(NHSRdatasets)
+# set default options
+opts_chunk$set(echo = FALSE,
+               collapse = TRUE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300,
+               dev.args = list(type = "cairo"))
+
+xaringanExtra::use_panelset()
+xaringanExtra::use_clipboard()
+xaringanExtra::use_webcam()
+xaringanExtra::use_broadcast()
+xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket")
+)
+
+# uncomment the following lines if you want to use the NHS-R theme colours by default
+# scale_fill_continuous <- partial(scale_fill_nhs, discrete = FALSE)
+# scale_fill_discrete <- partial(scale_fill_nhs, discrete = TRUE)
+# scale_colour_continuous <- partial(scale_colour_nhs, discrete = FALSE)
+# scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
+```
+
+class: title-slide, left, middle
+background-image: url(img/logo-nhsr.png)
+background-size: 250px
+background-position: 92% 60%
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+
+???
+
+Welcome to the workshop on sharing your work with xaringan.
+
+Where I'll show you how to create impressive presentation slides that can be deployed to the web for easy sharing.
+
+---
+layout: true
+
+<a class="footer-link" href="http://bit.ly/xaringan-nhsr">bit.ly/xaringan-nhsr</a>
+
+---
+name: hello
+layout: false
+class: inverse, middle, center
+
+.pull-left[.left[
+# About me
+
+<img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="150px"/>
+
+## Silvia Canelón
+
+### Postdoctoral Research Scientist
+
+### University of Pennsylvania,<br/>Philadelphia, PA, USA
+
+[`r icon::fa("link")` silvia.rbind.io](https://silvia.rbind.io)<br/>
+[`r icon::fa("twitter")` @spcanelon](https://twitter.com/spcanelon)<br/>
+[`r icon::fa("github")` @spcanelon](https://github.com/spcanelon) 
+]
+]
+
+---
+class: middle, left
+
+# Acknowledgments
+
+### [Laurie Baker](https://github.com/LaurieLBaker), co-pilot for this workshop and ... (primary role and institute?)
+
+- other acknowledgements here
+- and here
+
+---
+# About you
+
+--
+
+* first point
+
+--
+
+* second point
+
+--
+
+* third point
+
+---
+# Overview
+
+- What is it? 
+  - Package by Yihui Xie
+  - Rmd + Javascript (remarkjs)
+- Why use it?
+
+---
+# Note about custom NHS theme
+
+- Design
+- Incorporation into `nhsrtheme` package
+- (also into `xaringan` package, hopefully)
+
+---
+# How to create one?
+
+- `library(nhsrtheme)` --> New Rmarkdown --> NHS-R Template
+  - .footnote[Normally, `library(xaringan)` and output would be `xaringan::moon_reader`]
+
+---
+# What's in the YAML?
+
+- describe each piece of it
+- compare to standard R markdown file (i.e. output options like `html_document` for example)
+- what's new and different?
+
+---
+# How to make our first slide?
+
+- intro to xaringan structure
+  - first slide: starts immediately after YAML
+  - Markdown formatting: headings (#, ##, ###), **bold**, and _italics_, links with []()
+  - new slide: `---`
+  - incremental slides: `--`
+  - presenter notes: `???` underneath body of slide and before the next slide (or `---`)
+  
+---
+# Your turn: Make a hello slide
+
+- slide will include a reminder of the options we just convered
+- learners will be encouraged to mix and match
+- name
+- role
+- institute/NHS organisation
+- department
+- links?
+
+---
+# What about moving stuff around?
+
+- intro to layouts and classes
+- content can be aligned vertically: top, middle, bottom
+- content can be aligned horizontally: left, center, right
+- you can align some of the content using `.left[]` for example
+- or you can align all of the slide content using `class: left`
+- you can also use layout classes: .pull-left, .pull-right, .left-column, .right-column
+
+---
+# Your turn: move placement of content on your hello slide
+
+- play around with options
+- align all of it 
+- then align only some of it
+
+---
+# What else can go in slides
+- R stuff
+
+---
+class: inverse, middle, left
+
+.pull-left[.left[
+# Thank you!
+
+## Silvia Canelón
+
+### Postdoctoral Research Scientist
+
+### University of Pennsylvania,<br/>Philadelphia, PA, USA
+]]
+
+.pull-right[.right[
+<img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="170px"/>
+
+[`r icon::fa("link")` silvia.rbind.io](https://silvia.rbind.io)<br/>
+[`r icon::fa("twitter")` @spcanelon](https://twitter.com/spcanelon)<br/>
+[`r icon::fa("github")` @spcanelon](https://github.com/spcanelon)
+
+]]

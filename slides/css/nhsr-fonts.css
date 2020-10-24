@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Lora", sans-serif;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Source Code Pro', monospace;
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sharing Your Work with Xaringan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Silvia Canelón, Ph.D." />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <meta name="description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta name="generator" content="xaringan and remark.js"/>
+    <meta name="github-repo" content="rstudio-education/teaching-in-production"/>
+    <meta name="twitter:title" content="Sharing Your Work with Xaringan"/>
+    <meta name="twitter:description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta name="twitter:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
+    <meta name="twitter:image:src" content=""/>
+    <meta name="twitter:image:alt" content=""/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="og:title" content="Sharing Your Work with Xaringan"/>
+    <meta property="og:description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta property="og:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:image:alt" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <script src="libs/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <script src="libs/peerjs/peerjs.min.js"></script>
+    <script src="libs/tiny.toast/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast/broadcast.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/mytheme.css" type="text/css" />
+    <link rel="stylesheet" href="css/mytheme-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: title-slide, left, middle
+background-image: url(img/logo-nhsr.png)
+background-size: 250px
+background-position: 92% 60%
+
+# Sharing Your Work with Xaringan
+----
+## **The Basics and Beyond**
+### Silvia Canelón, Ph.D.
+### Nov. 3rd and 5th, 2020
+
+???
+
+Welcome to the workshop on sharing your work with xaringan.
+
+Where I'll show you how to create impressive presentation slides that can be deployed to the web for easy sharing.
+
+---
+layout: true
+
+&lt;a class="footer-link" href="http://bit.ly/xaringan-nhsr"&gt;bit.ly/xaringan-nhsr&lt;/a&gt;
+
+---
+name: hello
+layout: false
+class: inverse, middle, center
+
+.pull-left[.left[
+# About me
+
+&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="150px"/&gt;
+
+## Silvia Canelón
+
+### Postdoctoral Research Scientist
+
+### University of Pennsylvania,&lt;br/&gt;Philadelphia, PA, USA
+
+[<i class="fas  fa-link "></i> silvia.rbind.io](https://silvia.rbind.io)&lt;br/&gt;
+[<i class="fab  fa-twitter "></i> @spcanelon](https://twitter.com/spcanelon)&lt;br/&gt;
+[<i class="fab  fa-github "></i> @spcanelon](https://github.com/spcanelon) 
+]
+]
+
+---
+class: middle, left
+
+# Acknowledgments
+
+### [Laurie Baker](https://github.com/LaurieLBaker), co-pilot for this workshop and ... (primary role and institute?)
+
+- other acknowledgements here
+- and here
+
+---
+# About you
+
+--
+
+* first point
+
+--
+
+* second point
+
+--
+
+* third point
+
+---
+# Overview
+
+- What is it? 
+  - Package by Yihui Xie
+  - Rmd + Javascript (remarkjs)
+- Why use it?
+
+---
+# Note about custom NHS theme
+
+- Design
+- Incorporation into `nhsrtheme` package
+- (also into `xaringan` package, hopefully)
+
+---
+# How to create one?
+
+- `library(nhsrtheme)` --&gt; New Rmarkdown --&gt; NHS-R Template
+  - .footnote[Normally, `library(xaringan)` and output would be `xaringan::moon_reader`]
+
+---
+# What's in the YAML?
+
+- describe each piece of it
+- compare to standard R markdown file (i.e. output options like `html_document` for example)
+- what's new and different?
+
+---
+# How to make our first slide?
+
+- intro to xaringan structure
+  - first slide: starts immediately after YAML
+  - Markdown formatting: headings (#, ##, ###), **bold**, and _italics_, links with []()
+  - new slide: `---`
+  - incremental slides: `--`
+  - presenter notes: `???` underneath body of slide and before the next slide (or `---`)
+  
+---
+# Your turn: Make a hello slide
+
+- slide will include a reminder of the options we just convered
+- learners will be encouraged to mix and match
+- name
+- role
+- institute/NHS organisation
+- department
+- links?
+
+---
+# What about moving stuff around?
+
+- intro to layouts and classes
+- content can be aligned vertically: top, middle, bottom
+- content can be aligned horizontally: left, center, right
+- you can align some of the content using `.left[]` for example
+- or you can align all of the slide content using `class: left`
+- you can also use layout classes: .pull-left, .pull-right, .left-column, .right-column
+
+---
+# Your turn: move placement of content on your hello slide
+
+- play around with options
+- align all of it 
+- then align only some of it
+
+---
+# What else can go in slides
+- R stuff
+
+---
+class: inverse, middle, left
+
+.pull-left[.left[
+# Thank you!
+
+## Silvia Canelón
+
+### Postdoctoral Research Scientist
+
+### University of Pennsylvania,&lt;br/&gt;Philadelphia, PA, USA
+]]
+
+.pull-right[.right[
+&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="170px"/&gt;
+
+[<i class="fas  fa-link "></i> silvia.rbind.io](https://silvia.rbind.io)&lt;br/&gt;
+[<i class="fab  fa-twitter "></i> @spcanelon](https://twitter.com/spcanelon)&lt;br/&gt;
+[<i class="fab  fa-github "></i> @spcanelon](https://github.com/spcanelon)
+
+]]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "googlecode",
+"highlightLines": true,
+"highlightLanguage": "r",
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
