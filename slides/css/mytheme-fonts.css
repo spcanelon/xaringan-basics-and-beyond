@@ -7,8 +7,12 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: "Lora", sans-serif;
+}
+
+h3 {
+  font-family: "Source Sans Pro";
 }
 
 .remark-code, .remark-inline-code {

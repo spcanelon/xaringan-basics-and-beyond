@@ -125,7 +125,9 @@ class: middle, left
 
 # Acknowledgments
 
-### [Laurie Baker](https://github.com/LaurieLBaker), co-pilot for this workshop and ... (primary role and institute?)
+### [Laurie Baker](https://github.com/LaurieLBaker), co-pilot for this workshop and Data Science Lecturer at Data Science Campus at the U.K.'s Office for National Statistics.
+
+--
 
 - other acknowledgements here
 - and here
