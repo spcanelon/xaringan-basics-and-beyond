@@ -1,5 +1,5 @@
 ---
-title: "Presentation title"
+title: "NHS-R Theme &mdash; Presentation title"
 subtitle: "Presentation subtitle"
 author: "Author Name"
 institute: "NHS Organisation"
@@ -40,7 +40,7 @@ opts_chunk$set(echo = FALSE,
 # scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
 ```
 
-```{r, echo=FALSE}
+```{r echo=FALSE}
 xaringanExtra::use_logo(
   image_url = "img/logo-nhs-blue.png",
   exclude_class = c("title-slide", "inverse", "hide-logo")
@@ -61,10 +61,9 @@ class: inverse, middle, center
 
 ### Often used for transitions
 
-Links on an inverse slide would look like<br/>[this one leading to information about logos](#11)
+Links on an inverse slide would look like<br/>[this one leading to information about logos](#logos)
 
 ---
-
 # Bullets and text color
 
 --
@@ -115,7 +114,6 @@ knitr::kable(head(iris), format = 'html')
 > This is what a quote looks like.
 
 ---
-
 # Line highlighting
 
 An example of using the trailing comment `#<<` to highlight lines:
@@ -143,6 +141,7 @@ ggplot(mtcars) +
 ```
 
 ---
+name: logos
 
 # A note about logos
 
