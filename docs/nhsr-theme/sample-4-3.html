@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang xml:lang>
   <head>
-    <title>Presentation title</title>
+    <title>NHS-R Theme — Presentation title</title>
     <meta charset="utf-8" />
     <meta name="author" content="Author Name" />
     <style type="text/css">a, a > code {
@@ -88,10 +88,12 @@ border-bottom: 0px;
 .remark-slide-content h1 {
 color: #005EB8;
 font-size: 45px;
+line-height: 1em;
 }
 .remark-slide-content h2 {
 font-size: 35px;
 color: #005EB8;
+line-height: 1em;
 }
 .remark-slide-content h3 {
 font-size: 25px;
@@ -109,29 +111,6 @@ display: block;
 border: none;
 background-color: #231F20;
 height: 0.08em;
-}
-
-
-.inverse {
-background-color: #005EB8;
-color: #FFFFFF;
-text-shadow: none;
-}
-
-.inverse h1, .inverse h2, .inverse h3 {
-color: #FFFFFF;
-}
-
-.inverse hr {
-background-color: #FFFFFF;
-}
-
-.inverse a {
-color: white;
-border-bottom: 2px solid white;
-}
-.inverse a:hover {
-border-bottom: none;
 }
 
 
@@ -175,6 +154,48 @@ border-radius: 1px;
 pre code {
 background: none;
 font-size: 18px !important;
+}
+
+.remark-slide table {
+margin: auto;
+border-top: 1px solid #768692;
+border-bottom: 1px solid #768692;
+}
+
+.remark-slide table thead th {
+border-bottom: 1px solid #768692;
+}
+
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+background: #E8EDEE;
+}
+
+blockquote {
+border-left: solid 5px #E8EDEE;
+padding-left: 1em;
+}
+
+
+.inverse {
+background-color: #005EB8;
+color: #FFFFFF;
+text-shadow: none;
+}
+
+.inverse h1, .inverse h2, .inverse h3 {
+color: #FFFFFF;
+}
+
+.inverse hr {
+background-color: #FFFFFF;
+}
+
+.inverse a {
+color: white;
+border-bottom: 2px solid white;
+}
+.inverse a:hover {
+border-bottom: none;
 }
 
 
@@ -264,7 +285,7 @@ top:1em;right:1em;
 </div>
 
 
-# Presentation title
+# NHS-R Theme &amp;mdash; Presentation title
 ----
 ## **Presentation subtitle**
 ### Author Name
@@ -277,7 +298,7 @@ class: inverse, middle, center
 
 ### Often used for transitions
 
-Links on an inverse slide would look like&lt;br/&gt;[this one leading to information about logos](#11)
+Links on an inverse slide would look like&lt;br/&gt;[this one leading to information about logos](#logos)
 
 ---
 # Bullets and text color
@@ -410,6 +431,7 @@ ggplot(mtcars) +
 ```
 
 ---
+name: logos
 
 # A note about logos
 

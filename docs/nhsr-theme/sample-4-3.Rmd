@@ -1,5 +1,5 @@
 ---
-title: "Presentation title"
+title: "NHS-R Theme &mdash; Presentation title"
 subtitle: "Presentation subtitle"
 author: "Author Name"
 institute: "NHS Organisation"
@@ -61,7 +61,7 @@ class: inverse, middle, center
 
 ### Often used for transitions
 
-Links on an inverse slide would look like<br/>[this one leading to information about logos](#11)
+Links on an inverse slide would look like<br/>[this one leading to information about logos](#logos)
 
 ---
 # Bullets and text color
@@ -141,6 +141,7 @@ ggplot(mtcars) +
 ```
 
 ---
+name: logos
 
 # A note about logos
 
