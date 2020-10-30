@@ -1,0 +1,215 @@
+---
+title: "Presentation title"
+subtitle: "Presentation subtitle"
+author: "Author Name"
+institute: "NHS Organisation"
+date: "Presentation Date"
+output:
+  xaringan::moon_reader:
+    css: 
+      - default
+      - css/nhsr.css
+      - css/nhsr-fonts.css
+    lib_dir: libs
+    seal: false
+    nature:
+      highlightStyle: googlecode
+      highlightLines: true
+      highlightLanguage: ["r"]
+      countIncrementalSlides: false
+      ratio: "16:9"
+    includes:
+      after_body: [css/insert-logo.html]
+---
+
+```{r setup, include = FALSE}
+library(knitr)
+library(tidyverse)
+library(nhsrtheme)
+library(NHSRdatasets)
+# set default options
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300)
+
+# uncomment the following lines if you want to use the NHS-R theme colours by default
+# scale_fill_continuous <- partial(scale_fill_nhs, discrete = FALSE)
+# scale_fill_discrete <- partial(scale_fill_nhs, discrete = TRUE)
+# scale_colour_continuous <- partial(scale_colour_nhs, discrete = FALSE)
+# scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
+```
+
+class: title-slide, left, bottom
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+
+---
+name: hello
+class: middle, center, hide-logo
+
+<img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/53170984?s=200&v=4" width="150px"/>
+
+# NHS-R Community 
+
+## Promoting the use of R in the NHS
+
+--
+
+[`r icon::fa("link")` nhsrcommunity.com](https://nhsrcommunity.com/)<br/>
+[`r icon::fa("twitter")` @NHSrCommunity](https://twitter.com/NHSrCommunity)<br/>
+[`r icon::fa("github")` @nhs-r-community](https://github.com/nhs-r-community)<br/>
+[`r icon::fa("paper-plane")` nhs.rcommunity@nhs.net](mailto:nhs.rcommunity@nhs.net)
+
+???
+Hello! My name is NHS-R Community and I'm excited to be here promoting the use of R in the NHS.
+
+---
+class: inverse, middle
+
+# Outline
+
+.pull-left[
+
+Outline slides like this one are commonly found in the wild. If they incorporate links they can become a useful "table of contents" for a slide deck.  
+
+Downside is they aren't very memorable. I would encourage a "roadmap" approach to your presentations, using interesting transition slides that let your audience know where you've been and where you're going next.
+
+]<!--end of left-column-->
+
+.pull-right[
+.left[
+1\. [Making bullet points and emphasizing text](#bulletpoints)
+
+2\. [Tables and quotes](#tables-quotes)
+
+3\. [Line highlighting](#line-highlighting)
+
+4\. [Final slide and contact info](#goodbye)
+]
+] <!--end of right-column-->
+
+---
+name: bulletpoints
+# Bullets and text color
+
+--
+
+* first point
+
+--
+
+* second point
+
+--
+
+* third point
+
+--
+
+-----
+
+You can emphasize text with color:
+
+* .blue[Blue]
+* .green[Green]
+* .pink[Pink]
+* .red[Red]
+* .warmyellow[Warm Yellow]
+
+--
+
+And make it **bold** or _italicized_ using Markdown:
+
+* .blue[**Bold** or _italicized_]
+* .green[**Bold** or _italicized_]
+* .pink[**Bold** or _italicized_]
+* .red[**Bold** or _italicized_]
+* .warmyellow[**Bold** or _italicized_]
+
+---
+name: tables-quotes
+# Tables and quotes
+
+### Table
+.pull-left[
+
+`NHSRDatasets::LOS_model`
+
+Artificially generated hospital data. Fictional patients at 10 fictional hospitals, with `LOS`, `Age` and `Date status` data. 
+
+Data were generated to learn Generalized Linear Models (GLM) concepts, modelling either `Death` or `LOS`.
+]
+
+.pull-right[
+```{r}
+knitr::kable(head(LOS_model), format = 'html')
+```
+]
+
+### Quote
+
+> The NHS-R community aims to support the learning, application and exploitation of R in the NHS through workshops, video tutorials and providing a platform for discussion and sharing of developing best practice solutions to NHS problems.
+
+---
+name: line-highlighting
+
+# Line highlighting
+
+An example of using the trailing comment `#<<` to highlight lines:
+
+### Code
+
+````markdown
+`r ''````{r tidy=FALSE}
+library(NHSRdatasets)
+ggplot(LOS_model) +
+  aes(Age, fill = Organisation) + 
+  geom_boxplot() +               #<<
+  nhsrtheme::scale_fill_nhs()    #<<
+```
+````
+
+### Output
+
+```{r tidy=FALSE, eval=FALSE, echo=TRUE}
+library(NHSRdatasets)
+ggplot(LOS_model) +
+  aes(Age, fill = Organisation) + 
+  geom_boxplot() +               #<<
+  nhsrtheme::scale_fill_nhs()    #<<
+```
+
+---
+name: goodbye
+class: middle, inverse
+
+.pull-left[
+# **Thank you!**
+<br/>
+## NHS-R Community 
+
+### Promoting the use of R in the NHS
+
+### Everywhere, U.K.
+]
+
+.pull-right[
+.right[
+<img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/53170984?s=200&v=4" width="150px"/>
+
+
+[`r icon::fa("link")` nhsrcommunity.com](https://nhsrcommunity.com/)<br/>
+[`r icon::fa("twitter")` @NHSrCommunity](https://twitter.com/NHSrCommunity)<br/>
+[`r icon::fa("github")` @nhs-r-community](https://github.com/nhs-r-community)<br/>
+[`r icon::fa("paper-plane")` nhs.rcommunity@nhs.net](mailto:nhs.rcommunity@nhs.net)
+]
+]
+
+???
+Thank you for your attention! 
+I'm happy to take any questions, and if you'd like to get in touch, I've included my contact information on this slide
