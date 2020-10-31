@@ -75,16 +75,14 @@ xaringanExtra::style_share_again(
 # scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
 ```
 
-class: title-slide, left, middle
-background-image: url(img/logo-nhsr.png)
+class: title-slide, center, bottom
+background-image: 
 background-size: 250px
 background-position: 92% 60%
 
 # `r rmarkdown::metadata$title`
-----
 ## **`r rmarkdown::metadata$subtitle`**
-### `r rmarkdown::metadata$author`
-### `r rmarkdown::metadata$date`
+### `r rmarkdown::metadata$author` 
 
 ???
 
@@ -97,7 +95,6 @@ name: hello
 layout: false
 class: hello-slide, inverse, middle, center
 
-.pull-left[.left[
 # About me
 
 <img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="150px"/>
@@ -106,13 +103,11 @@ class: hello-slide, inverse, middle, center
 
 ### Postdoctoral Research Scientist
 
-### University of Pennsylvania,<br/>Philadelphia, PA, USA
+University of Pennsylvania<br/>Philadelphia, PA, USA
 
-[`r icon::fa("link")` silvia.rbind.io](https://silvia.rbind.io)<br/>
-[`r icon::fa("twitter")` @spcanelon](https://twitter.com/spcanelon)<br/>
-[`r icon::fa("github")` @spcanelon](https://github.com/spcanelon) 
-]
-]
+[`r icon::fa("link")` silvia.rbind.io](https://silvia.rbind.io)
+[`r icon::fa("twitter")` @spcanelon](https://twitter.com/spcanelon)
+[`r icon::fa("github", size = 1)` @spcanelon](https://github.com/spcanelon)
 
 ---
 layout: true
@@ -120,74 +115,33 @@ layout: true
 <a class="footer-link" href="http://bit.ly/xaringan-nhsr">bit.ly/xaringan-nhsr &mdash; Silvia Canelón</a>
 
 ---
-class: middle, left
+class: top
 
 # Acknowledgments
 
-### [Laurie Baker](https://github.com/LaurieLBaker), co-pilot for this workshop and Data Science Lecturer at Data Science Campus at the U.K.'s Office for National Statistics.
+.pull-left-narrow[.center[
+<img style="border-radius: 50%;" src="https://lauriebaker.rbind.io/author/dr.-laurie-baker/avatar_hu30116ce9545207e6cc07ea892252ff02_106302_270x270_fill_q90_lanczos_center.jpg" width="100px"/>
+]]
+
+.pull-right-wide[
+<br>
+[Dr. Laurie Baker](https://lauriebaker.rbind.io), co-pilot for this workshop and Data Science Lecturer at Data Science Campus at the U.K.'s Office for National Statistics.
+]
+
+----
 
 --
 
-- other acknowledgments here
-- and here
+other acknowledgments here
+
+--
+
+and here
 
 ---
 class: middle
 background-color: #fcf7e5
 
-
-# 3 column layout
-
-.left-col[
-# left-col
-
-![](img/logo-nhsr.png)
-
-This is the left column
-]
-
-.center-col[
-# center-col
-
-```{r, out.width="100%"}
-knitr::include_graphics("img/logo-nhsr.png")
-```
-
-
-This is the center column
-]
-
-.right-col[
-# right-col
-![](img/logo-nhsr.png)
-
-This is the right column
-]
-
----
-# 5 column layout
-
-.column-5[
-column 1
-]
-
-.column-5[
-column 2
-]
-
-.column-5[
-column 3
-]
-
-.column-5[
-column 4
-]
-
-.column-5[
-.fade[column 5]
-]
-
----
 # About you
 
 --

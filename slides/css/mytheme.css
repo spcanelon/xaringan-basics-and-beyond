@@ -27,13 +27,14 @@
 --Yellow:             #FAE100;
 
 --spc-primary:        #122140;
+--spc-secondary:      #e5bf00;
 --spc-secondary-dark: #ae8f00;
 }
 
 /*-- LINKS/ANCHORS --*/
 a {
-  color:              var(--DarkBlue);
-  border-bottom:      1px solid var(--Blue);
+  color:              var(--spc-secondary);
+  border-bottom:      2px solid var(--spc-secondary);
   line-height:        2rem;
 }
 
@@ -43,26 +44,25 @@ a:hover {
 
 /*-- HEADINGS --*/
 .remark-slide-content h1 {
-  color:              var(--DarkBlue);
-  /*font-size:          45px;*/
-  font-size:          1.8em;
-  font-weight:        600;
+  color:              var(--spc-primary);
+  font-weight:        400;
   line-height:        1em;
 }
 
 .remark-slide-content h2 {
   /*font-size:          35px;*/
-  font-size:          1.4em;
-  font-weight:        500;
-  color:              var(--DarkBlue);
+  /*font-size:          1.4em;*/
+  font-weight:        400;
+  color:              var(--spc-primary);
   line-height:        1em;
+  letter-spacing:     0.02em;
 }
 
 .remark-slide-content h3 {
-  font-size:          1em;
+  /*font-size:          1em;*/
   font-weight:        500;
-  color:              var(--DarkBlue);
-  line-height:        1.8rem;
+  color:              var(--spc-primary);
+  line-height:        1em;
 }
 
 /*-- PARAGRAPH TEXT --*/
@@ -76,8 +76,8 @@ hr {
   content:            '';
   display:            block;
   border:             none;
-  background-color:   var(--Black);
-  height:             .08em;
+  background-color:   #ae8f00;
+  height:             0.08em;
 }
 
 /*-- INVERSE SLIDE MODIFICATIONS --*/
@@ -127,14 +127,15 @@ hr {
 /* Persistent link in footer */
 /* https://github.com/rstudio-education/teaching-in-production/blob/master/slides/assets/css/my-theme.css */
 a.footer-link {
-    position: absolute;
-    bottom: 4px;
-    right: 20px;
-    height: 40px;
-    width: 350px;
-    color: var(--MidGrey);
-    border-bottom: none;
-    font-size: 0.8em;
+    position:       absolute;
+    bottom:         4px;
+    right:          20px;
+    height:         40px;
+    width:          350px;
+    color:          var(--spc-secondary-dark);
+    border-bottom:  none;
+    font-size:      0.8em;
+    opacity:        0.6;
 }
 
 /*-- Slide number --*/
@@ -182,14 +183,15 @@ pre code {
 
 /*-- NHS organisation logo --*/
 .title-slide {
-  background-image:    url(img/logo-nhs-org-right.png);
-  background-position: 95% 10%;
-  background-size:     300px;
+  background-color:    #94a1b8;
+  color:               var(--spc-primary);
 }
 
 /*-- Headings --*/
 .title-slide h1 {
-  color:               #000000;
+  color:               var(--spc-primary);
+  font-size:           2.4em;
+  font-weight:         600;
 }
 
 /*-- CUSTOM CLASS FOR HELLO SLIDE --*/
@@ -240,7 +242,7 @@ pre code {
 
 .remark-slide-number .progress-bar {
   height: 100%;
-  background-color: var(--DarkBlue);
+  background-color: var(--spc-secondary-dark);
 }
 
 /*-- EXPERIMENTAL -----------------------------------------------------------*/
@@ -288,8 +290,17 @@ pre code {
   display: flex;
 }
 
-.column-5 {
+/* Clear floats after the columns */
+.pull-left-narrow {
   float: left;
   width: 20%;
-  text-align: center;
+}
+
+.pull-right-wide {
+  float: right;
+  width: 75%;
+}
+
+.pull-right-wide + * {
+  clear: both;
 }
