@@ -68,14 +68,9 @@ Welcome to the workshop on sharing your work with xaringan.
 Where I'll show you how to create impressive presentation slides that can be deployed to the web for easy sharing.
 
 ---
-layout: true
-
-&lt;a class="footer-link" href="http://bit.ly/xaringan-nhsr"&gt;bit.ly/xaringan-nhsr&lt;/a&gt;
-
----
 name: hello
 layout: false
-class: inverse, middle, center
+class: hello-slide, inverse, middle, center
 
 .pull-left[.left[
 # About me
@@ -95,6 +90,11 @@ class: inverse, middle, center
 ]
 
 ---
+layout: true
+
+&lt;a class="footer-link" href="http://bit.ly/xaringan-nhsr"&gt;bit.ly/xaringan-nhsr &amp;mdash; Silvia Canelón&lt;/a&gt;
+
+---
 class: middle, left
 
 # Acknowledgments
@@ -103,8 +103,62 @@ class: middle, left
 
 --
 
-- other acknowledgements here
+- other acknowledgments here
 - and here
+
+---
+class: middle
+background-color: #fcf7e5
+
+
+# 3 column layout
+
+.left-col[
+# left-col
+
+![](img/logo-nhsr.png)
+
+This is the left column
+]
+
+.center-col[
+# center-col
+
+&lt;img src="img/logo-nhsr.png" width="100%" /&gt;
+
+
+This is the center column
+]
+
+.right-col[
+# right-col
+![](img/logo-nhsr.png)
+
+This is the right column
+]
+
+---
+# 5 column layout
+
+.column-5[
+column 1
+]
+
+.column-5[
+column 2
+]
+
+.column-5[
+column 3
+]
+
+.column-5[
+column 4
+]
+
+.column-5[
+.fade[column 5]
+]
 
 ---
 # About you
@@ -140,7 +194,9 @@ class: middle, left
 # How to create one?
 
 - `library(nhsrtheme)` --&gt; New Rmarkdown --&gt; NHS-R Template
-  - .footnote[Normally, `library(xaringan)` and output would be `xaringan::moon_reader`]
+
+.footnote[
+1. Normally, `library(xaringan)` and output would be `xaringan::moon_reader`]
 
 ---
 # What's in the YAML?
@@ -192,25 +248,18 @@ class: middle, left
 - R stuff
 
 ---
-class: inverse, middle, left
+class: goodbye-slide, inverse, middle, left
 
-.pull-left[.left[
+.pull-left[
+&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="170px"/&gt;
 # Thank you!
 
-## Silvia Canelón
+### Here's where you can find me...
 
-### Postdoctoral Research Scientist
-
-### University of Pennsylvania,&lt;br/&gt;Philadelphia, PA, USA
-]]
-
-.pull-right[.right[
-&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="170px"/&gt;
-
-[<i class="fas  fa-link "></i> silvia.rbind.io](https://silvia.rbind.io)&lt;br/&gt;
-[<i class="fab  fa-twitter "></i> @spcanelon](https://twitter.com/spcanelon)&lt;br/&gt;
-[<i class="fab  fa-github "></i> @spcanelon](https://github.com/spcanelon)
-
+.right[
+[silvia.rbind.io <i class="fas  fa-link "></i>](https://silvia.rbind.io)&lt;br/&gt;
+[@spcanelon <i class="fab  fa-twitter "></i>](https://twitter.com/spcanelon)&lt;br/&gt;
+[@spcanelon <i class="fab  fa-github "></i>](https://github.com/spcanelon)&lt;br/&gt;
 ]]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

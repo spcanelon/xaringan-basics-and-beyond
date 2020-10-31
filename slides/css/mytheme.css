@@ -25,13 +25,16 @@
 --Orange:             #ED8B00;
 --WarmYellow:         #FFB81C;
 --Yellow:             #FAE100;
+
+--spc-primary:        #122140;
+--spc-secondary-dark: #ae8f00;
 }
 
 /*-- LINKS/ANCHORS --*/
 a {
   color:              var(--DarkBlue);
-  border-bottom:      2px solid var(--Blue);
-  line-height:        1.5em;
+  border-bottom:      1px solid var(--Blue);
+  line-height:        2rem;
 }
 
 a:hover {
@@ -41,25 +44,30 @@ a:hover {
 /*-- HEADINGS --*/
 .remark-slide-content h1 {
   color:              var(--DarkBlue);
-  font-size:          45px;
+  /*font-size:          45px;*/
+  font-size:          1.8em;
+  font-weight:        600;
   line-height:        1em;
 }
 
 .remark-slide-content h2 {
-  font-size:          35px;
+  /*font-size:          35px;*/
+  font-size:          1.4em;
+  font-weight:        500;
   color:              var(--DarkBlue);
   line-height:        1em;
 }
 
 .remark-slide-content h3 {
-  font-size:          25px;
+  font-size:          1em;
+  font-weight:        500;
   color:              var(--DarkBlue);
   line-height:        1.8rem;
 }
 
 /*-- PARAGRAPH TEXT --*/
 .remark-slide-content {
-  font-size:          20px;
+  font-size:          1.6rem;
   line-height:        1.2em;
 }
 
@@ -76,7 +84,7 @@ hr {
 
 /*-- Slide background and text (inverse) --*/
 .inverse {
-  background-color:   var(--DarkBlue);
+  background-color:   var(--spc-primary);
   color:              white;
   text-shadow:        none;
 }
@@ -88,7 +96,16 @@ hr {
 
 .inverse a {
   color:              white;
-  border-bottom:      2px solid white;
+  border-bottom:      1px solid white;
+}
+
+.inverse a:hover {
+  border-bottom:      none;
+}
+
+/*-- Text muting/fading --*/
+.fade {
+  opacity: 0.5;
 }
 
 /*-- Horizontal bars (inverse) --*/
@@ -114,9 +131,10 @@ a.footer-link {
     bottom: 4px;
     right: 20px;
     height: 40px;
-    width: 200px;
+    width: 350px;
     color: var(--MidGrey);
     border-bottom: none;
+    font-size: 0.8em;
 }
 
 /*-- Slide number --*/
@@ -164,7 +182,7 @@ pre code {
 
 /*-- NHS organisation logo --*/
 .title-slide {
-  background-image:    url(../img/logo-nhs-org-right.png);
+  background-image:    url(img/logo-nhs-org-right.png);
   background-position: 95% 10%;
   background-size:     300px;
 }
@@ -175,8 +193,22 @@ pre code {
 }
 
 /*-- CUSTOM CLASS FOR HELLO SLIDE --*/
+.hello-slide {
+  background-color: var(--spc-primary);
+}
+
+.hello-slide h1 {
+  color: var(--spc-secondary-dark);
+}
 
 /*-- CUSTOM CLASS FOR GOODBYE SLIDE --*/
+.goodbye-slide {
+  background-color: var(--spc-primary);
+}
+
+.goodbye-slide h1 {
+  color: var(--spc-secondary-dark);
+}
 
 /*-- Hides slide number from title slide --*/
 .title-slide .remark-slide-number {
@@ -209,4 +241,55 @@ pre code {
 .remark-slide-number .progress-bar {
   height: 100%;
   background-color: var(--DarkBlue);
+}
+
+/*-- EXPERIMENTAL -----------------------------------------------------------*/
+
+/*-- 3 column layout --*/
+.left-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+.center-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+.right-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+/* five-column layout */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+}
+
+.column-5 {
+  float: left;
+  width: 20%;
+  text-align: center;
 }
