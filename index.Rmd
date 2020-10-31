@@ -88,7 +88,7 @@ Thanks to<br/>Stephan Kadauke
 # Links
 
 - Link to this website: [spcanelon.github.io/xaringan-basics-and-beyond](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html)
-- [RStudio Cloud workspace (_coming soon!_)]()
+- [RStudio Cloud workspace (_coming soon!_)](https://bit.ly/3mfJM4k)
 - [Day 1 slides: The Basics (_coming soon!_)]()
 - [Day 2 slides: The Beyond (_coming soon!_)]()
 
