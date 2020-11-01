@@ -35,8 +35,8 @@
 
 /*-- LINKS/ANCHORS --*/
 a {
-  color:              var(--spc-secondary);
-  border-bottom:      2px solid var(--spc-secondary);
+  color:              #903030;
+  border-bottom:      3px solid #903030;
   line-height:        2rem;
 }
 
@@ -87,7 +87,7 @@ hr {
 /*-- Slide background and text (inverse) --*/
 .inverse {
   background-color:   var(--spc-primary);
-  color:              white;
+  color:              var(--PaleGrey);
   text-shadow:        none;
 }
 
@@ -177,46 +177,66 @@ pre {
 
 /*--  --*/
 pre code {
-  background:          none;
-  font-size:           18px !important;
+  background:         none;
+  font-size:          18px !important;
 }
 
 /*-- CUSTOM CLASS FOR THE TITLE SLIDE --*/
 
 .title-slide {
-  /*background-color:    #A0B6E4;*/
-  background-color:    #E7EDF8;
-  color:               var(--PaleGrey);
+  /*background-color:   #E7EDF8;*/
+  background-color:   #FFFFFF;
+  color:              var(--spc-secondary);
 }
 /*-- Headings --*/
 .title-slide h1 {
-  font-size:           2.4em;
-  font-weight:         600;
-  color:               var(--PaleGrey);
+  font-size:          2.4em;
+  font-weight:        600;
+  color:              var(--spc-primary);
 }
 .title-slide h3 {
-  color:               var(--spc-secondary);
-  font-size:           1em;
-  text-transform:      uppercase;
+  color:              var(--spc-secondary);
+  font-size:          1.1em;
+  text-transform:     uppercase;
 }
 
 /*-- CUSTOM CLASS FOR HELLO SLIDE --*/
 .hello-slide {
-  background-color: var(--spc-primary);
+  background-color:   var(--spc-primary);
 }
 
 .hello-slide h1 {
-  color: #E7EDF8;
-  font-weight: 600;
+  color:              var(--spc-secondary-dark);
+  font-weight:        600;
 }
 
 /*-- CUSTOM CLASS FOR GOODBYE SLIDE --*/
 .goodbye-slide {
-  background-color: var(--spc-primary);
+  background-color:   var(--spc-primary);
 }
 
 .goodbye-slide h1 {
-  color: var(--spc-secondary-dark);
+  color:              var(--spc-secondary-dark);
+}
+
+/*-- CUSTOM CLASS FOR YOUR-TURN SLIDE --*/
+.yourturn-slide {
+  background-color:   #600018;
+  color:              var(--PaleGrey);
+}
+
+.yourturn-slide h1 {
+  color:              #c09090;
+  font-weight:        600;
+}
+
+.yourturn-slide h2 {
+  color:              var(--PaleGrey);
+}
+
+/*-- CUSTOM CLASS FOR LIVE DEMO SLIDE --*/
+.livedemo-slide {
+  background-color:   var(--spc-secondary);
 }
 
 /*-- Hides slide number from title slide --*/
@@ -225,26 +245,26 @@ pre code {
 }
 
 /*-- CUSTOM CLASSES FOR TEXT EMPHASIS --*/
-.blue       { color:   var(--Blue) }
-.green      { color:   var(--Green) }
-.pink       { color:   var(--Pink) }
-.red        { color:   var(--Red) }
-.warmyellow { color:   var(--WarmYellow) }
+.blue       { color:  var(--Blue) }
+.green      { color:  var(--Green) }
+.pink       { color:  var(--Pink) }
+.red        { color:  var(--Red) }
+.warmyellow { color:  var(--WarmYellow) }
 
 /*-- PROGRESS BAR --*/
 /* https://github.com/yihui/xaringan/wiki/Progressbar */
 
 .remark-slide-number {
-  position: inherit;
+  position:           inherit;
 }
 
 .remark-slide-number .progress-bar-container {
-  position: absolute;
-  bottom: 0;
-  height: 4px;
-  display: block;
-  left: 0;
-  right: 0;
+  position:           absolute;
+  bottom:             0;
+  height:             4px;
+  display:            block;
+  left:               0;
+  right:              0;
 }
 
 .remark-slide-number .progress-bar {
