@@ -29,6 +29,8 @@
 --spc-primary:        #122140;
 --spc-secondary:      #e5bf00;
 --spc-secondary-dark: #ae8f00;
+
+--my-
 }
 
 /*-- LINKS/ANCHORS --*/
@@ -181,17 +183,21 @@ pre code {
 
 /*-- CUSTOM CLASS FOR THE TITLE SLIDE --*/
 
-/*-- NHS organisation logo --*/
 .title-slide {
-  background-color:    #94a1b8;
-  color:               var(--spc-primary);
+  /*background-color:    #A0B6E4;*/
+  background-color:    #E7EDF8;
+  color:               var(--PaleGrey);
 }
-
 /*-- Headings --*/
 .title-slide h1 {
-  color:               var(--spc-primary);
   font-size:           2.4em;
   font-weight:         600;
+  color:               var(--PaleGrey);
+}
+.title-slide h3 {
+  color:               var(--spc-secondary);
+  font-size:           1em;
+  text-transform:      uppercase;
 }
 
 /*-- CUSTOM CLASS FOR HELLO SLIDE --*/
@@ -200,7 +206,8 @@ pre code {
 }
 
 .hello-slide h1 {
-  color: var(--spc-secondary-dark);
+  color: #E7EDF8;
+  font-weight: 600;
 }
 
 /*-- CUSTOM CLASS FOR GOODBYE SLIDE --*/

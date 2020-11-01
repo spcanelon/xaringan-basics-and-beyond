@@ -1,6 +1,6 @@
 ---
-title: "Sharing Your Work with Xaringan"
-subtitle: "The Basics and Beyond"
+title: "Sharing<br>Your Work<br>with Xaringan"
+subtitle: "An Introduction to Xaringan<br>for Presentations"
 author: "Silvia Canelón, Ph.D."
 institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
 date: "Nov. 3rd and 5th, 2020"
@@ -75,15 +75,17 @@ xaringanExtra::style_share_again(
 # scale_colour_discrete <- partial(scale_colour_nhs, discrete = TRUE)
 ```
 
-class: title-slide, center, bottom
-background-image: 
-background-size: 250px
-background-position: 92% 60%
+class: title-slide, left, middle
+background-image: url(img/frame-blue.jpg)
+background-size: cover
+background-position: left
 
+.pull-left[
 # `r rmarkdown::metadata$title`
-## **`r rmarkdown::metadata$subtitle`**
-### `r rmarkdown::metadata$author` 
+### `r rmarkdown::metadata$subtitle`
 
+`r rmarkdown::metadata$author` 
+]
 ???
 
 Welcome to the workshop on sharing your work with xaringan.
@@ -125,18 +127,31 @@ class: top
 
 .pull-right-wide[
 <br>
-[Dr. Laurie Baker](https://lauriebaker.rbind.io), co-pilot for this workshop and Data Science Lecturer at Data Science Campus at the U.K.'s Office for National Statistics.
+[Laurie Baker](https://lauriebaker.rbind.io), co-pilot for this workshop and Data Science Lecturer at Data Science Campus at the U.K.'s Office for National Statistics
 ]
 
-----
+--
+
+.pull-left-narrow[.center[
+<img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/53170984?s=200&v=4" width="125px"/>
+]]
+
+.pull-right-wide[
+[NHS-R Community](https://nhsrcommunity.com/) for the opportunity to provide this workshop
+- [nhsrtheme `r emo::ji("package")`](https://github.com/nhs-r-community/nhsrtheme) developed by Tom Jemmett
+- [NHSRdatasets `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRdatasets) developed by Chris Mainey
+]
 
 --
 
-other acknowledgments here
+.pull-left-narrow[.center[
+`r icon::fa("smile", size = 3, color = "#e5bf00")`]]
 
---
-
-and here
+.pull-right-wide[
+- [xaringan `r emo::ji("package")`](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
+- [xaringanExtra `r emo::ji("package")`](https://github.com/gadenbuie/xaringanExtra/#xaringanExtra) developed by Garrick Aden-Buie
+- Materials developed by [Alison Hill](https://twitter.com/apreshill) that have inspired and informed this workshop
+]
 
 ---
 class: middle
