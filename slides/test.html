@@ -91,6 +91,43 @@ class: about-me-slide, inverse, middle, center
 [<i class="fab  fa-github "></i> @spcanelon](https://github.com/spcanelon)
 
 ---
+### Example for issue: No panelset
+
+
+```r
+---
+class: title-slide, left, bottom
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+---
+```
+
+
+---
+### Example for issue: Panelset
+
+.panelset[
+.panel[.panel-name[Example]
+
+```r
+---
+class: title-slide, left, bottom
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+---
+```
+]
+] &lt;!----&gt;
+
+---
 layout: true
 
 &lt;a class="footer-link" href="http://bit.ly/xaringan-nhsr"&gt;bit.ly/xaringan-nhsr &amp;mdash; Silvia Canelón&lt;/a&gt;
@@ -105,7 +142,7 @@ class: top
 .pull-left-narrow[.center[&lt;img style="border-radius: 50%;" src="https://lauriebaker.rbind.io/author/dr.-laurie-baker/avatar_hu30116ce9545207e6cc07ea892252ff02_106302_270x270_fill_q90_lanczos_center.jpg" width="100px"/&gt;]]
 
 .pull-right-wide[
-[Laurie Baker](https://lauriebaker.rbind.io), co-pilot for this workshop and Data Science Lecturer at the Data Science Campus, Office for National Statistics, UK.as
+[Laurie Baker](https://lauriebaker.rbind.io), co-pilot for this workshop and Data Science Lecturer at Data Science Campus at the U.K.'s Office for National Statistics
 ]
 
 --
@@ -153,10 +190,7 @@ class: left
 .pull-right-wide[### .my-gold[**you want to know about cool HTML5 slides**]] 
 
 ---
-name: question
 class: inverse, middle, center
----
-template: question
 
 <i class="fas  fa-images fa-3x "></i>
 # How do we make&lt;br&gt;cool HTML5 slides?
@@ -224,14 +258,14 @@ Remark helps us:
 - and use the presentation (keyboard shortcuts).
 
 ---
-# CSS for the &lt;img src="https://nhsrcommunity.com/wp-content/uploads/2018/02/logo.png" width="13%"/&gt;&amp;nbsp; 
+# CSS for the NHS
 
 .pull-left[
 &lt;iframe src="https://spcanelon.github.io/xaringan-basics-and-beyond/nhsr-theme/sample-4-3.html" width="100%" height="400px"&gt;&lt;/iframe&gt;
 ]
 
 .pull-right[
-I designed a custom CSS theme for the NHS-R Community following the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/) 🚀. 
+I designed a custom CSS theme for the NHS-R Community following the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/). 
 
 [Tom Jemmett](https://github.com/tomjemmett) helped me incorporate it into the [nhsrtheme 📦](https://github.com/nhs-r-community/nhsrtheme#nhs-r-theme-) in preparation for this workshop.
 ]
@@ -245,7 +279,7 @@ I designed a custom CSS theme for the NHS-R Community following the [NHS identit
 1. Install the `nhsrtheme` package from GitHub
 
 ```r
-# install.packages("devtools")
+#install.packages("devtools")
 devtools::install_github("nhs-r-community/nhsrtheme")
 ```
 
@@ -262,23 +296,11 @@ library(nhsrtheme)
 2. New R Markdown
 ![:scale 90%](img/new-r-markdown.png)
 ]
-
 .pull-right[
 3\. From Template <i class="fas  fa-angle-double-right "></i> NHS-R Presentation&lt;br&gt;4. Give your slide deck a name!
 ![:scale 85%](img/nhsrtheme-template.png)
 ]
 ]&lt;!----&gt;
-
-.panel[.panel-name[Directory]
-The new directory in the "Files" pane contains
-.left[
-+ <i class="fas  fa-file-code "></i> the new Rmd file (i.e. `my-slides.Rmd`)
-
-+ <i class="fas  fa-folder-open "></i> the `img` folder containing logo files
-
-+ <i class="fas  fa-folder-open "></i> the `css` folder containing the custom `nhsr` theme files&lt;br&gt;.small[and an HTML file in charge of [adding the NHS logo to each slide](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides)]
-]
-] &lt;!----&gt;
 
 .panel[.panel-name[YAML 1]
 
@@ -324,166 +346,108 @@ More options for output `xaringan::moon_reader`
 ] &lt;!--end of panelset--&gt;
 
 ---
-name: live-coding
-background-color: var(--my-yellow)
-class: middle, center
-
-<i class="fas  fa-code fa-3x " style="color:#122140;"></i>&lt;br&gt;
-# Let's try it live together
-
----
 ## Our first few slides
 
-<i class="fas  fa-star " style="color:#e5bf00;"></i> Slide content starts immediately after the YAML `---`
+<i class="fas  fa-star " style="color:#ae8f00;"></i> Slide content starts immediately after the YAML `---`
 
 .pull-left-narrow[
 The .my-coral[nhsrtheme] template comes pre-loaded with a few things
 ]
 .pull-right-wide[
-- .my-coral[A `setup` chunk] with a few libraries and some chunk options set for the whole slide deck
+- A `setup` chunk with a few libraries and some chunk options set for the whole slide deck
 
 - Some example slides separated by three dashes (`---`)
   1. .my-coral[Title slide with the `title-slide` class.]&lt;br&gt;Content is aligned with the `left` and the `bottom` of the slide
   1. .my-coral[Inverse slide with the `inverse` slide class.]&lt;br&gt;Content is aligned with `middle` and `center` of the slide
-  1. .my-coral[Incremental slides with no specified slide class (default).]&lt;br&gt;Incremental steps are made using two dashes (`--`), and bullet points made using markdown (`*`)
+  1. .my-coral[Incremental slides with no specified slide class (default layout).]&lt;br&gt;Incremental steps are made using two dashes (`--`), and bullet points made using markdown (`*`)
 ]
 
 ---
 .panelset[
-
-.panel[.panel-name[Moon Reader]
-To view the slides generated by your new Rmd file, you have two options:
-
-1\. 🌙 Run xaringan's infinite moon reader function in the console&lt;sup1&lt;sup/&gt;
-
-```r
-xaringan::inf_mr()
-```
-
-&gt; .small[Note: you can also access this feature using the IDE toolbar: **Addins &gt; XARINGAN Infinite Moon Reader**]
-
-
-2\. 🧶 Knit the document
-
-] &lt;!----&gt;
-
-.panel[.panel-name[Setup chunk]
-.pull-left-narrow[
+.panel[.panel-name[Setup Chunk]
+.pull-left[
 A `setup` chunk with a few libraries and some chunk options set for the whole slide deck
 ]
-.pull-right-wide[
-![](img/code-setup-chunk.png)
+.pull-right[
+
+```r
+---
+library(knitr)
+library(tidyverse)
+library(nhsrtheme)
+
+opts_chunk$set(echo = FALSE,        #set default options
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300)
+---
+```
 ]
 ] &lt;!----&gt;
 
 .panel[.panel-name[Title slide]
 
-.pull-left[
-### Code
+```r
+---
+class: title-slide, left, bottom
 
-This is the very first slide after the YAML so it doesn't need to begin with `---`
-
-![](img/code-title-slide.png)]
-
-.pull-right[
-### Slide
-&lt;img src="img/sample-title-slide.png" width="100%" 
-style="border:2px solid #E8EDEE"/&gt; 
-]
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+---
+```
 ] &lt;!----&gt;
+
 .panel[.panel-name[Inverse slide]
+````
 
-.pull-left[
-### Code
-![](img/code-inverse-slide.png)]
+```r
+---
+class: inverse, middle, center
 
-.pull-right[
-### Slide
-&lt;img src="img/sample-inverse-slide.png" width="100%" 
-style="border:0px solid #E8EDEE"/&gt; 
-]
+# An inverse slide
+
+Often used for transitions
+
+---
+```
+````
 ] &lt;!----&gt;
 .panel[.panel-name[Incremental slides]
 
-.pull-left[
-### Code
-![](img/code-incremental-slides.png)]
+```r
+---
 
-.pull-right[
-### Slide
-&lt;img src="img/sample-incremental-slides.png" width="100%" style="border:2px solid #E8EDEE"/&gt; 
-]
+# A slide where bullets appear
+
+--
+
+* first point
+
+--
+
+* second point
+
+--
+
+* third point
+---
+```
+
 ] &lt;!----&gt;
 ]&lt;!--end of panelset--&gt;
 
 ---
-# xaringan syntax
 
-### What did you notice?
-
-???
-What about the syntax used in the R Markdown file looked familiar?
-Please type your answers in the chat box.
-
---
-
-.pull-left[
-
-### Familiar from **markdown**
-
-- Headings (#, ##, ###)
-- **Bold** and _italic_ type
-- Links and images with `![]()`
-- Bullet points can be added&lt;br&gt;with `-`, `+`, or `-`
-- Numbered lists can be created&lt;br&gt;with `1.`
-]
-
-???
-What about the syntax looked new or different?
-Please type your answers in the chat box.
-
---
-
-.pull-right[
-### Not so familiar, from **remark.js**
-- First slide starts immediately after YAML, doesn't need to begin with three dashes(`---`)
-- Slides are separated by&lt;br&gt;three dashes (`---`)
-- Incremental slides are separated by&lt;br&gt;two dashes (`--`)
-- Slide content is separated from presenter notes by three questions marks (`???`)
-]
-
----
-template: question
-
-<i class="fas  fa-magic fa-3x "></i>
-# How can we make our slides&lt;br&gt;more interesting???
-
---
-
-----
-
-.left-col[.center[
-<i class="fab  fa-css3 fa-2x "></i>
-### with css classes
-]]
-
---
-
-.center-col[
-.center[
-<i class="fas  fa-image fa-2x "></i>
-### pretty pictures
-]]
-
---
-
-.right-col[.center[
-&lt;i class="fab fa-question fa-2x"&gt;&lt;/i&gt;
-### and icons
-]]
-
----
-&lt;i class="fas fa-icons"&gt;&lt;/i&gt;
+- intro to xaringan structure
+  - first slide: starts immediately after YAML
+  - Markdown formatting: headings (#, ##, ###), **bold**, and _italics_, links with []()
+  - new slide: `---`
+  - incremental slides: `--`
+  - presenter notes: `???` underneath body of slide and before the next slide (or `---`)
+  
 ---
 name: your-turn
 background-color: var(--my-red)

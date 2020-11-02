@@ -14,9 +14,9 @@ h1, h2 {
 }
 
 h3 {
-  font-family: "Lato", "Source Sans Pro";
+  font-family: "Lato", "Source Sans Pro", sans-serif;
 }
 
 .remark-code, .remark-inline-code {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", "Lucida Console", monospace;
 }

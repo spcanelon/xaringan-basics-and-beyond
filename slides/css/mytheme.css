@@ -98,6 +98,8 @@ hr {
 /*-- Text muting/fading --*/
 .fade { opacity: 0.5; }
 
+/*-- Small text --*/
+.small { font-size: 70% }
 /*-- Horizontal bars (inverse) --*/
 .inverse hr { background-color: white; }
 
@@ -106,7 +108,7 @@ hr {
 /*-- Footnote --*/
 .footnote {
   position:           absolute;
-  bottom:             1em;
+  bottom:             2em;
   padding-right:      4em;
   font-size:          70%;
   line-height:        1em;
@@ -143,7 +145,7 @@ div.footer-link {
 
 /*-- In-line highlighting within text --*/
 .remark-code, .remark-inline-code {
-  font-size:          90%;
+  font-size:          80%;
   color:              var(--my-blue);
   background:         var(--PaleGrey);
   border-radius:      3px;
@@ -196,8 +198,6 @@ pre code {
 }
 
 /*-- Custom class for the about-me slide --*/
-.about-me-slide { background-color: var(--my-blue); }
-
 .about-me-slide h1 {
   color:              var(--my-gold);
   font-weight:        600;
@@ -281,6 +281,10 @@ pre code {
 }*/
 
 /*.columns { display: flex; }*/
+
+.pull-left {
+  padding-top: 0px;
+}
 
 .pull-left-narrow {
   float: left;
