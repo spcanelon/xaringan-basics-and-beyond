@@ -86,14 +86,19 @@ hr {
 }
 
 /*-- Headings (inverse) --*/
-.inverse h1, .inverse h2, .inverse h3 { color: white;}
+.inverse h1, .inverse h2, .inverse h3 { color: var(--PaleGrey); }
 
 .inverse a {
-  color:              white;
+  color:              var(--PaleGrey);
   border-bottom:      1px solid white;
 }
 
 .inverse a:hover { border-bottom: none;}
+
+/*-- left-column for the 2-column layout --*/
+.inverse .left-column h2:last-of-type, .inverse .left-column h3:last-child {
+  color: var(--PaleGrey);
+}
 
 /*-- Text muting/fading --*/
 .fade { opacity: 0.5; }
@@ -101,7 +106,7 @@ hr {
 /*-- Small text --*/
 .small { font-size: 70% }
 /*-- Horizontal bars (inverse) --*/
-.inverse hr { background-color: white; }
+.inverse hr { background-color: var(--PaleGrey); }
 
 /*-- BOTTOM-OF-SLIDE PROPERTIES ----------------------------------------------*/
 
