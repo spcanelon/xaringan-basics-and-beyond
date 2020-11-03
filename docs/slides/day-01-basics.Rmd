@@ -951,17 +951,20 @@ class: inverse
 ]
 
 .right-column[
-### Make a new slide and practice adding some R content
+### Make a new slide and practice<br>adding some R content
 
 ----
-
-Think about adding a table or a plot
 
 Here are some options to consider
 - add a [table](#tables)
 - add a [plot](#plots)
 - try [arranging content](#alison-tips) to have code on one side and the output on the other
 ]
+
+---
+template: live-coding
+
+### Let's try deploying slides to GitHub!
 
 ---
 class: goodbye-slide, inverse, middle, left
