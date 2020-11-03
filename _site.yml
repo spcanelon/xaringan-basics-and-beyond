@@ -2,7 +2,7 @@ name: "xaringan-basics-and-beyond"
 title: "Sharing Your Work with Xaringan"
 description: |
   An Introduction to Slides with Xaringan: The Basics and Beyond
-output_dir: "_root"
+output_dir: "."
 theme: theme.css
 navbar:
   right:
