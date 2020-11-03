@@ -834,15 +834,6 @@ Here are some options to consider
 ]
 
 ---
-# What about moving stuff around?
-
-
----
-template: your-turn
-class: inverse
-
-
----
 template: question
 
 `r icon::fa("r-project", size = 3)`
@@ -941,13 +932,36 @@ NHSRdatasets::LOS_model %>%
 .footnote[Note the use of the [nhsrtheme `r emo::ji("package")`](https://github.com/nhs-r-community/nhsrtheme#nhs-r-theme-) here! It was developed by Tom Jemmett and contains a few different colour palettes based on the NHS identity guidelines]
 ---
 template: plots
+name: alison-tips
 
-### More great tips here from Alison Hill
+### Great tips here from Alison Hill
 
 ```{r}
 knitr::include_url("https://rstudio-education.github.io/teaching-in-production/slides/index.html#46")
 ```
 
+---
+name: your-turn
+background-color: var(--my-red)
+class: inverse
+
+.left-column[
+## Your turn<br>`r icon::fa("edit")`<br>
+### .my-pink[10:00 mins]
+]
+
+.right-column[
+### Make a new slide and practice adding some R content
+
+----
+
+Think about adding a table or a plot
+
+Here are some options to consider
+- add a [table](#tables)
+- add a [plot](#plots)
+- try [arranging content](#alison-tips) to have code on one side and the output on the other
+]
 
 ---
 class: goodbye-slide, inverse, middle, left
