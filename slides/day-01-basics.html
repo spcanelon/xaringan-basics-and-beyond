@@ -41,6 +41,17 @@
     <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="libs/academicons/css/academicons.min.css" rel="stylesheet" />
+    <link href="libs/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding/datatables.js"></script>
+    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="css/mytheme.css" type="text/css" />
     <link rel="stylesheet" href="css/mytheme-fonts.css" type="text/css" />
   </head>
@@ -677,6 +688,8 @@ There are a variety of ways to add images to your slides!
 - most flexible
 - a bit unsightly
 - takes time to [get used to syntax](https://www.w3schools.com/html/html_images.asp)
+
+.small[To insert an avatar: `&lt;img style="border-radius: 50%;" src="https://insertweblink.here" width="170px"/&gt;`]
 ]
 
 .pull-right[
@@ -732,9 +745,53 @@ class: inverse, middle, center
 # **Contain**
 
 ---
+class: left
 name: icons
-# Icons &lt;i class="fas fa-star" style = "float: right"&gt;&lt;/i&gt;
+## Icons &lt;i class="fas fa-star" style = "float: right"&gt;&lt;/i&gt;
 
+--
+
+.pull-left-narrow[.center[
+😄&lt;br&gt;
+[Emojis](https://github.com/hadley/emo#emoji)
+]]
+.pull-right-wide[
+Use Hadley's [emo(ji) 📦](https://github.com/hadley/emo#emoji):&lt;br&gt;
+Icon on the left: ` r emo::ji("smile")` (surrounded by backticks `)
+]
+
+--
+
+.pull-left-narrow[.center[
+&lt;i class="fas fa-brain"&gt;&lt;/i&gt;
+&lt;br&gt;
+[FontAwesome](https://fontawesome.com/icons?d=gallery&amp;c=medical&amp;m=free)
+]]
+
+.pull-right-wide[
+Copy and paste html directly from the website:&lt;br&gt;`&lt;i class="fas fa-brain"&gt;&lt;/i&gt;`&lt;br&gt;
+Or use the [icon 📦](https://slides.mitchelloharawild.com/icon/): ` r icon::fa("brain")`&lt;br&gt;
+]
+
+--
+
+.pull-left-narrow[.center[
+<i class="ai  ai-orcid "></i>&lt;br&gt;
+[Academicons](https://jpswalsh.github.io/academicons/)
+]]
+.pull-right-wide[
+The easiest way to access them is with the icon 📦:&lt;br&gt;` r icon::fa("orcid")`
+]
+
+--
+
+.pull-left-narrow[.center[
+<i class="ion  ion-ios-flask-outline "></i>&lt;br&gt;
+[Ionicons](https://ionicons.com/)
+]]
+.pull-right-wide[
+I haven't had as much luck with these, but you can use the icon 📦 here as well: ` r icon::ii("ios-flask-outline")`
+]
 ---
 name: your-turn
 background-color: var(--my-red)
@@ -753,37 +810,592 @@ class: inverse
 Think about including details like your&lt;br&gt;name, affiliation, location, and/or contact information
 
 Here are some options to consider
-- practice [moving content around](#layouts) the slide
-- separate content with a horizontal bar
-- add an image or photo
+- practice [moving content around](#placement) the slide
+- separate content with a horizontal bar `----`
+- [add an image](#pictures) or photo
 - link to sites and/or social media
-- add some icons!
+- add some [icons](#icons)!
 - see [my about me slide](#about-me) for ideas
 ]
 
 ---
 # What about moving stuff around?
 
-- intro to layouts and classes
-- content can be aligned vertically: top, middle, bottom
-- content can be aligned horizontally: left, center, right
-- you can align some of the content using `.left[]` for example
-- or you can align all of the slide content using `class: left`
-- you can also use layout classes: .pull-left, .pull-right, .left-column, .right-column
 
 ---
 template: your-turn
 class: inverse
 
-# Your turn: move placement of content on your hello slide
-
-- play around with options
-- align all of it 
-- then align only some of it
 
 ---
-# What else can go in slides
-- R stuff
+template: question
+
+<i class="fab  fa-r-project fa-3x "></i>
+# What about R content?
+
+--
+
+----
+
+.pull-left[.center[
+<i class="fas  fa-table fa-2x "></i>
+### tables
+]]
+
+--
+
+.pull-right[
+.center[
+<i class="fas  fa-chart-bar fa-2x "></i>
+### plots
+]]
+
+---
+name: tables
+## Tables &lt;i class="fas fa-table" style = "float: right"&gt;&lt;/i&gt;
+
+---
+template: tables
+
+### Direct output
+
+
+```r
+NHSRdatasets::LOS_model %&gt;%
+  head()
+## # A tibble: 6 x 5
+##      ID Organisation   Age   LOS Death
+##   &lt;int&gt; &lt;ord&gt;        &lt;int&gt; &lt;int&gt; &lt;int&gt;
+## 1     1 Trust1          55     2     0
+## 2     2 Trust2          27     1     0
+## 3     3 Trust3          93    12     0
+## 4     4 Trust4          45     3     1
+## 5     5 Trust5          70    11     0
+## 6     6 Trust6          60     7     0
+```
+
+.footnote[We're using the [NHSRdatasets 📦](https://github.com/nhs-r-community/NHSRdatasets#nhs-r-community-datasets-) here! It was developed by Chris Mainey and contains a few datasets to use for practice.]
+---
+template: tables
+
+### HTML table
+
+
+```r
+NHSRdatasets::LOS_model %&gt;%
+  head() %&gt;%
+  knitr::kable(format = "html")
+```
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; ID &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Organisation &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Age &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; LOS &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Death &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Trust1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 55 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Trust2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 27 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Trust3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 93 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Trust4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 45 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Trust5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 70 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Trust6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+template: tables
+
+### DT table
+
+```r
+NHSRdatasets::LOS_model %&gt;%
+  head() %&gt;%
+  DT::datatable()
+```
+
+<div id="htmlwidget-dedf47b020dfc11c7aac" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dedf47b020dfc11c7aac">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+
+---
+template: tables
+
+### GT table
+
+
+```r
+NHSRdatasets::LOS_model %&gt;%
+  head() %&gt;%
+  gt::gt()
+```
+
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#khilhtyzqh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#khilhtyzqh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#khilhtyzqh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#khilhtyzqh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#khilhtyzqh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#khilhtyzqh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#khilhtyzqh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#khilhtyzqh .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#khilhtyzqh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#khilhtyzqh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#khilhtyzqh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#khilhtyzqh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#khilhtyzqh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#khilhtyzqh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#khilhtyzqh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#khilhtyzqh .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#khilhtyzqh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#khilhtyzqh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#khilhtyzqh .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#khilhtyzqh .gt_left {
+  text-align: left;
+}
+
+#khilhtyzqh .gt_center {
+  text-align: center;
+}
+
+#khilhtyzqh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#khilhtyzqh .gt_font_normal {
+  font-weight: normal;
+}
+
+#khilhtyzqh .gt_font_bold {
+  font-weight: bold;
+}
+
+#khilhtyzqh .gt_font_italic {
+  font-style: italic;
+}
+
+#khilhtyzqh .gt_super {
+  font-size: 65%;
+}
+
+#khilhtyzqh .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="khilhtyzqh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">ID</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Organisation</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Age</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">LOS</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Death</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_center">1</td>
+      <td class="gt_row gt_center">Trust1</td>
+      <td class="gt_row gt_center">55</td>
+      <td class="gt_row gt_center">2</td>
+      <td class="gt_row gt_center">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">2</td>
+      <td class="gt_row gt_center">Trust2</td>
+      <td class="gt_row gt_center">27</td>
+      <td class="gt_row gt_center">1</td>
+      <td class="gt_row gt_center">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">3</td>
+      <td class="gt_row gt_center">Trust3</td>
+      <td class="gt_row gt_center">93</td>
+      <td class="gt_row gt_center">12</td>
+      <td class="gt_row gt_center">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">4</td>
+      <td class="gt_row gt_center">Trust4</td>
+      <td class="gt_row gt_center">45</td>
+      <td class="gt_row gt_center">3</td>
+      <td class="gt_row gt_center">1</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">5</td>
+      <td class="gt_row gt_center">Trust5</td>
+      <td class="gt_row gt_center">70</td>
+      <td class="gt_row gt_center">11</td>
+      <td class="gt_row gt_center">0</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_center">6</td>
+      <td class="gt_row gt_center">Trust6</td>
+      <td class="gt_row gt_center">60</td>
+      <td class="gt_row gt_center">7</td>
+      <td class="gt_row gt_center">0</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div>
+
+.footnote[Make sure to check out the GT package workshop tomorrow!]
+---
+name: plots
+## Plots &lt;i class="fas fa-chart-bar" style = "float: right"&gt;&lt;/i&gt;
+
+---
+template: plots
+
+.pull-left[
+### Code
+
+```r
+NHSRdatasets::LOS_model %&gt;%
+  ggplot(aes(x = Age, y = Organisation)) +
+  geom_boxplot(aes(fill = Organisation)) +
+  nhsrtheme::scale_fill_nhs("highlights")
+```
+]
+
+.pull-right[
+
+### Plot
+![](day-01-basics_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+
+]
+
+.footnote[Note the use of the [nhsrtheme 📦](https://github.com/nhs-r-community/nhsrtheme#nhs-r-theme-) here! It was developed by Tom Jemmett and contains a few different colour palettes based on the NHS identity guidelines]
+---
+template: plots
+
+### More great tips here from Alison Hill
+
+&lt;iframe src="https://rstudio-education.github.io/teaching-in-production/slides/index.html#46" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
 
 ---
 class: goodbye-slide, inverse, middle, left

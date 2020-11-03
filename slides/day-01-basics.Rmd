@@ -703,6 +703,8 @@ knitr::include_graphics("img/camera-green.jpg")
 - most flexible
 - a bit unsightly
 - takes time to [get used to syntax](https://www.w3schools.com/html/html_images.asp)
+
+.small[To insert an avatar: `<img style="border-radius: 50%;" src="https://insertweblink.here" width="170px"/>`]
 ]
 
 .pull-right[
@@ -758,9 +760,53 @@ class: inverse, middle, center
 # **Contain**
 
 ---
+class: left
 name: icons
-# Icons <i class="fas fa-star" style = "float: right"></i>
+## Icons <i class="fas fa-star" style = "float: right"></i>
 
+--
+
+.pull-left-narrow[.center[
+`r emo::ji("smile")`<br>
+[Emojis](https://github.com/hadley/emo#emoji)
+]]
+.pull-right-wide[
+Use Hadley's [emo(ji) `r emo::ji("package")`](https://github.com/hadley/emo#emoji):<br>
+Icon on the left: ` r emo::ji("smile")` (surrounded by backticks `)
+]
+
+--
+
+.pull-left-narrow[.center[
+<i class="fas fa-brain"></i>
+<br>
+[FontAwesome](https://fontawesome.com/icons?d=gallery&c=medical&m=free)
+]]
+
+.pull-right-wide[
+Copy and paste html directly from the website:<br>`<i class="fas fa-brain"></i>`<br>
+Or use the [icon `r emo::ji("package")`](https://slides.mitchelloharawild.com/icon/): ` r icon::fa("brain")`<br>
+]
+
+--
+
+.pull-left-narrow[.center[
+`r icon::ai("orcid")`<br>
+[Academicons](https://jpswalsh.github.io/academicons/)
+]]
+.pull-right-wide[
+The easiest way to access them is with the icon `r emo::ji("package")`:<br>` r icon::fa("orcid")`
+]
+
+--
+
+.pull-left-narrow[.center[
+`r icon::ii("ios-flask-outline")`<br>
+[Ionicons](https://ionicons.com/)
+]]
+.pull-right-wide[
+I haven't had as much luck with these, but you can use the icon `r emo::ji("package")` here as well: ` r icon::ii("ios-flask-outline")`
+]
 ---
 name: your-turn
 background-color: var(--my-red)
@@ -779,37 +825,129 @@ class: inverse
 Think about including details like your<br>name, affiliation, location, and/or contact information
 
 Here are some options to consider
-- practice [moving content around](#layouts) the slide
-- separate content with a horizontal bar
-- add an image or photo
+- practice [moving content around](#placement) the slide
+- separate content with a horizontal bar `----`
+- [add an image](#pictures) or photo
 - link to sites and/or social media
-- add some icons!
+- add some [icons](#icons)!
 - see [my about me slide](#about-me) for ideas
 ]
 
 ---
 # What about moving stuff around?
 
-- intro to layouts and classes
-- content can be aligned vertically: top, middle, bottom
-- content can be aligned horizontally: left, center, right
-- you can align some of the content using `.left[]` for example
-- or you can align all of the slide content using `class: left`
-- you can also use layout classes: .pull-left, .pull-right, .left-column, .right-column
 
 ---
 template: your-turn
 class: inverse
 
-# Your turn: move placement of content on your hello slide
-
-- play around with options
-- align all of it 
-- then align only some of it
 
 ---
-# What else can go in slides
-- R stuff
+template: question
+
+`r icon::fa("r-project", size = 3)`
+# What about R content?
+
+--
+
+----
+
+.pull-left[.center[
+`r icon::fa("table", size = 2)`
+### tables
+]]
+
+--
+
+.pull-right[
+.center[
+`r icon::fa("chart-bar", size = 2)`
+### plots
+]]
+
+---
+name: tables
+## Tables <i class="fas fa-table" style = "float: right"></i>
+
+---
+template: tables
+
+### Direct output
+
+```{r, echo=TRUE}
+NHSRdatasets::LOS_model %>%
+  head()
+```
+
+.footnote[We're using the [NHSRdatasets `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRdatasets#nhs-r-community-datasets-) here! It was developed by Chris Mainey and contains a few datasets to use for practice.]
+---
+template: tables
+
+### HTML table
+
+```{r, echo=TRUE}
+NHSRdatasets::LOS_model %>%
+  head() %>%
+  knitr::kable(format = "html")
+```
+
+---
+template: tables
+
+### DT table
+```{r, echo=TRUE}
+NHSRdatasets::LOS_model %>%
+  head() %>%
+  DT::datatable()
+```
+
+---
+template: tables
+
+### GT table
+
+```{r, echo=TRUE}
+NHSRdatasets::LOS_model %>%
+  head() %>%
+  gt::gt()
+```
+
+.footnote[Make sure to check out the GT package workshop tomorrow!]
+---
+name: plots
+## Plots <i class="fas fa-chart-bar" style = "float: right"></i>
+
+---
+template: plots
+
+.pull-left[
+### Code
+```{r plot-last, echo=TRUE, fig.show='hide'}
+NHSRdatasets::LOS_model %>%
+  ggplot(aes(x = Age, y = Organisation)) +
+  geom_boxplot(aes(fill = Organisation)) +
+  nhsrtheme::scale_fill_nhs("highlights")
+```
+]
+
+.pull-right[
+
+### Plot
+```{r, ref.label="plot-last"}
+```
+
+]
+
+.footnote[Note the use of the [nhsrtheme `r emo::ji("package")`](https://github.com/nhs-r-community/nhsrtheme#nhs-r-theme-) here! It was developed by Tom Jemmett and contains a few different colour palettes based on the NHS identity guidelines]
+---
+template: plots
+
+### More great tips here from Alison Hill
+
+```{r}
+knitr::include_url("https://rstudio-education.github.io/teaching-in-production/slides/index.html#46")
+```
+
 
 ---
 class: goodbye-slide, inverse, middle, left
