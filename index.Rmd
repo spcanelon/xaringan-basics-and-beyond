@@ -5,7 +5,7 @@ author:
   url: https://silvia.rbind.io
   affiliation: University of Pennsylvania
   affiliation_url: https://www.dbei.med.upenn.edu
-date: "`r Sys.Date()`"
+date: "11/02/2020"
 description: |
   An Introduction to Xaringan for Presentations: The Basics and Beyond
 site: distill::distill_website
@@ -88,8 +88,8 @@ Thanks to<br/>Stephan Kadauke
 # Links
 
 - Link to this website: [spcanelon.github.io/xaringan-basics-and-beyond](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html)
-- [RStudio Cloud workspace (_coming soon!_)](https://bit.ly/3mfJM4k)
-- [Day 1 slides: The Basics (_coming soon!_)]()
+- [RStudio Cloud workspace](https://bit.ly/3mfJM4k)
+- [Day 1 slides: The Basics](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html#1)
 - [Day 2 slides: The Beyond (_coming soon!_)]()
 
 # Acknowledgments {.appendix}
