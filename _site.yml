@@ -2,16 +2,22 @@ name: "xaringan-basics-and-beyond"
 title: "Sharing Your Work with Xaringan"
 description: |
   An Introduction to Slides with Xaringan: The Basics and Beyond
-output_dir: "docs"
+output_dir: "_site"
 theme: theme.css
 navbar:
   right:
     - text: "2020 NHS-R Conference"
       href: "https://nhsrcommunity.com/nhsr-conference-2020/"
-    - icon: fas fa-home
-      href: index.html
+    - text: "Slides"
+      menu:
+        - text: "Day 1: The Basics"
+          href: "static/slides/day-01-basics.html"
+    - icon: fas fa-cloud
+      href: "https://bit.ly/3mfJM4k"
     - icon: fab fa-github
       href: https://github.com/spcanelon/xaringan-basics-and-beyond
+creative_commons: CC BY-SA
+repository_url: https://github.com/spcanelon/xaringan-basics-and-beyond
 output:
   distill::distill_article:
     toc: true

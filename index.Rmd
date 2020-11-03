@@ -5,7 +5,7 @@ author:
   url: https://silvia.rbind.io
   affiliation: University of Pennsylvania
   affiliation_url: https://www.dbei.med.upenn.edu
-date: "11/02/2020"
+date: November 3rd, 2020
 description: |
   An Introduction to Xaringan for Presentations: The Basics and Beyond
 site: distill::distill_website
@@ -52,11 +52,15 @@ knitr::include_graphics("https://nhsrcommunity.com/wp-content/uploads/2018/02/lo
 
 This four-hour hands-on workshop will be a gentle introduction to the [xaringan](https://github.com/yihui/xaringan#xaringan) package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.
 
-- **Day 1** will cover the nuts and bolts of creating presentation slides using [xaringan](https://github.com/yihui/xaringan#xaringan) and deploying them in HTML format for easy sharing with others.
+- **Day 1** covered the nuts and bolts of creating presentation slides using [xaringan](https://github.com/yihui/xaringan#xaringan) and deploying them in HTML format for easy sharing with others.
 
 <aside>
 Tuesday, Nov. 3<br/>3-5pm BST ([check your time zone](https://www.worldtimebuddy.com/?qm=1&lid=2643743,5128581&h=5128581&date=2020-11-3&sln=10-12))
 </aside>
+
+```{r embed-xaringan, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html", ratio = "16:9")
+```
 
 - **Day 2** will cover how to take your slides to the next level with the [xaringanExtra](https://github.com/gadenbuie/xaringanExtra#xaringanextra) package and how to customize slides with CSS.
 
@@ -88,8 +92,8 @@ Thanks to<br/>Stephan Kadauke
 # Links
 
 - Link to this website: [spcanelon.github.io/xaringan-basics-and-beyond](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html)
-- [RStudio Cloud workspace](https://bit.ly/3mfJM4k)
-- [Day 1 slides: The Basics](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html#1)
+- [RStudio Cloud workspace](https://bit.ly/3mfJM4k) and companion [source materials](https://github.com/spcanelon/xaringan-basics-and-beyond/tree/main/materials)
+- [Day 1 slides: The Basics](static/slides/day-01-basics.html)
 - [Day 2 slides: The Beyond (_coming soon!_)]()
 
 # Acknowledgments {.appendix}

@@ -1,0 +1,335 @@
+:root {
+/*-- COLOR VARIABLES --*/
+--DarkBlue:           #003087;
+--Blue:               #005EB8;
+--BrightBlue:         #0072CE;
+
+--Black:              #231F20;
+--DarkGrey:           #425563;
+--MidGrey:            #768692;
+--PaleGrey:           #E8EDEE;
+--White:              #FFFFFF;
+
+--DarkGreen:          #006747;
+--Green:              #009639;
+--AquaGreen:          #00A499;
+
+--Purple:             #330072;
+--DarkPink:           #7C2855;
+--Pink:               #AE2573;
+--DarkRed:            #8A1538;
+--Red:                #DA291C;
+
+--my-blue:            #122140;
+--my-yellow:          #e5bf00;
+--my-gold:            #ae8f00;
+
+--my-coral:          #903030;
+--my-red:            #600018;
+--my-pink:           #c09090;
+}
+
+/*-- LINKS/ANCHORS --*/
+a {
+  color:              var(--my-coral);
+  border-bottom:      3px solid var(--my-coral);
+  line-height:        2rem;
+}
+
+a:hover { border-bottom: none; }
+
+/*-- HEADINGS --*/
+.remark-slide-content h1 {
+  color:              var(--my-blue);
+  font-weight:        400;
+  line-height:        1em;
+}
+
+.remark-slide-content h2 {
+  /*font-size:          35px;*/
+  /*font-size:          1.4em;*/
+  font-weight:        400;
+  color:              var(--my-blue);
+  line-height:        1em;
+  letter-spacing:     0.02em;
+}
+
+.remark-slide-content h3 {
+  /*font-size:          1em;*/
+  font-weight:        500;
+  color:              var(--my-blue);
+  line-height:        1em;
+}
+
+/*-- PARAGRAPH TEXT --*/
+.remark-slide-content {
+  font-size:          1.6rem;
+  line-height:        1.2em;
+}
+
+/*-- HORIZONTAL BARS --*/
+hr {
+  content:            '';
+  display:            block;
+  border:             none;
+  background-color:   #ae8f00;
+  height:             0.08em;
+}
+
+/*-- INVERSE SLIDE MODIFICATIONS --*/
+
+/*-- Slide background and text (inverse) --*/
+.inverse {
+  background-color:   var(--my-blue);
+  color:              var(--PaleGrey);
+  text-shadow:        none;
+}
+
+/*-- Headings (inverse) --*/
+.inverse h1, .inverse h2, .inverse h3 { color: var(--PaleGrey); }
+
+.inverse a {
+  color:              var(--PaleGrey);
+  border-bottom:      1px solid white;
+}
+
+.inverse a:hover { border-bottom: none;}
+
+/*-- left-column for the 2-column layout --*/
+.inverse .left-column h2:last-of-type, .inverse .left-column h3:last-child {
+  color: var(--PaleGrey);
+}
+
+/*-- Text muting/fading --*/
+.fade { opacity: 0.5; }
+
+/*-- Small text --*/
+.small { font-size: 70% }
+/*-- Horizontal bars (inverse) --*/
+.inverse hr { background-color: var(--PaleGrey); }
+
+/*-- BOTTOM-OF-SLIDE PROPERTIES ----------------------------------------------*/
+
+/*-- Footnote --*/
+.footnote {
+  position:           absolute;
+  bottom:             2em;
+  padding-right:      4em;
+  font-size:          70%;
+  line-height:        1em;
+}
+
+/* Persistent link in footer */
+/* https://github.com/rstudio-education/teaching-in-production/blob/master/slides/assets/css/my-theme.css */
+
+a.footer-link {
+    position:       absolute;
+    bottom:         4px;
+    right:          0px;
+    height:         30px;
+    width:          300px;
+    color:          var(--my-gold);
+    border-bottom:  none;
+    font-size:      0.7em;
+    opacity:        0.6;
+}
+
+div.footer-link {
+    background-color: var(--my-blue);
+    position:         absolute;
+    bottom:           0px;
+    left:             0px;
+    height:           30px;
+    width:            100%;
+}
+
+/*-- Slide number --*/ /* replaced with progress-bar
+.remark-slide-number { color: #000000; } */
+
+/*-- CODE TEXT ---------------------------------------------------------------*/
+
+/*-- In-line highlighting within text --*/
+.remark-code, .remark-inline-code {
+  font-size:          80%;
+  color:              var(--my-blue);
+  background:         var(--PaleGrey);
+  border-radius:      3px;
+  padding:            1px 1px 1px 1px;
+}
+
+/*-- Line highlighting within code --*/
+.remark-code-line-highlighted {
+  background-color:   var(--PaleGrey);
+}
+
+/*-- CODE CHUNKS --*/
+
+/*-- Code chunk background layer --*/
+pre {
+  /*border: 2px solid rgba(204, 189, 204, 0.8); /* code chunk border*/
+  border:             none;
+  box-shadow:         2px 2px 2px 2px #eee;
+  padding:            0.1em;                    /* padding between code chunk and border */
+  background:         none !important;
+  overflow-x:         auto;                     /* enable horizontal scrolling with overflow */
+  border-radius:      1px;                      /* modify rounding of corners*/
+}
+
+/*--  --*/
+pre code {
+  background:         none;
+  font-size:          18px !important;
+}
+
+/* -- CUSTOM CLASSES ---------------------------------------------------------*/
+
+/*-- Custom class for the title slide --*/
+
+.title-slide {
+  /*background-color:   #E7EDF8;*/
+  background-color:   #FFFFFF;
+  color:              var(--my-yellow);
+}
+/*-- Headings --*/
+.title-slide h1 {
+  font-size:          2.4em;
+  font-weight:        600;
+  color:              var(--my-blue);
+}
+.title-slide h3 {
+  color:              var(--my-yellow);
+  font-size:          1.1em;
+  text-transform:     uppercase;
+}
+
+/*-- Custom class for the about-me slide --*/
+.about-me-slide h1 {
+  color:              var(--my-gold);
+  font-weight:        600;
+}
+
+/*-- Hides slide number from title slide --*/
+.title-slide .remark-slide-number { display: none; }
+
+/*-- Custom classes for text emphasis --*/
+.blue       { color:  var(--Blue) }
+.green      { color:  var(--Green) }
+.pink       { color:  var(--Pink) }
+.red        { color:  var(--Red) }
+.warmyellow { color:  var(--WarmYellow) }
+.palegrey   { color:  var(--PaleGrey)}
+.my-blue    { color:  var(--my-blue) }
+.my-yellow  { color:  var(--my-yellow) }
+.my-gold    { color:  var(--my-gold)}
+.my-red     { color:  var(--my-red) }
+.my-coral   { color:  var(--my-coral) }
+.my-pink    { color:  var(--my-pink) }
+
+/*-- PROGRESS BAR IN FOOTER --*/
+/* https://github.com/yihui/xaringan/wiki/Progressbar */
+
+.remark-slide-number { position: inherit; }
+
+.remark-slide-number .progress-bar-container {
+  position:           absolute;
+  bottom:             0;
+  height:             5px;
+  display:            block;
+  left:               0;
+  right:              0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: var(--my-yellow);
+}
+
+/*-- EXPERIMENTAL -----------------------------------------------------------*/
+
+/*-- 3 column layout --*/
+.left-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+.center-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+.right-col {
+  width: 29%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+/* five-column layout */
+
+/*.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  text-align: center;
+}*/
+
+/*.columns { display: flex; }*/
+
+.pull-left {
+  padding-top: 0px;
+}
+
+.pull-left-narrow {
+  float: left;
+  width: 20%;
+}
+
+.pull-right-wide {
+  float: right;
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.pull-right-wide + * { clear: both; }
+
+/*-- CUSTOM CLASSES FOR EDUCATIONAL PURPOSES ---------------------------------*/
+
+/* Pull */
+.pull-left-color {
+  float: left;
+  width: 47%;
+  background-color: var(--my-pink);
+}
+
+.pull-right-color {
+  float: right: 47%;
+}
+
+/* Two-column layout */
+.left-column-color {
+  background-color: var(--my-coral);
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+.left-column-color h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+.right-column-color {
+  background-color: var(--my-pink);
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
