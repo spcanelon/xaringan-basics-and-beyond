@@ -167,8 +167,8 @@ div.footer-link {
 /*-- Code chunk background layer --*/
 pre {
   /*border: 2px solid rgba(204, 189, 204, 0.8); /* code chunk border*/
-  border:             none;
-  box-shadow:         2px 2px 2px 2px #eee;
+  border:             2px solid var(--PaleGrey);
+  box-shadow:         2px 2px 2px 2px var(--PaleGrey);
   padding:            0.1em;                    /* padding between code chunk and border */
   background:         none !important;
   overflow-x:         auto;                     /* enable horizontal scrolling with overflow */

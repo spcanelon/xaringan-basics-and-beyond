@@ -76,6 +76,8 @@ background-size: 8%, cover
 Nov. 3rd, 2020
 ]
 
+.palegrey[.left[.footnote[Graphic by [Vernon Adams](https://www.rawpixel.com/image/575297/artistic-canvas-background-template)]]]
+
 ???
 
 Welcome to the workshop on sharing your work with xaringan.
@@ -173,6 +175,7 @@ class: inverse, middle, center
 ---
 template: question
 
+<i class="fas  fa-images fa-3x "></i>
 # How do we make&lt;br&gt;cool HTML5 slides?
 
 ---
@@ -256,14 +259,14 @@ I designed a custom CSS theme for the NHS-R Community following the [NHS identit
 
 .panelset[
 .panel[.panel-name[nhsrtheme]
-1. Install the `nhsrtheme` package from GitHub
+**Step 1.** Install the `nhsrtheme` package from GitHub
 
 ```r
 # install.packages("devtools")
 devtools::install_github("nhs-r-community/nhsrtheme")
 ```
 
-2. Load the `nhsrtheme` package
+**Step 2.** Load the `nhsrtheme` package
 
 ```r
 library(nhsrtheme)
@@ -596,7 +599,7 @@ template: placement
 ### Pull content to either side of the slide
 
 .pull-left[
-**The `pull-left[]` class pulls content to&lt;br&gt;the left 47%**
+**The `.pull-left[]` class pulls content to&lt;br&gt;the left 47%**
 
 Like the text above and&lt;br&gt;the hex sticker below
 
@@ -606,7 +609,7 @@ Like the text above and&lt;br&gt;the hex sticker below
 --
 
 .pull-right[
-**And `pull-right[]` pulls content to&lt;br&gt;the right 47%**
+**And `.pull-right[]` pulls content to&lt;br&gt;the right 47%**
 
 You've already seen these content classes&lt;br&gt;in action today 😄
 &lt;br&gt;
@@ -625,7 +628,7 @@ template: placement
 ### Arrange content into a two-column layout
 
 .left-column[
-**`left-column[]` places content into a column 20% wid**
+**`.left-column[]` places content into a column 20% wid**
 
 And text is a little lighter
 ]
@@ -633,10 +636,10 @@ And text is a little lighter
 --
 
 .right-column[
-**`right-column[]` places content into a column 75% wide**
+**`.right-column[]` places content into a column 75% wide**
 - It also has a _little_ bit of padding on the top
 
-- And unlike the `pull` content classes, these column classes are fixed for the entire slide
+- And unlike the `.pull` content classes, these column classes are fixed for the entire slide
 - They are meant to be used together
 
 .center[
@@ -660,11 +663,15 @@ There are a variety of ways to add images to your slides!
 - simple
 - not very flexible
 - output size fully dependent on the size of the image, but scaling can be managed [using custom macros (JavaScript functions) ](https://slides.yihui.org/xaringan/#33)
+ 
+.small[
+Photo by [Annie Spratt](https://unsplash.com/@anniespratt)]
 ]
 
 .pull-right[
 ![](img/camera-green.jpg)
-]] &lt;!----&gt;
+]
+] &lt;!----&gt;
 
 .panel[.panel-name[knitr]
 
@@ -756,7 +763,7 @@ name: icons
 [Emojis](https://github.com/hadley/emo#emoji)
 ]]
 .pull-right-wide[
-Use Hadley's [emo(ji) 📦](https://github.com/hadley/emo#emoji):&lt;br&gt;
+Use the [emo(ji) 📦](https://github.com/hadley/emo#emoji):&lt;br&gt;
 Icon on the left: ` r emo::ji("smile")` (surrounded by backticks `)
 ]
 
@@ -770,7 +777,7 @@ Icon on the left: ` r emo::ji("smile")` (surrounded by backticks `)
 
 .pull-right-wide[
 Copy and paste html directly from the website:&lt;br&gt;`&lt;i class="fas fa-brain"&gt;&lt;/i&gt;`&lt;br&gt;
-Or use the [icon 📦](https://slides.mitchelloharawild.com/icon/): ` r icon::fa("brain")`&lt;br&gt;
+Use the [icon 📦](https://slides.mitchelloharawild.com/icon/): ` r icon::fa("brain")`,&lt;br&gt;or the [fontawesome 📦](https://github.com/rstudio/fontawesome#the-fontawesome-package): ` r fontawesome:fa("brain")`
 ]
 
 --
@@ -850,6 +857,8 @@ template: tables
 
 ### Direct output
 
+----
+
 
 ```r
 NHSRdatasets::LOS_model %&gt;%
@@ -866,18 +875,23 @@ NHSRdatasets::LOS_model %&gt;%
 ```
 
 .footnote[We're using the [NHSRdatasets 📦](https://github.com/nhs-r-community/NHSRdatasets#nhs-r-community-datasets-) here! It was developed by Chris Mainey and contains a few datasets to use for practice.]
+
 ---
 template: tables
 
 ### HTML table
 
+----
+.pull-left[
 
 ```r
 NHSRdatasets::LOS_model %&gt;%
   head() %&gt;%
   knitr::kable(format = "html")
 ```
+]
 
+.pull-right[
 &lt;table&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -933,11 +947,15 @@ NHSRdatasets::LOS_model %&gt;%
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+]
 
 ---
 template: tables
 
 ### DT table
+
+----
+
 
 ```r
 NHSRdatasets::LOS_model %&gt;%
@@ -945,26 +963,31 @@ NHSRdatasets::LOS_model %&gt;%
   DT::datatable()
 ```
 
-<div id="htmlwidget-4bf189f4f88c55c1517b" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4bf189f4f88c55c1517b">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fd294fd7f7a920ad6a2f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fd294fd7f7a920ad6a2f">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 template: tables
 
 ### GT table
 
+----
+
+.pull-left[
 
 ```r
 NHSRdatasets::LOS_model %&gt;%
   head() %&gt;%
   gt::gt()
 ```
+]
 
+.pull-right[
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#apmrmuzyhx .gt_table {
+#jxbebjtadt .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -987,7 +1010,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-left-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_heading {
+#jxbebjtadt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -999,7 +1022,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_title {
+#jxbebjtadt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1009,7 +1032,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-bottom-width: 0;
 }
 
-#apmrmuzyhx .gt_subtitle {
+#jxbebjtadt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1019,13 +1042,13 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-width: 0;
 }
 
-#apmrmuzyhx .gt_bottom_border {
+#jxbebjtadt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_col_headings {
+#jxbebjtadt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1040,7 +1063,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_col_heading {
+#jxbebjtadt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1060,7 +1083,7 @@ NHSRdatasets::LOS_model %&gt;%
   overflow-x: hidden;
 }
 
-#apmrmuzyhx .gt_column_spanner_outer {
+#jxbebjtadt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1072,15 +1095,15 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 4px;
 }
 
-#apmrmuzyhx .gt_column_spanner_outer:first-child {
+#jxbebjtadt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#apmrmuzyhx .gt_column_spanner_outer:last-child {
+#jxbebjtadt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#apmrmuzyhx .gt_column_spanner {
+#jxbebjtadt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1092,7 +1115,7 @@ NHSRdatasets::LOS_model %&gt;%
   width: 100%;
 }
 
-#apmrmuzyhx .gt_group_heading {
+#jxbebjtadt .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1114,7 +1137,7 @@ NHSRdatasets::LOS_model %&gt;%
   vertical-align: middle;
 }
 
-#apmrmuzyhx .gt_empty_group_heading {
+#jxbebjtadt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1129,19 +1152,19 @@ NHSRdatasets::LOS_model %&gt;%
   vertical-align: middle;
 }
 
-#apmrmuzyhx .gt_striped {
+#jxbebjtadt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#apmrmuzyhx .gt_from_md > :first-child {
+#jxbebjtadt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#apmrmuzyhx .gt_from_md > :last-child {
+#jxbebjtadt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#apmrmuzyhx .gt_row {
+#jxbebjtadt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1160,7 +1183,7 @@ NHSRdatasets::LOS_model %&gt;%
   overflow-x: hidden;
 }
 
-#apmrmuzyhx .gt_stub {
+#jxbebjtadt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1172,7 +1195,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-left: 12px;
 }
 
-#apmrmuzyhx .gt_summary_row {
+#jxbebjtadt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1182,7 +1205,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 5px;
 }
 
-#apmrmuzyhx .gt_first_summary_row {
+#jxbebjtadt .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1192,7 +1215,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_grand_summary_row {
+#jxbebjtadt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1202,7 +1225,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 5px;
 }
 
-#apmrmuzyhx .gt_first_grand_summary_row {
+#jxbebjtadt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1212,7 +1235,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_table_body {
+#jxbebjtadt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1221,7 +1244,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_footnotes {
+#jxbebjtadt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1235,13 +1258,13 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_footnote {
+#jxbebjtadt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#apmrmuzyhx .gt_sourcenotes {
+#jxbebjtadt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1255,46 +1278,46 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#apmrmuzyhx .gt_sourcenote {
+#jxbebjtadt .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#apmrmuzyhx .gt_left {
+#jxbebjtadt .gt_left {
   text-align: left;
 }
 
-#apmrmuzyhx .gt_center {
+#jxbebjtadt .gt_center {
   text-align: center;
 }
 
-#apmrmuzyhx .gt_right {
+#jxbebjtadt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#apmrmuzyhx .gt_font_normal {
+#jxbebjtadt .gt_font_normal {
   font-weight: normal;
 }
 
-#apmrmuzyhx .gt_font_bold {
+#jxbebjtadt .gt_font_bold {
   font-weight: bold;
 }
 
-#apmrmuzyhx .gt_font_italic {
+#jxbebjtadt .gt_font_italic {
   font-style: italic;
 }
 
-#apmrmuzyhx .gt_super {
+#jxbebjtadt .gt_super {
   font-size: 65%;
 }
 
-#apmrmuzyhx .gt_footnote_marks {
+#jxbebjtadt .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="apmrmuzyhx" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="jxbebjtadt" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1352,8 +1375,8 @@ NHSRdatasets::LOS_model %&gt;%
   
   
 </table></div>
-
-.footnote[Make sure to check out the GT package workshop tomorrow!]
+]
+.footnote[Make sure to check out the [GT package workshop](https://github.com/nhs-r-community/Conference_2020#workshop-sessions) tomorrow!]
 ---
 name: plots
 ## Plots &lt;i class="fas fa-chart-bar" style = "float: right"&gt;&lt;/i&gt;
@@ -1363,6 +1386,9 @@ template: plots
 
 .pull-left[
 ### Code
+
+----
+
 
 ```r
 NHSRdatasets::LOS_model %&gt;%
@@ -1375,7 +1401,10 @@ NHSRdatasets::LOS_model %&gt;%
 .pull-right[
 
 ### Plot
-![](day-01-basics_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+
+----
+
+![](day-01-basics_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
 
 ]
 
