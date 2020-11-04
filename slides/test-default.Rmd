@@ -1,48 +1,21 @@
 ---
-title: "Sharing Your Work<br>with Xaringan"
-subtitle: "An Introduction to Xaringan:<br>The Basics"
-author: "Silvia Canelón, Ph.D."
-institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
-date: \`r Sys.Date()`\
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    css: 
-      - default
-      - css/mytheme.css
-      - css/mytheme-fonts.css
     lib_dir: libs
-    seal: false
-    self_contained: true
+    css:
+      - default
+      - css/nhsr.css
+      - css/nhsr-fonts.css
     nature:
-      highlightStyle: googlecode
+      highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      ratio: "16:9"
-      beforeInit: "macros.js"
-      slideNumberFormat: |
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
-          </div>
-        </div>
 ---
-
-```{r meta, echo=FALSE}
-library(metathis)
-meta() %>%
-  meta_general(
-    description = "An Introduction to Xaringan for Presentations: The Basics and Beyond",
-    generator = "xaringan and remark.js"
-  ) %>% 
-  meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
-  meta_social(
-    title = "Sharing Your Work with Xaringan",
-    url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
-    image = "",
-    image_alt = "",
-    og_type = "website",
-    twitter_card_type = "summary_large_image"
-  )
-```
 
 ```{r setup, include = FALSE}
 options(htmltools.dir.version = FALSE)
@@ -352,38 +325,8 @@ More options for output `xaringan::moon_reader`
 
   + `arta`, `ascetic`, `dark`, `default`, `far`, `github`, `googlecode`,   `idea`, `ir-black`, `magula`, `monokai`, `rainbow`, `solarized-dark`, `solarized-light`, `sunburst`, `tomorrow`, `tomorrow-night-blue`, `tomorrow-night-bright`, `tomorrow-night`, `tomorrow-night-eighties`, `vs`, `zenburn`.
 ] <!---->
-
-.panel[.panel-name[syntax testing]
-```r
-# `r rmarkdown::metadata$title`
-### `r rmarkdown::metadata$subtitle`
-
-**`r rmarkdown::metadata$author`**<br>
-`r rmarkdown::metadata$date`
-```
-]
-
 ] <!--end of panelset-->
----
-# Testing things
 
-.pull-left[
-```
-# `r rmarkdown::metadata$title`
-### `r rmarkdown::metadata$subtitle`
-
-**`r rmarkdown::metadata$author`**<br>
-`r rmarkdown::metadata$date`
-```
-]
-
-.pull-right[
-# `r rmarkdown::metadata$title`
-### `r rmarkdown::metadata$subtitle`
-
-**`r rmarkdown::metadata$author`**<br>
-`r rmarkdown::metadata$date`
-]
 ---
 name: live-coding
 background-color: var(--my-yellow)

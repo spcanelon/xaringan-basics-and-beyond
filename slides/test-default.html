@@ -1,26 +1,12 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Sharing Your Work with Xaringan</title>
+    <title>Presentation Ninja</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Silvia Canelón, Ph.D." />
+    <meta name="author" content="Yihui Xie" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <meta name="description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
-    <meta name="generator" content="xaringan and remark.js"/>
-    <meta name="github-repo" content="rstudio-education/teaching-in-production"/>
-    <meta name="twitter:title" content="Sharing Your Work with Xaringan"/>
-    <meta name="twitter:description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
-    <meta name="twitter:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
-    <meta name="twitter:image:src" content=""/>
-    <meta name="twitter:image:alt" content=""/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta property="og:title" content="Sharing Your Work with Xaringan"/>
-    <meta property="og:description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
-    <meta property="og:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
-    <meta property="og:image" content=""/>
-    <meta property="og:image:alt" content=""/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:locale" content="en_US"/>
+    <link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+    <script src="libs/anchor-sections/anchor-sections.js"></script>
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -52,13 +38,20 @@
     <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
     <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
     <script src="libs/crosstalk/js/crosstalk.min.js"></script>
-    <link rel="stylesheet" href="css/mytheme.css" type="text/css" />
-    <link rel="stylesheet" href="css/mytheme-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/nhsr.css" type="text/css" />
+    <link rel="stylesheet" href="css/nhsr-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
+class: center, middle, inverse, title-slide
 
+# Presentation Ninja
+## ⚔<br/>with xaringan
+### Yihui Xie
+### RStudio, PBC
+### 2016/12/12 (updated: 2020-11-03)
 
+---
 
 
 
@@ -69,11 +62,11 @@ background-position: 90% 75%, 75% 75%
 background-size: 8%, cover
 
 .right-column[
-# Sharing Your Work&lt;br&gt;with Xaringan
-### An Introduction to Xaringan:&lt;br&gt;The Basics
+# Presentation Ninja
+### ⚔&lt;br/&gt;with xaringan
 
-**Silvia Canelón, Ph.D.**&lt;br&gt;
-\`r Sys.Date()`\
+**Yihui Xie**&lt;br&gt;
+2016/12/12 (updated: `r Sys.Date()`)
 ]
 
 .palegrey[.left[.footnote[Graphic by [Vernon Adams](https://www.rawpixel.com/image/575297/artistic-canvas-background-template)]]]
@@ -338,38 +331,8 @@ More options for output `xaringan::moon_reader`
 
   + `arta`, `ascetic`, `dark`, `default`, `far`, `github`, `googlecode`,   `idea`, `ir-black`, `magula`, `monokai`, `rainbow`, `solarized-dark`, `solarized-light`, `sunburst`, `tomorrow`, `tomorrow-night-blue`, `tomorrow-night-bright`, `tomorrow-night`, `tomorrow-night-eighties`, `vs`, `zenburn`.
 ] &lt;!----&gt;
-
-.panel[.panel-name[syntax testing]
-```r
-# Sharing Your Work&lt;br&gt;with Xaringan
-### An Introduction to Xaringan:&lt;br&gt;The Basics
-
-**Silvia Canelón, Ph.D.**&lt;br&gt;
-\`r Sys.Date()`\
-```
-]
-
 ] &lt;!--end of panelset--&gt;
----
-# Testing things
 
-.pull-left[
-```
-# Sharing Your Work&lt;br&gt;with Xaringan
-### An Introduction to Xaringan:&lt;br&gt;The Basics
-
-**Silvia Canelón, Ph.D.**&lt;br&gt;
-\`r Sys.Date()`\
-```
-]
-
-.pull-right[
-# Sharing Your Work&lt;br&gt;with Xaringan
-### An Introduction to Xaringan:&lt;br&gt;The Basics
-
-**Silvia Canelón, Ph.D.**&lt;br&gt;
-\`r Sys.Date()`\
-]
 ---
 name: live-coding
 background-color: var(--my-yellow)
@@ -993,8 +956,8 @@ NHSRdatasets::LOS_model %&gt;%
   DT::datatable()
 ```
 
-<div id="htmlwidget-58703d9398d6cb0bd7c0" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-58703d9398d6cb0bd7c0">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-1b0d6dca1d92066b198a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b0d6dca1d92066b198a">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 template: tables
@@ -1017,7 +980,7 @@ NHSRdatasets::LOS_model %&gt;%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#uenbuhonlu .gt_table {
+#drnhktqzan .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1042,7 +1005,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-left-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_heading {
+#drnhktqzan .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1054,7 +1017,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_title {
+#drnhktqzan .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1064,7 +1027,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-bottom-width: 0;
 }
 
-#uenbuhonlu .gt_subtitle {
+#drnhktqzan .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1074,13 +1037,13 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-width: 0;
 }
 
-#uenbuhonlu .gt_bottom_border {
+#drnhktqzan .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_col_headings {
+#drnhktqzan .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1095,7 +1058,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_col_heading {
+#drnhktqzan .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1115,7 +1078,7 @@ NHSRdatasets::LOS_model %&gt;%
   overflow-x: hidden;
 }
 
-#uenbuhonlu .gt_column_spanner_outer {
+#drnhktqzan .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1127,15 +1090,15 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 4px;
 }
 
-#uenbuhonlu .gt_column_spanner_outer:first-child {
+#drnhktqzan .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uenbuhonlu .gt_column_spanner_outer:last-child {
+#drnhktqzan .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uenbuhonlu .gt_column_spanner {
+#drnhktqzan .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1147,7 +1110,7 @@ NHSRdatasets::LOS_model %&gt;%
   width: 100%;
 }
 
-#uenbuhonlu .gt_group_heading {
+#drnhktqzan .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1169,7 +1132,7 @@ NHSRdatasets::LOS_model %&gt;%
   vertical-align: middle;
 }
 
-#uenbuhonlu .gt_empty_group_heading {
+#drnhktqzan .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1184,15 +1147,15 @@ NHSRdatasets::LOS_model %&gt;%
   vertical-align: middle;
 }
 
-#uenbuhonlu .gt_from_md > :first-child {
+#drnhktqzan .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uenbuhonlu .gt_from_md > :last-child {
+#drnhktqzan .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uenbuhonlu .gt_row {
+#drnhktqzan .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1211,7 +1174,7 @@ NHSRdatasets::LOS_model %&gt;%
   overflow-x: hidden;
 }
 
-#uenbuhonlu .gt_stub {
+#drnhktqzan .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1223,7 +1186,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-left: 12px;
 }
 
-#uenbuhonlu .gt_summary_row {
+#drnhktqzan .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1233,7 +1196,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 5px;
 }
 
-#uenbuhonlu .gt_first_summary_row {
+#drnhktqzan .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1243,7 +1206,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_grand_summary_row {
+#drnhktqzan .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1253,7 +1216,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 5px;
 }
 
-#uenbuhonlu .gt_first_grand_summary_row {
+#drnhktqzan .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1263,11 +1226,11 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_striped {
+#drnhktqzan .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uenbuhonlu .gt_table_body {
+#drnhktqzan .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1276,7 +1239,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_footnotes {
+#drnhktqzan .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1290,13 +1253,13 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_footnote {
+#drnhktqzan .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#uenbuhonlu .gt_sourcenotes {
+#drnhktqzan .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1310,46 +1273,46 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#uenbuhonlu .gt_sourcenote {
+#drnhktqzan .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#uenbuhonlu .gt_left {
+#drnhktqzan .gt_left {
   text-align: left;
 }
 
-#uenbuhonlu .gt_center {
+#drnhktqzan .gt_center {
   text-align: center;
 }
 
-#uenbuhonlu .gt_right {
+#drnhktqzan .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uenbuhonlu .gt_font_normal {
+#drnhktqzan .gt_font_normal {
   font-weight: normal;
 }
 
-#uenbuhonlu .gt_font_bold {
+#drnhktqzan .gt_font_bold {
   font-weight: bold;
 }
 
-#uenbuhonlu .gt_font_italic {
+#drnhktqzan .gt_font_italic {
   font-style: italic;
 }
 
-#uenbuhonlu .gt_super {
+#drnhktqzan .gt_super {
   font-size: 65%;
 }
 
-#uenbuhonlu .gt_footnote_marks {
+#drnhktqzan .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="uenbuhonlu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="drnhktqzan" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1436,7 +1399,7 @@ NHSRdatasets::LOS_model %&gt;%
 
 ----
 
-![](day-01-basics_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+![](test-default_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -1492,13 +1455,10 @@ class: goodbye-slide, inverse, middle, left
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script src="macros.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "googlecode",
+"highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9",
-"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>"
+"countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
