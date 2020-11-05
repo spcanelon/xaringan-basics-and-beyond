@@ -187,8 +187,10 @@ class: left
 # About .my-gold[future] you
 
 --
-.pull-left-narrow[.center[# **&#x1F3A1;**]]
-.pull-right-wide[### **you can make your slides .my-gold[extra special]<br>with the xaringanExtra `r emo::ji("package")`**]
+
+.pull-left-narrow[.center[
+# **&#x1F3A1;**]]
+.pull-right-wide[.center[### **you can make your slides .my-gold[extra special]<br>with the xaringanExtra `r emo::ji("package")`**]]
 
 --
 
@@ -652,7 +654,7 @@ a, a > code {
 My go-to resource for looking up `selectors` or `property` options is the [CSS-Tricks Almanac](https://css-tricks.com/almanac/)
 
 ```{r, echo=FALSE}
-knitr::include_url("https://css-tricks.com/almanac/")
+knitr::include_url("https://css-tricks.com/almanac/", height = 350)
 ```
 
 
@@ -1110,7 +1112,7 @@ class: title-slide, left, bottom
 template: css-nhsr
 
 .pull-left[
-.my-coral[:] `default.css`
+.my-coral[Custom color classes:] `default.css`
 
 > None in the default style sheet
 
@@ -1119,7 +1121,7 @@ template: css-nhsr
 --
 
 .pull-right[
-.my-coral[:] `nhsr.css`
+.my-coral[Custom color classes:] `nhsr.css`
 
 ```{css, eval=FALSE}
 /*-- CUSTOM CLASSES FOR TEXT EMPHASIS --*/
@@ -1201,12 +1203,21 @@ knitr::include_url("https://coolors.co/palettes/trending/dark")
 [coolors.co/palettes/trending/dark](https://coolors.co/palettes/trending/dark)
 ] <!--end of panel-->
 .panel[.panel-name[More resources]
-- Check your color combinations for contrast:<br>https://coolors.co/contrast-checker/112a46-acc8e5)
+- Check your color combinations for contrast:
+  - https://coolors.co/contrast-checker)
 
-- Create and save your own color palettes:<br>https://coolors.co/f0b67f-fe5f55-d6d1b1-c7efcf-eef5db
+- Generate and save your own color palettes:
+  - https://coolors.co/generate
+  - https://mycolor.space
 
-- Quickly look up a hex color code:<br>https://www.color-hex.com/
+- Quickly look up hex color codes:
+  - https://www.color-hex.com
+  - https://www.w3schools.com
+  
 ] <!--end of panel-->
+
+.small[Thanks to Laurie Baker and Josie Browning for kindly adding resources to these lists]
+
 ]
 
 ---
