@@ -73,7 +73,7 @@ background-size: 8%, cover
 ### An Introduction to Xaringan:&lt;br&gt;The Basics
 
 **Silvia Canelón, Ph.D.**&lt;br&gt;
-Nov. 3rd, 2020
+\`r Sys.Date()`\
 ]
 
 .palegrey[.left[.footnote[Graphic by [Vernon Adams](https://www.rawpixel.com/image/575297/artistic-canvas-background-template)]]]
@@ -338,8 +338,38 @@ More options for output `xaringan::moon_reader`
 
   + `arta`, `ascetic`, `dark`, `default`, `far`, `github`, `googlecode`,   `idea`, `ir-black`, `magula`, `monokai`, `rainbow`, `solarized-dark`, `solarized-light`, `sunburst`, `tomorrow`, `tomorrow-night-blue`, `tomorrow-night-bright`, `tomorrow-night`, `tomorrow-night-eighties`, `vs`, `zenburn`.
 ] &lt;!----&gt;
-] &lt;!--end of panelset--&gt;
 
+.panel[.panel-name[syntax testing]
+```r
+# Sharing Your Work&lt;br&gt;with Xaringan
+### An Introduction to Xaringan:&lt;br&gt;The Basics
+
+**Silvia Canelón, Ph.D.**&lt;br&gt;
+\`r Sys.Date()`\
+```
+]
+
+] &lt;!--end of panelset--&gt;
+---
+# Testing things
+
+.pull-left[
+```
+# Sharing Your Work&lt;br&gt;with Xaringan
+### An Introduction to Xaringan:&lt;br&gt;The Basics
+
+**Silvia Canelón, Ph.D.**&lt;br&gt;
+\`r Sys.Date()`\
+```
+]
+
+.pull-right[
+# Sharing Your Work&lt;br&gt;with Xaringan
+### An Introduction to Xaringan:&lt;br&gt;The Basics
+
+**Silvia Canelón, Ph.D.**&lt;br&gt;
+\`r Sys.Date()`\
+]
 ---
 name: live-coding
 background-color: var(--my-yellow)
@@ -963,8 +993,8 @@ NHSRdatasets::LOS_model %&gt;%
   DT::datatable()
 ```
 
-<div id="htmlwidget-fd294fd7f7a920ad6a2f" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-fd294fd7f7a920ad6a2f">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-58703d9398d6cb0bd7c0" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-58703d9398d6cb0bd7c0">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 template: tables
@@ -987,13 +1017,15 @@ NHSRdatasets::LOS_model %&gt;%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#jxbebjtadt .gt_table {
+#uenbuhonlu .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
   font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
   background-color: #FFFFFF;
   width: auto;
   border-top-style: solid;
@@ -1010,7 +1042,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-left-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_heading {
+#uenbuhonlu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1022,7 +1054,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_title {
+#uenbuhonlu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1032,7 +1064,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-bottom-width: 0;
 }
 
-#jxbebjtadt .gt_subtitle {
+#uenbuhonlu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1042,13 +1074,13 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-width: 0;
 }
 
-#jxbebjtadt .gt_bottom_border {
+#uenbuhonlu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_col_headings {
+#uenbuhonlu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1063,7 +1095,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_col_heading {
+#uenbuhonlu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1083,7 +1115,7 @@ NHSRdatasets::LOS_model %&gt;%
   overflow-x: hidden;
 }
 
-#jxbebjtadt .gt_column_spanner_outer {
+#uenbuhonlu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1095,15 +1127,15 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 4px;
 }
 
-#jxbebjtadt .gt_column_spanner_outer:first-child {
+#uenbuhonlu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jxbebjtadt .gt_column_spanner_outer:last-child {
+#uenbuhonlu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jxbebjtadt .gt_column_spanner {
+#uenbuhonlu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1115,7 +1147,7 @@ NHSRdatasets::LOS_model %&gt;%
   width: 100%;
 }
 
-#jxbebjtadt .gt_group_heading {
+#uenbuhonlu .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1137,7 +1169,7 @@ NHSRdatasets::LOS_model %&gt;%
   vertical-align: middle;
 }
 
-#jxbebjtadt .gt_empty_group_heading {
+#uenbuhonlu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1152,19 +1184,15 @@ NHSRdatasets::LOS_model %&gt;%
   vertical-align: middle;
 }
 
-#jxbebjtadt .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#jxbebjtadt .gt_from_md > :first-child {
+#uenbuhonlu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jxbebjtadt .gt_from_md > :last-child {
+#uenbuhonlu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jxbebjtadt .gt_row {
+#uenbuhonlu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1183,7 +1211,7 @@ NHSRdatasets::LOS_model %&gt;%
   overflow-x: hidden;
 }
 
-#jxbebjtadt .gt_stub {
+#uenbuhonlu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1195,7 +1223,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-left: 12px;
 }
 
-#jxbebjtadt .gt_summary_row {
+#uenbuhonlu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1205,7 +1233,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 5px;
 }
 
-#jxbebjtadt .gt_first_summary_row {
+#uenbuhonlu .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1215,7 +1243,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_grand_summary_row {
+#uenbuhonlu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1225,7 +1253,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 5px;
 }
 
-#jxbebjtadt .gt_first_grand_summary_row {
+#uenbuhonlu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1235,7 +1263,11 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_table_body {
+#uenbuhonlu .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#uenbuhonlu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1244,7 +1276,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_footnotes {
+#uenbuhonlu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1258,13 +1290,13 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_footnote {
+#uenbuhonlu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#jxbebjtadt .gt_sourcenotes {
+#uenbuhonlu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1278,46 +1310,46 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#jxbebjtadt .gt_sourcenote {
+#uenbuhonlu .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#jxbebjtadt .gt_left {
+#uenbuhonlu .gt_left {
   text-align: left;
 }
 
-#jxbebjtadt .gt_center {
+#uenbuhonlu .gt_center {
   text-align: center;
 }
 
-#jxbebjtadt .gt_right {
+#uenbuhonlu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jxbebjtadt .gt_font_normal {
+#uenbuhonlu .gt_font_normal {
   font-weight: normal;
 }
 
-#jxbebjtadt .gt_font_bold {
+#uenbuhonlu .gt_font_bold {
   font-weight: bold;
 }
 
-#jxbebjtadt .gt_font_italic {
+#uenbuhonlu .gt_font_italic {
   font-style: italic;
 }
 
-#jxbebjtadt .gt_super {
+#uenbuhonlu .gt_super {
   font-size: 65%;
 }
 
-#jxbebjtadt .gt_footnote_marks {
+#uenbuhonlu .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="jxbebjtadt" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="uenbuhonlu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
