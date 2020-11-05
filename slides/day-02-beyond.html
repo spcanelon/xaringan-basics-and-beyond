@@ -157,8 +157,7 @@ class: left
 # About .my-gold[future] you
 
 --
-.pull-left-narrow[.center[
-# **&amp;#x1F3A1;**]]
+.pull-left-narrow[.center[# **&amp;#x1F3A1;**]]
 .pull-right-wide[### **you can make your slides .my-gold[extra special]&lt;br&gt;with the xaringanExtra 📦**]
 
 --
@@ -458,7 +457,355 @@ Make our own super fun and fabulous .my-gold[**party theme**] 🥳&lt;br&gt;
 
 ----
 
-.my-coral[**By the end** you'll have some skills that you can use outside of xaringan!]
+.my-coral[**By the end** you'll have some styling skills that you can use in and out of xaringan!]
+
+---
+
+# CSS goes beyond xaringan
+
+.left-column[
+The CSS basics we'll cover today can be used&lt;br&gt;to better understand how _any website_&lt;br&gt;is styled.
+]
+
+.right-column[
+### A little CSS know-how can go a long way.
+
+Here are examples of <i class="fab  fa-r-project "></i> places I've managed to apply what I've learned:
+
+- Personal [blogdown](https://bookdown.org/yihui/blogdown/) website
+
+- [Distill](https://rstudio.github.io/distill/website.html) site for this workshop
+
+- Xaringan slides for this workshop (of course)
+]
+
+---
+name: css-basics
+
+## xaringan's `default.css`&lt;i class="fab fa-css3" style = "float: right"&gt;&lt;/i&gt;
+
+.panelset[
+.panel[.panel-name[Directory]
+Remember on day 01 when said that xaringan generates a directory of libraries? 
+
+The `default.css` styling sheet is tucked away in there.
+
+&lt;!--this "icons as a list" trick comes from: https://fontawesome.com/how-to-use/on-the-web/styling/icons-in-a-list--&gt;
+&lt;ul class="fa-ul"&gt;
+  &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-folder-open"&gt;&lt;/i&gt;&lt;/span&gt;That directory is &lt;b&gt;libs&lt;/b&gt; and it contains:&lt;/li&gt;
+  &lt;ul class="fa-ul"&gt;
+    &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-folder"&gt;&lt;/i&gt;&lt;/span&gt;lots of different folders&lt;/li&gt;
+    &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-folder"&gt;&lt;/i&gt;&lt;/span&gt;for everything we could possibly need in our slide deck&lt;/li&gt;
+    &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-folder"&gt;&lt;/i&gt;&lt;/span&gt;depending on which packages and functions we use&lt;/li&gt;
+    &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-folder-open"&gt;&lt;/i&gt;&lt;/span&gt;one of these folders is &lt;b&gt;remark-css&lt;/b&gt;&lt;/li&gt;
+    &lt;ul class="fa-ul"&gt;
+      &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-file-code"&gt;&lt;/i&gt;&lt;/span&gt;&lt;b&gt;default.css&lt;/b&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/ul&gt;
+&lt;/ul&gt;
+
+When we make custom style sheets like `nhsr.css` or `nhsr-fonts.css` and ask xaringan to use them (in the YAML), xaringan follows those rules first and _then_ fills in the blanks with `default.css` rules.
+
+???
+So a custom style sheet need not have _all_ the same rules as `default.css`, only the ones to modify.
+
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Rules]
+This is the basic structure we're going to come across. Our sheets have a bunch of CSS rules: `selectors` of various types, each with 1+ `properties` that are assigned a `value`.
+
+![:scale 95%](https://i2.wp.com/css-tricks.com/wp-content/uploads/2020/04/LV2OI0TM.png?resize=2048%2C667&amp;ssl=1)&lt;br&gt;
+.small[[css-tricks.com/complete-guide-to-css-functions](https://css-tricks.com/complete-guide-to-css-functions/)]
+
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Selectors]
+
+CSS `selectors` are patterns used to select `elements`; they point to an element to style,&lt;br&gt;like a heading (`h1`) for example. 
+
+.pull-left[
+
+The rules can be written on one line...
+
+![](https://www.w3schools.com/whatis/img_selector.gif)
+&lt;br&gt;&lt;br&gt;
+.small[[w3schools.com/whatis/whatis_css.asp](https://www.w3schools.com/whatis/whatis_css.asp)]
+]
+
+.pull-right[
+...or on multiple lines.
+
+```css
+h1 { 
+  color: blue; 
+  font-size: 12px;
+}
+```
+
+.small[**Note**: Unlike with many <i class="fab  fa-r-project "></i> functions, `color` cannot be replaced with `colour` in CSS land 😞]
+]
+
+This rule selects all level 1 headers (`#` in Markdown) and assigns them&lt;br&gt;the `color` blue and a `font-size` of 12px.
+
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Class Selectors]
+
+.pull-left[
+
+The most common type of `selector` we'll see is the `class selector`, which begins with a `.`
+
+Where else have we heard the term "class" or seen the `.` syntax?
+
+----
+
+**Tip:** Try `prismatic::colour("#272822")` in the console to get a sense for what colour that hex code maps to.
+]
+
+.pull-right[
+This example from `default.css` reads
+&gt; .small[all HTML elements with class="inverse" will have a [background colour](https://css-tricks.com/almanac/properties/b/background/) `#272822`, text [colour](https://css-tricks.com/almanac/properties/c/color/) `#d6d6d6`, and some particular [text shadowing](https://css-tricks.com/almanac/properties/t/text-shadow/).]
+
+
+```css
+.inverse {
+  background-color: #272822;
+  color: #d6d6d6;
+  text-shadow: 0 0 20px #333;
+}
+```
+]
+
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Elements]
+
+.pull-left-narrow[This CSS rule doesn't use a class selector but selects individual elements.] 
+
+.pull-right-wide[
+In this case:
+&gt; .small[all HTML elements of type `a` (anchors/links), including those of type `code` that are nested in anchors/links, are assigned the [color](https://css-tricks.com/almanac/properties/c/color/) `rgb(249, 38, 114)` and are assigned no [text decoration](https://css-tricks.com/almanac/properties/t/text-decoration/).]
+
+
+
+```css
+a, a &gt; code {
+  color: rgb(249, 38, 114);
+  text-decoration: none;
+}
+```
+]
+] &lt;!--end of panel--&gt;
+
+
+
+.panel[.panel-name[Almanac]
+My go-to resource for looking up `selectors` or `property` options is the [CSS-Tricks Almanac](https://css-tricks.com/almanac/)
+
+&lt;iframe src="https://css-tricks.com/almanac/" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+
+] &lt;!--end of panel--&gt;
+
+] &lt;!--end of panelset--&gt;
+
+---
+template: live-coding
+
+### We'll take a look at the **default.css** file
+
+---
+name: css-nhsr
+
+## The NHS-R theme's `nhsr.css`&lt;img style="float: right;" src="https://nhsrcommunity.com/wp-content/uploads/2018/02/logo.png" width="90px"/&gt;
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Anchors/links:] Before
+
+
+```css
+a, a &gt; code {
+  color: rgb(249, 38, 114);
+  text-decoration: none;
+}
+```
+
+]
+
+.pull-right[
+.my-coral[Anchors/links:] After
+
+
+```css
+a {
+  color:              #005EB8;
+  border-bottom:      2px solid #005EB8;
+  line-height:        1.5em;
+}
+a:hover {
+  border-bottom:      0px;
+}
+```
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Headings:] Before
+
+&gt; The default xaringan theme did not change any properties from the "root" HTML file
+&gt; - paragraph text is 16px
+&gt; - text is the colour black
+
+----
+
+**[A note about font sizes and units](https://css-tricks.com/rems-ems/)** 
+- Document level adjustments should be in `px`
+- Modules (i.e. classes) will scale with the document, in `rem`
+- Type will scale with module, in `em`
+
+]
+
+.pull-right[
+.my-coral[Headings:] After
+
+
+```css
+.remark-slide-content h1 {
+  color:              #005EB8;
+  font-size:          45px;
+  line-height:        1em;
+}
+.remark-slide-content h2 {
+  font-size:          35px;
+  color:              #005EB8;
+  line-height:        1em;
+}
+.remark-slide-content h3 {
+  font-size:          25px;
+  color:              #005EB8;
+}
+```
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Paragraph text:] Before
+
+&gt; Again, nothing specific here.
+
+]
+
+.pull-right[
+.my-coral[Paragraph text:] After
+
+
+```css
+.remark-slide-content {
+  font-size:          20px;
+  line-height:        1.2em;
+}
+```
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Horizontal bars:] Before
+
+&gt; Default values used by xaringan.
+
+]
+
+.pull-right[
+.my-coral[Horizontal bars:] After
+
+
+```css
+hr {
+  content:            none;
+  display:            block;
+  border:             none;
+  background-color:   #231F20;
+  height:             0.08em;
+}
+```
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Bottom of slide:] Before
+
+
+```css
+/*-- Footnote --*/
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  padding-right: 4em;
+  font-size: 90%;
+}
+```
+
+]
+
+.pull-right[
+.my-coral[Bottom of slide:] After
+
+
+```css
+/*-- Footnote --*/
+.footnote {
+  position:           absolute;
+  bottom:             2em;
+  padding-right:      4em;
+  font-size:          80%;
+  line-height:        1.3em;
+}
+
+/*-- Slide number --*/
+.remark-slide-number {
+  color:              #000000;
+}
+```
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[:] Before
+
+
+```css
+
+```
+
+]
+
+.pull-right[
+.my-coral[:] After
+
+
+```css
+
+```
+
+]
 
 ---
 class: goodbye-slide, inverse, left
