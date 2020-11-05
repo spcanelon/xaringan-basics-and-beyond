@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sharing Your Work with Xaringan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Silvia Canelón, Ph.D." />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <meta name="description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta name="generator" content="xaringan and remark.js"/>
+    <meta name="github-repo" content="spcanelon/xaringan-basics-and-beyond"/>
+    <meta name="twitter:title" content="Sharing Your Work with Xaringan"/>
+    <meta name="twitter:description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta name="twitter:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
+    <meta name="twitter:image:src" content="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png"/>
+    <meta name="twitter:image:alt" content="Title slide for the Sharing Your Work with Xaringan workshop series"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@spcanelon"/>
+    <meta name="twitter:site" content="@spcanelon"/>
+    <meta property="og:title" content="Sharing Your Work with Xaringan"/>
+    <meta property="og:description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta property="og:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
+    <meta property="og:image" content="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png"/>
+    <meta property="og:image:alt" content="Title slide for the Sharing Your Work with Xaringan workshop series"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Silvia Canelon"/>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/mytheme.css" type="text/css" />
+    <link rel="stylesheet" href="css/mytheme-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: title-slide, right, top
+background-image: url(img/hex-xaringan.png), url(img/frame-art.png)
+background-position: 90% 75%, 75% 75%
+background-size: 8%, cover
+
+.right-column[
+# Sharing Your Work&lt;br&gt;with Xaringan
+### An Introduction to Xaringan:&lt;br&gt;The Beyond
+
+**Silvia Canelón, Ph.D.**&lt;br&gt;
+Nov. 5th, 2020
+]
+
+.palegrey[.left[.footnote[Graphic by [Vernon Adams](https://www.rawpixel.com/image/575297/artistic-canvas-background-template)]]]
+
+???
+
+Welcome to the workshop on sharing your work with xaringan.
+
+Where I'll show you how to create impressive presentation slides that can be deployed to the web for easy sharing.
+
+---
+name: about-me
+layout: false
+class: about-me-slide, inverse, middle, center
+
+# About me
+
+&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="150px"/&gt;
+
+## Silvia Canelón
+
+### Postdoctoral Research Scientist
+
+.fade[University of Pennsylvania&lt;br&gt;Philadelphia, PA, USA]
+
+[<i class="fas  fa-link "></i> silvia.rbind.io](https://silvia.rbind.io)
+[<i class="fab  fa-twitter "></i> @spcanelon](https://twitter.com/spcanelon)
+[<i class="fab  fa-github "></i> @spcanelon](https://github.com/spcanelon)
+
+---
+layout: true
+
+&lt;a class="footer-link" href="http://bit.ly/xaringan-nhsr"&gt;bit.ly/xaringan-nhsr &amp;mdash; Silvia Canelón&lt;/a&gt;
+
+&lt;!-- this adds the link footer to all slides, depends on footer-link class in css--&gt;
+
+---
+class: top
+
+# Acknowledgments
+
+.pull-left-narrow[.center[&lt;img style="border-radius: 50%;" src="https://lauriebaker.rbind.io/author/dr.-laurie-baker/avatar_hu30116ce9545207e6cc07ea892252ff02_106302_270x270_fill_q90_lanczos_center.jpg" width="100px"/&gt;]]
+
+.pull-right-wide[
+[Laurie Baker](https://lauriebaker.rbind.io), co-pilot for this workshop and Data Science Lecturer at the Data Science Campus, Office for National Statistics, UK.as
+]
+
+--
+
+.pull-left-narrow[.center[
+&lt;img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/53170984?s=200&amp;v=4" width="125px"/&gt;]]
+
+.pull-right-wide[
+[NHS-R Community](https://nhsrcommunity.com/) for the opportunity to provide this workshop
+- [nhsrtheme 📦](https://github.com/nhs-r-community/nhsrtheme) developed by Tom Jemmett
+- [NHSRdatasets 📦](https://github.com/nhs-r-community/NHSRdatasets) developed by Chris Mainey
+]
+
+--
+
+.pull-left-narrow[.center[
+<i class="fas  fa-smile fa-3x " style="color:#e5bf00;"></i>]]
+
+.pull-right-wide[
+- [xaringan 📦](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
+- [xaringanExtra 📦](https://github.com/gadenbuie/xaringanExtra/#xaringanExtra) developed by Garrick Aden-Buie
+- Materials developed by [Alison Hill](https://twitter.com/apreshill) that have inspired and informed this workshop
+]
+
+---
+class: left
+
+# About you
+
+--
+.pull-left-narrow[.center[
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png" width="25%"/&gt;]]
+.pull-right-wide[### you know xaringan]
+
+--
+
+.pull-left-narrow[.center[
+&lt;i class="far fa-grin-stars fa-2x"&gt;&lt;/i&gt;]]
+.pull-right-wide[### you've seen pretty slides in the wild]
+
+--
+
+.pull-left-narrow[.center[
+&lt;i class="fas fa-images fa-2x"&gt;&lt;/i&gt;]]
+.pull-right-wide[### .my-gold[**you want to make your own pretty slides**]] 
+
+---
+class: left
+
+# About .my-gold[future] you
+
+--
+.pull-left-narrow[.center[
+# **&amp;#x1F3A1;**]]
+.pull-right-wide[### **you can make your slides .my-gold[extra special]&lt;br&gt;with the xaringanExtra 📦**]
+
+--
+
+.pull-left-narrow[.center[
+&lt;i class="fab fa-css3 fa-2x"&gt;&lt;/i&gt;]]
+.pull-right-wide[### **you can customize your slides .my-gold[using CSS**]] 
+
+---
+name: question
+class: inverse, middle, center
+
+---
+template: question
+
+# &lt;svg style="height:0.8em;top:.04em;position:relative;fill:#E8EDEE;" viewBox="0 0 512 512"&gt;&lt;path d="M496 448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zm-304-64l-64-32 64-32 32-64 32 64 64 32-64 32-16 32h208l-86.41-201.63a63.955 63.955 0 0 1-1.89-45.45L416 0 228.42 107.19a127.989 127.989 0 0 0-53.46 59.15L64 416h144l-16-32zm64-224l16-32 16 32 32 16-32 16-16 32-16-32-32-16 32-16z"/&gt;&lt;/svg&gt;
+# What's the extra?
+
+--
+
+----
+
+.left-col[.center[
+<i class="fas  fa-th fa-2x "></i>
+### slide overview
+]]
+
+--
+
+.center-col[
+.center[
+<i class="fas  fa-share-square fa-2x "></i>
+### slide embedding
+]]
+
+--
+
+.right-col[.center[
+<i class="fas  fa-folder fa-2x "></i>
+### slide panels
+]]
+
+---
+### These .my-gold[extra] features are made possible by the [xaringanExtra 📦](https://github.com/gadenbuie/xaringanExtra#xaringanextra)
+
+&gt; 🎡 A playground of enhancements and extensions for xaringan slides.
+
+&lt;iframe src="https://pkg.garrickadenbuie.com/xaringanExtra/#/?id=xaringanextra" width="100%" height="400px"&gt;&lt;/iframe&gt;
+.small[[pkg.garrickadenbuie.com/xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/?id=xaringanextra)]
+
+---
+name: demo-tile-view
+
+## Slide overview with [Tile View](https://github.com/gadenbuie/xaringanExtra#-tile-view-demo) &lt;i class="fas fa-th" style = "float: right"&gt;&lt;/i&gt;
+
+.panelset[
+
+.panel[.panel-name[Example]
+.center[
+&lt;img src="img/demo-tile-view.png" width="80%"/&gt;
+]
+] &lt;!----&gt;
+
+.panel[.panel-name[How-to]
+**Step 1.** Install xaringanExtra from GitHub
+
+```r
+devtools::install_github("gadenbuie/xaringanExtra")
+```
+
+**Step 2.** Load the library and add the `use_tile_view()` function to your setup chunk
+
+
+```r
+library(xaringanExtra)
+xaringanExtra::use_tile_view()
+```
+
+**Step 3.** Save and render your slides
+
+**Step 4.** Press the letter "O" (for **O**verview) on your keyboard to see a slide overview!&lt;br&gt;
+.small[You can also try pressing "O" right now!]
+
+] &lt;!----&gt;
+
+.panel[.panel-name[Reference]
+&lt;iframe src="https://pkg.garrickadenbuie.com/xaringanExtra/tile-view/" width="100%" height="400px"&gt;&lt;/iframe&gt;
+.small[[pkg.garrickadenbuie.com/xaringanExtra/tile-view](https://pkg.garrickadenbuie.com/xaringanExtra/tile-view/")]
+] &lt;!----&gt;
+] &lt;!--end of panelset--&gt;
+
+
+---
+name: demo-share-again
+
+## Slide embedding with [Share Again](https://github.com/gadenbuie/xaringanExtra#-share-again) &lt;i class="fas fa-share-square" style = "float: right"&gt;&lt;/i&gt;
+
+.panelset[
+
+.panel[.panel-name[Example]
+&lt;iframe src="https://spcanelon.github.io/xaringan-basics-and-beyond/" width="100%" height="400px"&gt;&lt;/iframe&gt;
+.small[[spcanelon.github.io/xaringan-basics-and-beyond](https://spcanelon.github.io/xaringan-basics-and-beyond/)]
+]
+
+.panel[.panel-name[How-to]
+
+.pull-left-narrow[
+**Now**, in your current document
+]
+
+.pull-right-wide[
+**Step 1.** Add the `use_share_again()` function to your setup chunk
+
+
+```r
+xaringanExtra::use_share_again()
+```
+
+**Step 2.** Style share bar and choose social media sites in setup chunk
+
+
+```r
+xaringanExtra::style_share_again(share_buttons = c("twitter", "linkedin", "pocket"))
+```
+]
+
+.pull-left-narrow[
+**Later**, in a different document
+]
+
+.pull-right-wide[
+**Step 3.** Embed your slides in blogdown or R Markdown HTML docs 
+
+```r
+xaringanExtra::embed_xaringan(url = "my-slides.html", ratio = "16:9")
+```
+]]
+
+.panel[.panel-name[Reference]
+&lt;iframe src="https://gadenbuie.github.io/xaringanExtra/share-again/share-again.html" width="100%" height="400px"&gt;&lt;/iframe&gt;
+.small[[pkg.garrickadenbuie.com/xaringanExtra/share-again/share-again.html](https://pkg.garrickadenbuie.com/xaringanExtra/share-again/share-again.html)]
+]
+
+] &lt;!--end of panelset--&gt;
+
+---
+name: your-turn
+background-color: var(--my-red)
+class: inverse
+
+.left-column[
+## Your turn&lt;br&gt;<i class="fas  fa-edit "></i>&lt;br&gt;
+### [.my-pink[5:00 mins]](https://apps.garrickadenbuie.com/countdown/)
+]
+
+.right-column[
+
+### Make your slides a little extra
+
+----
+
+Options:
+1. Slide overview feature with [tile view](#demo-tile-view)
+2. Slide embedding feature with [share again](#demo-share-again)
+]
+
+---
+
+## Slide panels with [Panelset](https://github.com/gadenbuie/xaringanExtra#-panelset) &lt;i class="fas fa-folder" style = "float: right"&gt;&lt;/i&gt;
+
+.panelset[
+
+.panel[.panel-name[Example]
+&lt;iframe src="https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html#demo-tile-view" width="100%" height="400px"&gt;&lt;/iframe&gt;
+.small[[spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html#demo-tile-view](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html#demo-tile-view)]
+] &lt;!----&gt;
+
+.panel[.panel-name[How-to]
+
+.pull-left[
+**Step 1.** Add the `use_panelset()` function to your setup chunk
+
+
+```r
+xaringanExtra::use_panelset()
+```
+
+]
+
+.pull-right[
+**Step 2.** Create a `.panelset[]` containing a `.panel[]` that itself has a `.panel-name[]`
+```markdown
+.panelset[
+.panel[.panel-name[NAME]
+...your content goes here...
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+```
+]
+
+⭐ **Tip:** The nested class brackets can get a little confusing, so I like to add a comment to signal the "end" of a set of brackets. Comments in html are written like this: `&lt;!----&gt;`&lt;br&gt;
+.small[.right[[This upcoming slide]() is the result of the code chunk shown above <i class="fas  fa-arrow-circle-right "></i>]]
+
+] &lt;!----&gt;
+
+.panel[.panel-name[Reference]
+&lt;iframe src="https://pkg.garrickadenbuie.com/xaringanExtra/panelset" width="100%" height="400px"&gt;&lt;/iframe&gt;
+.small[[pkg.garrickadenbuie.com/xaringanExtra/panelset](https://pkg.garrickadenbuie.com/xaringanExtra/panelset/)]
+] &lt;!----&gt;
+
+] &lt;!--end of panelset--&gt;
+
+---
+
+### Example from [this panelset slide](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html?panelset2=how-to3&amp;panelset4=example4&amp;panelset5=example5&amp;panelset6=example6&amp;panelset7=name2#21)
+
+.panelset[
+.panel[.panel-name[NAME]
+...your content goes here...
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
+---
+name: live-coding
+background-color: var(--my-yellow)
+class: middle, center
+
+<i class="fas  fa-code fa-3x " style="color:#122140;"></i>&lt;br&gt;
+# Let's try it live together
+
+---
+name: your-turn
+background-color: var(--my-red)
+class: inverse
+
+.left-column[
+## Your turn&lt;br&gt;<i class="fas  fa-edit "></i>&lt;br&gt;
+### [.my-pink[5:00 mins]](https://apps.garrickadenbuie.com/countdown/)
+]
+
+.right-column[
+### Add another panel to the slide template&lt;br&gt;provided below
+
+----
+
+**Tip:** you can hover over the code chunk and see the "Copy Code" button in the top-right corner 🙂
+
+```markdown
+---
+# This slide has panels
+
+.panelset[
+.panel[.panel-name[PANEL 1]
+...your content goes here...
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+---
+```
+.small[Hint: try adding `.panel[.panel-name[PANEL 2]]` underneath `&lt;!--end of panel--&gt;`]
+]
+
+---
+template: question
+
+<i class="fab  fa-css3 fa-3x "></i>
+# So how about that CSS???
+
+--
+
+### Let's get into it!
+
+---
+class: middle, center
+
+# Our approach
+
+--
+
+----
+
+Take a look the default xaringan styling sheet
+
+--
+
+Go through the modifications made to create the `nhsr` theme
+
+--
+
+Make some of our own helpful modifications
+
+--
+
+Make our own super fun and fabulous .my-gold[**party theme**] 🥳&lt;br&gt;
+.small[Credit for this idea goes to Laurie Baker!]
+
+--
+
+----
+
+.my-coral[**By the end** you'll have some skills that you can use outside of xaringan!]
+
+---
+class: goodbye-slide, inverse, left
+
+.pull-left[
+.middle[
+&lt;img style="border-radius: 50%;" src="https://silvia.rbind.io/authors/silvia/avatar.png" width="170px"/&gt;
+# Thank you!
+
+### Here's where you can find me...
+
+.right[
+[silvia.rbind.io <i class="fas  fa-link "></i>](https://silvia.rbind.io)&lt;br/&gt;
+[@spcanelon <i class="fab  fa-twitter "></i>](https://twitter.com/spcanelon)&lt;br/&gt;
+[@spcanelon <i class="fab  fa-github "></i>](https://github.com/spcanelon)&lt;br/&gt;
+]]]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "googlecode",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
