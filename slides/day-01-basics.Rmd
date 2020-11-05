@@ -1,6 +1,7 @@
 ---
 title: "Sharing Your Work<br>with Xaringan"
 subtitle: "An Introduction to Xaringan:<br>The Basics"
+session: "01"
 author: "Silvia Canelón, Ph.D."
 institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
 date: \`r Sys.Date()`\
@@ -33,14 +34,16 @@ meta() %>%
     description = "An Introduction to Xaringan for Presentations: The Basics and Beyond",
     generator = "xaringan and remark.js"
   ) %>% 
-  meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
+  meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
     title = "Sharing Your Work with Xaringan",
     url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
-    image = "",
-    image_alt = "",
+    image = "https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png",
+    image_alt = "Title slide for the Sharing Your Work with Xaringan workshop series",
     og_type = "website",
-    twitter_card_type = "summary_large_image"
+    og_author = "Silvia Canelon",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@spcanelon"
   )
 ```
 
@@ -540,7 +543,7 @@ template: question
 
 ---
 name: placement
-## Layouts <i class="fas fa-th-large" style = "float: right"></i>
+## Placement <i class="fas fa-th-large" style = "float: right"></i>
 
 ---
 template: placement
@@ -671,7 +674,7 @@ template: placement
 ### Arrange content into a two-column layout
 
 .left-column[
-**`.left-column[]` places content into a column 20% wid**
+**`.left-column[]` places content into a column 20% wide**
 
 And text is a little lighter
 ]
