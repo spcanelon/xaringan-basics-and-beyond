@@ -4,7 +4,7 @@ subtitle: "An Introduction to Xaringan:<br>The Basics"
 session: "01"
 author: "Silvia Canelón, Ph.D."
 institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
-date: \`r Sys.Date()`\
+date: "Nov. 3rd, 2020"
 output:
   xaringan::moon_reader:
     css: 
@@ -355,16 +355,6 @@ More options for output `xaringan::moon_reader`
 
   + `arta`, `ascetic`, `dark`, `default`, `far`, `github`, `googlecode`,   `idea`, `ir-black`, `magula`, `monokai`, `rainbow`, `solarized-dark`, `solarized-light`, `sunburst`, `tomorrow`, `tomorrow-night-blue`, `tomorrow-night-bright`, `tomorrow-night`, `tomorrow-night-eighties`, `vs`, `zenburn`.
 ] <!---->
-
-.panel[.panel-name[syntax testing]
-```r
-# `r rmarkdown::metadata$title`
-### `r rmarkdown::metadata$subtitle`
-
-**`r rmarkdown::metadata$author`**<br>
-`r rmarkdown::metadata$date`
-```
-]
 
 ] <!--end of panelset-->
 ---
@@ -1054,5 +1044,4 @@ class: goodbye-slide, inverse, middle, left
 [@spcanelon `r icon::fa("twitter")`](https://twitter.com/spcanelon)<br/>
 [@spcanelon `r icon::fa("github")`](https://github.com/spcanelon)<br/>
 ]]
-
 

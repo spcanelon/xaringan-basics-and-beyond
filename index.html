@@ -2196,6 +2196,12 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
   
   d-byline a:hover {
     text-decoration: underline;
+  }
+  
+  /*-- Code --*/
+  code, pre {
+      font-family: "Source Code Pro", "Lucida Console",
+      Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2398,10 +2404,13 @@ Slides
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="static/slides/day-01-basics.html">Day 1: The Basics</a>
-<a href="static/slides/day-02-beyond.html">Day 2: The Beyond</a>
+<a href="slides/day-01-basics.html">Day 1: The Basics</a>
+<a href="slides/day-02-beyond.html">Day 2: The Beyond</a>
 </div>
 </div>
+<a href="https://www.youtube.com/channel/UCMwM-3tg_-Pbx8hKO78q5EA">
+<i class="fab fa-youtube" aria-hidden="true"></i>
+</a>
 <a href="https://bit.ly/3mfJM4k">
 <i class="fas fa-cloud" aria-hidden="true"></i>
 </a>
@@ -2448,7 +2457,7 @@ Slides
 
 </div>
 <h1 id="welcome">Welcome</h1>
-<p>Thank you for registering for this workshop! This is the course site for the <em>Sharing Your Work with Xaringan</em> workshop created by Dr. Silvia Canelón for the <a href="https://nhsrcommunity.com/about/">NHS-R Community</a> <a href="https://nhsrcommunity.com/nhsr-conference-2020/">2020 Virtual Conference</a>.</p>
+<p>This is the course site for the <em>Sharing Your Work with Xaringan</em> workshop created by Dr. Silvia Canelón for the <a href="https://nhsrcommunity.com/about/">NHS-R Community</a> <a href="https://nhsrcommunity.com/nhsr-conference-2020/">2020 Virtual Conference</a>.</p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="https://nhsrcommunity.com/wp-content/uploads/2018/02/logo.png" height="43" /></p>
@@ -2456,7 +2465,7 @@ Slides
 </aside>
 <p>This four-hour hands-on workshop will be a gentle introduction to the <a href="https://github.com/yihui/xaringan#xaringan">xaringan</a> package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.</p>
 <ul>
-<li><strong>Day 1</strong> covered the nuts and bolts of creating presentation slides using <a href="https://github.com/yihui/xaringan#xaringan">xaringan</a> and deploying them in HTML format for easy sharing with others.</li>
+<li><strong>Day 1</strong> will cover the nuts and bolts of creating presentation slides using <a href="https://github.com/yihui/xaringan#xaringan">xaringan</a> and deploying them in HTML format for easy sharing with others.</li>
 </ul>
 <aside>
 Tuesday, Nov. 3<br/>3-5pm BST (<a href="https://www.worldtimebuddy.com/?qm=1&amp;lid=2643743,5128581&amp;h=5128581&amp;date=2020-11-3&amp;sln=10-12">check your time zone</a>)
@@ -2492,6 +2501,22 @@ Thursday, Nov. 5<br/>3-5pm BST (<a href="https://www.worldtimebuddy.com/?qm=1&a
 <li>Install <a href="https://cloud.r-project.org/">R</a> and <a href="https://rstudio.com/products/rstudio/download/">RStudio Desktop</a> on your computer.</li>
 </ul>
 <p>You can find step-by-step instructions for installing these here: <a href="https://www.youtube.com/watch?v=GM88tYlEy_g">macOS</a>, <a href="https://www.youtube.com/watch?v=JRKmZK5-6aE">Windows</a>.</p>
+<ul>
+<li>Install the following packages:</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='co'># From CRAN</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"xaringan"</span><span class='op'>)</span>
+
+<span class='co'># From GitHub</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"nhs-r-community/nhsrtheme"</span><span class='op'>)</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"nhs-r-community/NHSRdatasets"</span><span class='op'>)</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"gadenbuie/xaringanExtra"</span><span class='op'>)</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"ropenscilabs/icon"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
 <aside>
 Thanks to<br/>Stephan Kadauke
 </aside>
@@ -2499,11 +2524,11 @@ Thanks to<br/>Stephan Kadauke
 <ul>
 <li>Link to this website: <a href="https://spcanelon.github.io/xaringan-basics-and-beyond/index.html">spcanelon.github.io/xaringan-basics-and-beyond</a></li>
 <li><a href="https://bit.ly/3mfJM4k">RStudio Cloud workspace</a> and companion <a href="https://github.com/spcanelon/xaringan-basics-and-beyond/tree/main/materials">source materials</a></li>
-<li><a href="static/slides/day-01-basics.html">Day 1 slides: The Basics</a></li>
-<li><a href="">Day 2 slides: The Beyond (<em>coming soon!</em>)</a></li>
+<li>Day 1: The Basics: <a href="slides/day-01-basics.html">Slides</a> | <a href="https://youtu.be/M3skTMQbCD0">Video</a></li>
+<li>Day 2: The Beyond: <a href="slides/day-02-beyond.html">Slides</a> | <a href="https://www.youtube.com/channel/UCMwM-3tg_-Pbx8hKO78q5EA">Video</a></li>
 </ul>
 <h1 id="acknowledgments" class="appendix">Acknowledgments</h1>
-<p>This workshop draws from various sources, most notably Alison Hill’s <a href="https://arm.rbind.io/slides/xaringan.html">Making Slides with R Markdown</a> and Greg Wilson’s <a href="http://teachtogether.tech/en/">Teaching Tech Together</a>.</p>
+<p>This workshop draws from various sources, most notably Alison Hill’s <a href="https://arm.rbind.io/slides/xaringan.html">Making Slides with R Markdown</a> and Greg Wilson’s <a href="http://teachtogether.tech/en/">Teaching Tech Together</a>. This workshop ran smoothly with the help of <a href="https://lauriebaker.rbind.io/">Laurie Baker</a> as co-pilot.</p>
 <p>This website was made with the <a href="https://rstudio.github.io/distill/">distill package</a> and a custom theme designed by Silvia Canelón.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

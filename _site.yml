@@ -11,9 +11,11 @@ navbar:
     - text: "Slides"
       menu:
         - text: "Day 1: The Basics"
-          href: "static/slides/day-01-basics.html"
+          href: "slides/day-01-basics.html"
         - text: "Day 2: The Beyond"
-          href: "static/slides/day-02-beyond.html"
+          href: "slides/day-02-beyond.html"
+    - icon: fab fa-youtube
+      href: "https://www.youtube.com/channel/UCMwM-3tg_-Pbx8hKO78q5EA"
     - icon: fas fa-cloud
       href: "https://bit.ly/3mfJM4k"
     - icon: fab fa-github

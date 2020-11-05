@@ -116,3 +116,9 @@ d-byline .byline h3 {
 d-byline a:hover {
   text-decoration: underline;
 }
+
+/*-- Code --*/
+code, pre {
+    font-family: "Source Code Pro", "Lucida Console",
+    Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
