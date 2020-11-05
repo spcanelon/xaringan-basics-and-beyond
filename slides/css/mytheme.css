@@ -224,6 +224,7 @@ pre code {
 .my-red     { color:  var(--my-red) }
 .my-coral   { color:  var(--my-coral) }
 .my-pink    { color:  var(--my-pink) }
+.my-hot-pink { background-color: #ff69b4 }
 
 /*-- PROGRESS BAR IN FOOTER --*/
 /* https://github.com/yihui/xaringan/wiki/Progressbar */
@@ -332,4 +333,23 @@ pre code {
   width: 75%;
   float: right;
   padding-top: 1em;
+}
+
+/* Lets us expand the code chunk horizontally upon hovering! */
+/* Hat-tip: June Choe: https://twitter.com/yjunechoe/status/1314219490197098496?s=19 */
+/* Appears to conflict with
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = TRUE
+)
+*/
+
+code.r.hljs.remark-code {
+  position: relative;
+  overflow-x: hidden;
+}
+code.r.hljs.remark-code:hover {
+  overflow-x: visible;
+  width: 500px;
+  border-style: solid;
 }

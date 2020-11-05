@@ -456,6 +456,14 @@ class: inverse
 ]
 
 ---
+background-image: url(img/explore.jpg)
+background-size: cover
+class: top, right
+
+.my-pink[.small[Photo by [.my-pink[Dominika Roseclay]](https://www.pexels.com/photo/cubes-with-letters-on-wooden-surface-near-fern-leaves-4288760/)]]
+
+
+---
 template: question
 
 `r icon::fa("css3", size = 3)`
@@ -516,15 +524,18 @@ Here are examples of `r icon::fa("r-project")` places I've managed to apply what
 ]
 
 ---
-name: css-basics
+name: xaringan-default-css
+
 
 ## xaringan's `default.css`<i class="fab fa-css3" style = "float: right"></i>
 
-.panelset[
-.panel[.panel-name[Directory]
-Remember on day 01 when said that xaringan generates a directory of libraries? 
+Remember in part 1 of this workshop when said that xaringan generates a directory of libraries using `lib_dir` [in the YAML](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html?panelset1=yaml-2&panelset4=remark.js2&panelset5=nhsrtheme2&panelset6=moon-reader2&panelset7=markdown2#14)? 
+
+--
 
 The `default.css` styling sheet is tucked away in there.
+
+--
 
 <!--this "icons as a list" trick comes from: https://fontawesome.com/how-to-use/on-the-web/styling/icons-in-a-list-->
 <ul class="fa-ul">
@@ -540,23 +551,34 @@ The `default.css` styling sheet is tucked away in there.
   </ul>
 </ul>
 
-When we make custom style sheets like `nhsr.css` or `nhsr-fonts.css` and ask xaringan to use them (in the YAML), xaringan follows those rules first and _then_ fills in the blanks with `default.css` rules.
+--
+
+When we make custom style sheets like `nhsr.css` or `nhsr-fonts.css` and ask xaringan to use them ([in the YAML](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html?panelset1=yaml-1&panelset4=remark.js2&panelset5=nhsrtheme2&panelset6=moon-reader2&panelset7=markdown2#14)), xaringan follows those rules first and _then_ fills in the blanks with `default.css` rules.
 
 ???
 So a custom style sheet need not have _all_ the same rules as `default.css`, only the ones to modify.
 
-] <!--end of panel-->
+---
+template: live-coding
+
+### We'll take a look at the **default.css** file
+
+---
+name: css-basics
+
+## CSS basics<i class="fab fa-css3" style = "float: right"></i>
+
+.panelset[
 
 .panel[.panel-name[Rules]
+
 This is the basic structure we're going to come across. Our sheets have a bunch of CSS rules: `selectors` of various types, each with 1+ `properties` that are assigned a `value`.
 
 ![:scale 95%](https://i2.wp.com/css-tricks.com/wp-content/uploads/2020/04/LV2OI0TM.png?resize=2048%2C667&ssl=1)<br>
 .small[[css-tricks.com/complete-guide-to-css-functions](https://css-tricks.com/complete-guide-to-css-functions/)]
-
 ] <!--end of panel-->
 
 .panel[.panel-name[Selectors]
-
 CSS `selectors` are patterns used to select `elements`; they point to an element to style,<br>like a heading (`h1`) for example. 
 
 .pull-left[
@@ -564,8 +586,10 @@ CSS `selectors` are patterns used to select `elements`; they point to an element
 The rules can be written on one line...
 
 ![](https://www.w3schools.com/whatis/img_selector.gif)
-<br><br>
+<br>
 .small[[w3schools.com/whatis/whatis_css.asp](https://www.w3schools.com/whatis/whatis_css.asp)]
+
+.small[This rule selects all level 1 headers (`#` in Markdown) and assigns them the `color` blue and a `font-size` of 12px.]
 ]
 
 .pull-right[
@@ -579,13 +603,9 @@ h1 {
 
 .small[**Note**: Unlike with many `r icon::fa("r-project")` functions, `color` cannot be replaced with `colour` in CSS land `r emo::ji("disappointed")`]
 ]
-
-This rule selects all level 1 headers (`#` in Markdown) and assigns them<br>the `color` blue and a `font-size` of 12px.
-
 ] <!--end of panel-->
 
 .panel[.panel-name[Class Selectors]
-
 .pull-left[
 
 The most common type of `selector` we'll see is the `class selector`, which begins with a `.`
@@ -609,11 +629,9 @@ This example from `default.css` reads
 }
 ```
 ]
-
 ] <!--end of panel-->
 
 .panel[.panel-name[Elements]
-
 .pull-left-narrow[This CSS rule doesn't use a class selector but selects individual elements.] 
 
 .pull-right-wide[
@@ -630,8 +648,6 @@ a, a > code {
 ]
 ] <!--end of panel-->
 
-
-
 .panel[.panel-name[Almanac]
 My go-to resource for looking up `selectors` or `property` options is the [CSS-Tricks Almanac](https://css-tricks.com/almanac/)
 
@@ -645,11 +661,6 @@ knitr::include_url("https://css-tricks.com/almanac/")
 ] <!--end of panelset-->
 
 ---
-template: live-coding
-
-### We'll take a look at the **default.css** file
-
----
 name: css-nhsr
 
 ## The NHS-R theme's `nhsr.css`<img style="float: right;" src="https://nhsrcommunity.com/wp-content/uploads/2018/02/logo.png" width="90px"/>
@@ -658,7 +669,7 @@ name: css-nhsr
 template: css-nhsr
 
 .pull-left[
-.my-coral[Anchors/links:] Before
+.my-coral[Anchors/links:] `default.css`
 
 ```{css, eval=FALSE}
 a, a > code {
@@ -669,8 +680,10 @@ a, a > code {
 
 ]
 
+--
+
 .pull-right[
-.my-coral[Anchors/links:] After
+.my-coral[Anchors/links:] `nhsr.css`
 
 ```{css, eval=FALSE}
 a {
@@ -689,7 +702,7 @@ a:hover {
 template: css-nhsr
 
 .pull-left[
-.my-coral[Headings:] Before
+.my-coral[Headings:] `default.css`
 
 > The default xaringan theme did not change any properties from the "root" HTML file
 > - paragraph text is 16px
@@ -704,8 +717,10 @@ template: css-nhsr
 
 ]
 
+--
+
 .pull-right[
-.my-coral[Headings:] After
+.my-coral[Headings:] `nhsr.css`
 
 ```{css, eval=FALSE}
 .remark-slide-content h1 {
@@ -730,14 +745,14 @@ template: css-nhsr
 template: css-nhsr
 
 .pull-left[
-.my-coral[Paragraph text:] Before
+.my-coral[Paragraph text:] `default.css`
 
 > Again, nothing specific here.
 
 ]
 
 .pull-right[
-.my-coral[Paragraph text:] After
+.my-coral[Paragraph text:] `nhsr.css`
 
 ```{css, eval=FALSE}
 .remark-slide-content {
@@ -752,14 +767,16 @@ template: css-nhsr
 template: css-nhsr
 
 .pull-left[
-.my-coral[Horizontal bars:] Before
+.my-coral[Horizontal bars:] `default.css`
 
 > Standard values were used by xaringan.
 
 ]
 
+--
+
 .pull-right[
-.my-coral[Horizontal bars:] After
+.my-coral[Horizontal bars:] `nhsr.css`
 
 ```{css, eval=FALSE}
 hr {
@@ -777,7 +794,7 @@ hr {
 template: css-nhsr
 
 .pull-left[
-.my-coral[Bottom of slide:] Before
+.my-coral[Bottom of slide stuff:] `default.css`
 
 ```{css, eval=FALSE}
 /*-- Footnote --*/
@@ -793,8 +810,10 @@ How do we write comments in CSS?
 
 ]
 
+--
+
 .pull-right[
-.my-coral[Bottom of slide:] After
+.my-coral[Bottom of slide stuff:] `nhsr.css`
 
 ```{css, eval=FALSE}
 /*-- Footnote --*/
@@ -818,21 +837,376 @@ How do we write comments in CSS?
 template: css-nhsr
 
 .pull-left[
-.my-coral[:] Before
+.my-coral[Inline code:] `default.css`
 
 ```{css, eval=FALSE}
+.remark-code-line-highlighted     { background-color: #ffff88; }
+```
 
+
+```{css, eval=FALSE}
+/* Can also be written: */
+
+.remark-code-line-highlighted { 
+  background-color: #ffff88; 
+}
 ```
 
 ]
 
+--
+
 .pull-right[
-.my-coral[:] After
+.my-coral[Inline code:] `nhsr.css`
 
 ```{css, eval=FALSE}
+/*-- In-line highlighting within text --*/
+.remark-code, .remark-inline-code {
+  font-size:          90%;
+  font-weight:        400;
+  color:              #231F20;
+  background:         #E8EDEE;
+  border-radius:      3px;
+  padding:            1px 1px 1px 1px;
+}
 
+/*-- Line highlighting within code --*/
+.remark-code-line-highlighted {
+  background-color:   #E8EDEE;
+}
 ```
 
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Code chunks:] `default.css`
+
+> Nothing specific in the xaringan default style sheet -- it's possible `highlightStyle` [in the YAML](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html?panelset1=yaml-2&panelset4=remark.js2&panelset5=nhsrtheme2&panelset6=moon-reader2&panelset7=markdown2#14) takes the lead on this `r emo::ji("woman_shrugging")`
+
+```{r, echo=FALSE}
+knitr::include_url("https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html?panelset1=yaml-2&panelset4=remark.js2&panelset5=nhsrtheme2&panelset6=moon-reader2&panelset7=markdown2#14", height = 250)
+```
+
+]
+
+--
+
+.pull-right[
+.my-coral[Code chunks:] `nhsr.css`
+
+```{css, eval=FALSE}
+/*-- Code chunk background layer --*/
+pre {
+  /*border: 2px solid rgba(204, 189, 204, 0.8); /* code chunk border*/
+  border:             none;
+  box-shadow:         2px 2px 2px 2px #eee;
+  padding:            0.1em;                    /* padding between code chunk and border */
+  background:         none !important;
+  overflow-x:         auto;                     /* enable horizontal scrolling with overflow */
+  border-radius:      1px;                      /* modify rounding of corners*/
+}
+/*-- Code chunk foreground --*/
+pre code {
+  background:          none;
+  font-size:           18px !important;
+}
+```
+
+]
+
+???
+Sometimes our code won't fit vertically! What can we do? We can make the `font-size` a little smaller **or** we can use xaringanExtra's [fit to screen extension](https://github.com/gadenbuie/xaringanExtra#-fit-to-screen)
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Tables:] `default.css`
+
+```{css, eval=FALSE}
+.remark-slide table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+.remark-slide table thead th { 
+  border-bottom: 1px solid #ddd; 
+}
+th, td { padding: 5px; 
+}
+.remark-slide thead, 
+.remark-slide tfoot, 
+.remark-slide tr:nth-child(even) { background: #eee }
+```
+
+]
+
+--
+
+.pull-right[
+.my-coral[Tables:] `nhsr.css`
+
+```{css, eval=FALSE}
+.remark-slide table {
+  margin:              auto;
+  border-top:          1px solid #768692;
+  border-bottom:       1px solid #768692;
+}
+/*-- Table header --*/
+.remark-slide table thead th {
+  border-bottom:       1px solid #768692;
+}
+/*-- Table rows (even) --*/
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+  background:          #E8EDEE;
+}
+```
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Block quote:] `default.css`
+
+> Like this one
+
+```{css, eval=FALSE}
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+```
+
+]
+
+--
+
+.pull-right[
+.my-coral[Block quote:] `nhsr.css`
+
+Can you spot the difference?
+
+```{css, eval=FALSE}
+blockquote {
+  border-left:         solid 5px #E8EDEE;
+  padding-left:        1em;
+}
+```
+
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Inverse class modifications:] `default.css`
+
+```{css, eval=FALSE}
+.inverse {
+  background-color: #272822;
+  color: #d6d6d6;
+  text-shadow: 0 0 20px #333;
+}
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #f3f3f3;
+}
+```
+
+]
+
+--
+.pull-right[
+.my-coral[Inverse class modifications:] `nhsr.css`
+
+```{css, eval=FALSE}
+/*-- Slide background and text (inverse) --*/
+.inverse {
+  background-color:   #005EB8;
+  color:              #FFFFFF;
+  text-shadow:        none;}
+/*-- Headings (inverse) --*/
+.inverse h1, .inverse h2, .inverse h3 { color: #FFFFFF;}
+/*-- Horizontal bars (inverse) --*/
+.inverse hr { background-color:   #FFFFFF;}
+/*-- Links/anchors (inverse) --*/
+.inverse a {
+  color:              white;
+  border-bottom:      2px solid white;}
+.inverse a:hover { border-bottom: none;}
+```
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[Custom **title-slide** class:] `default.css`
+
+> None in the default style sheet
+
+----
+
+Does this look familiar?
+
+```markdown
+---
+class: title-slide, left, bottom
+
+# `r '\x60r rmarkdown::metadata$title\x60'`
+----
+## **`r '\x60r rmarkdown::metadata$subtitle\x60'`**
+### `r '\x60r rmarkdown::metadata$author\x60'`
+### `r '\x60r rmarkdown::metadata$date\x60'`
+---
+```
+
+<!--This is another option to show the code for teaching purposes -- many thanks to Garrick Aden-Buie for his help!:
+https://github.com/gadenbuie/xaringanExtra/issues/71#issuecomment-720643949 -->
+
+<!--<pre><code>---
+class: title-slide, left, bottom
+
+# `r '\x60r rmarkdown::metadata$title\x60'`
+----
+## **`r '\x60r rmarkdown::metadata$subtitle\x60'`**
+### `r '\x60r rmarkdown::metadata$author\x60'`
+### `r '\x60r rmarkdown::metadata$date\x60'`
+---</code></pre>
+-->
+]
+
+--
+
+.pull-right[
+.my-coral[Custom **title-slide** class:] `nhsr.css`
+
+```{css, eval=FALSE}
+/*-- NHS organisation logo --*/
+.title-slide {
+  background-image:    url(../img/logo-title-slide.png);
+  background-position: 95% 10%;
+  background-size:     300px;
+}
+/*-- Headings --*/
+.title-slide h1 {
+  color:               #000000;
+}
+/*-- Hides slide number from title slide --*/
+.title-slide .remark-slide-number {
+  display:             none;
+}
+```
+
+]
+
+---
+template: css-nhsr
+
+.pull-left[
+.my-coral[:] `default.css`
+
+> None in the default style sheet
+
+]
+
+--
+
+.pull-right[
+.my-coral[:] `nhsr.css`
+
+```{css, eval=FALSE}
+/*-- CUSTOM CLASSES FOR TEXT EMPHASIS --*/
+.blue       { color:   #005EB8 }
+.green      { color:   #009639 }
+.pink       { color:   #AE2573 }
+.red        { color:   #DA291C }
+.warmyellow { color:   #FFB81C }
+```
+
+You can use these by writing something like this in your slides R Markdown:
+```{css, eval=FALSE}
+.pink[Some pink text here]
+```
+
+.pink[Some pink text here]
+
+]
+
+---
+name: your-turn
+background-color: var(--my-red)
+class: inverse
+
+.left-column[
+## Your turn<br>`r icon::fa("edit")`<br>
+### [.my-pink[1:00 min]](https://apps.garrickadenbuie.com/countdown/)
+]
+
+.right-column[
+### Try adding one of the custom classes below<br>to your `nhsr.css` file and try it out<br>in your slide Rmd file with `.fade[]` or `.small[]`
+
+----
+
+**Remember:** you can hover over the code chunk and see the "Copy Code" button in the top-right corner `r emo::ji("slightly_smiling_face")`
+
+```{css, eval=FALSE}
+.fade { 
+  opacity: 0.5; 
+}
+```
+
+```{css, eval=FALSE}
+.small { 
+  font-size: 70% 
+}
+```
+
+]
+
+---
+background-image: url(img/party-theme.jpg)
+background-size: cover
+class: right, bottom
+
+# .my-hot-pink[**Party time! `r emo::ji("partying_face")`**]
+
+### .my-hot-pink[**This is your time**]
+### .my-hot-pink[**to have fun**]
+### .my-hot-pink[**and play around**]
+### .my-hot-pink[**with modifications!**]
+
+---
+
+## Let's talk colors<i class="fas fa-palette" style = "float: right"></i>
+
+.panelset[
+.panel[.panel-name[Light Palettes]
+```{r, echo=FALSE}
+knitr::include_url("https://coolors.co/palettes/trending")
+```
+[coolors.co/palettes/trending](https://coolors.co/palettes/trending)
+
+] <!--end of panel-->
+.panel[.panel-name[Dark Palettes]
+```{r, echo=FALSE}
+knitr::include_url("https://coolors.co/palettes/trending/dark")
+```
+[coolors.co/palettes/trending/dark](https://coolors.co/palettes/trending/dark)
+] <!--end of panel-->
+.panel[.panel-name[More resources]
+- Check your color combinations for contrast:<br>https://coolors.co/contrast-checker/112a46-acc8e5)
+
+- Create and save your own color palettes:<br>https://coolors.co/f0b67f-fe5f55-d6d1b1-c7efcf-eef5db
+
+- Quickly look up a hex color code:<br>https://www.color-hex.com/
+] <!--end of panel-->
 ]
 
 ---
