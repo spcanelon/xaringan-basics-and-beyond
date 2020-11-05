@@ -12,6 +12,8 @@ navbar:
       menu:
         - text: "Day 1: The Basics"
           href: "static/slides/day-01-basics.html"
+        - text: "Day 2: The Beyond"
+          href: "static/slides/day-02-beyond.html"
     - icon: fas fa-cloud
       href: "https://bit.ly/3mfJM4k"
     - icon: fab fa-github
