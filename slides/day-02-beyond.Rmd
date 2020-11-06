@@ -275,12 +275,6 @@ xaringanExtra::use_tile_view()
 
 ] <!---->
 
-.panel[.panel-name[Reference]
-```{r, echo=FALSE}
-knitr::include_url("https://pkg.garrickadenbuie.com/xaringanExtra/tile-view/")
-```
-.small[[pkg.garrickadenbuie.com/xaringanExtra/tile-view](https://pkg.garrickadenbuie.com/xaringanExtra/tile-view/")]
-] <!---->
 ] <!--end of panelset-->
 
 
@@ -292,11 +286,13 @@ name: demo-share-again
 .panelset[
 
 .panel[.panel-name[Example]
-```{r, echo=FALSE}
-knitr::include_url("https://spcanelon.github.io/xaringan-basics-and-beyond/")
+.center[
+```{r, echo=FALSE, out.width="70%"}
+knitr::include_graphics("img/demo-share-again.png")
 ```
-.small[[spcanelon.github.io/xaringan-basics-and-beyond](https://spcanelon.github.io/xaringan-basics-and-beyond/)]
-]
+<br>.small[[spcanelon.github.io/xaringan-basics-and-beyond](https://spcanelon.github.io/xaringan-basics-and-beyond/)]]
+
+] <!--end of panelset-->
 
 .panel[.panel-name[How-to]
 
@@ -329,13 +325,6 @@ xaringanExtra::embed_xaringan(url = "my-slides.html", ratio = "16:9")
 ```
 ]]
 
-.panel[.panel-name[Reference]
-```{r, echo=FALSE}
-knitr::include_url("https://gadenbuie.github.io/xaringanExtra/share-again/share-again.html")
-```
-.small[[pkg.garrickadenbuie.com/xaringanExtra/share-again/share-again.html](https://pkg.garrickadenbuie.com/xaringanExtra/share-again/share-again.html)]
-]
-
 ] <!--end of panelset-->
 
 ---
@@ -360,6 +349,7 @@ Options:
 ]
 
 ---
+name: panelset-how-to
 
 ## Slide panels with [Panelset](https://github.com/gadenbuie/xaringanExtra#-panelset) <i class="fas fa-folder" style = "float: right"></i>
 
@@ -392,25 +382,19 @@ xaringanExtra::use_panelset()
 ] <!--end of panel-->
 ] <!--end of panelset-->
 ```
+.small[.right[See this example in the next slide `r icon::fa("arrow-circle-right")`]]
 ]
 
-`r emo::ji("star")` **Tip:** The nested class brackets can get a little confusing, so I like to add a comment to signal the "end" of a set of brackets. Comments in html are written like this: `<!---->`<br>
-.small[.right[[This upcoming slide]() is the result of the code chunk shown above `r icon::fa("arrow-circle-right")`]]
+`r emo::ji("star")` **Tip:** The nested class brackets can get a little confusing, so I like to add a comment to signal the "end" of a set of brackets. Comments in html are written like this: `<!---->`
 
-] <!---->
-
-.panel[.panel-name[Reference]
-```{r, echo=FALSE}
-knitr::include_url("https://pkg.garrickadenbuie.com/xaringanExtra/panelset")
-```
-.small[[pkg.garrickadenbuie.com/xaringanExtra/panelset](https://pkg.garrickadenbuie.com/xaringanExtra/panelset/)]
 ] <!---->
 
 ] <!--end of panelset-->
 
 ---
+name: example-panelset
 
-### Example from [this panelset slide](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html?panelset2=how-to3&panelset4=example4&panelset5=example5&panelset6=example6&panelset7=name2#21)
+### Example from [this panelset slide](#panelset-how-to)
 
 .panelset[
 .panel[.panel-name[NAME]
@@ -651,12 +635,14 @@ a, a > code {
 ] <!--end of panel-->
 
 .panel[.panel-name[Almanac]
+
 My go-to resource for looking up `selectors` or `property` options is the [CSS-Tricks Almanac](https://css-tricks.com/almanac/)
 
-```{r, echo=FALSE}
-knitr::include_url("https://css-tricks.com/almanac/", height = 350)
+.center[
+```{r, echo=FALSE, out.width="62%"}
+knitr::include_graphics("img/css-tricks-almanac.png")
 ```
-
+]
 
 ] <!--end of panel-->
 
@@ -889,7 +875,7 @@ template: css-nhsr
 > Nothing specific in the xaringan default style sheet -- it's possible `highlightStyle` [in the YAML](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html?panelset1=yaml-2&panelset4=remark.js2&panelset5=nhsrtheme2&panelset6=moon-reader2&panelset7=markdown2#14) takes the lead on this `r emo::ji("woman_shrugging")`
 
 ```{r, echo=FALSE}
-knitr::include_url("https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html?panelset1=yaml-2&panelset4=remark.js2&panelset5=nhsrtheme2&panelset6=moon-reader2&panelset7=markdown2#14", height = 250)
+knitr::include_graphics("img/recap-yaml-2.png")
 ```
 
 ]
@@ -1173,6 +1159,155 @@ class: inverse
 ]
 
 ---
+
+## Let's talk colours<i class="fas fa-palette" style = "float: right"></i>
+
+.panelset[
+.panel[.panel-name[Light Palettes]
+```{r, echo=FALSE}
+knitr::include_graphics("img/coolors-light-palettes.png")
+```
+[coolors.co/palettes/trending](https://coolors.co/palettes/trending)
+
+] <!--end of panel-->
+.panel[.panel-name[Dark Palettes]
+```{r, echo=FALSE}
+knitr::include_graphics("img/coolors-dark-palettes.png")
+```
+[coolors.co/palettes/trending/dark](https://coolors.co/palettes/trending/dark)
+] <!--end of panel-->
+
+.panel[.panel-name[NHS identity]
+
+.pull-left[.center[
+![:scale 75%](img/nhs-colour-guidelines.png)
+]]
+
+.pull-right[
+The [NHS identity guideline](https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/) colour hex codes `r emo::ji("paint")`
+
+```{r, echo=FALSE, collapse = FALSE}
+nhsrtheme::getNhsColours()
+```
+
+]
+
+] <!--end of panel-->
+
+.panel[.panel-name[More resources]
+- Check your colour combinations for contrast:
+  - https://coolors.co/contrast-checker
+
+- Generate and save your own colour palettes:
+  - https://coolors.co/generate
+  - https://mycolor.space
+
+- Quickly look up hex colour codes:
+  - https://www.color-hex.com
+  - https://www.w3schools.com
+  
+.small[Thanks to Laurie Baker and Josie Browning for kindly adding resources to these lists]
+  
+] <!--end of panel-->
+
+]<!--end of panelset-->
+
+---
+
+## Let's talk fonts<i class="fas fa-font" style = "float: right"></i>
+
+.panelset[
+
+.panel[.panel-name[NHS identity]
+
+The [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/fonts/) encourage:
+
+.pull-left[
+**Frutiger** as the core font...
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/font-frutiger.png")
+```
+]
+
+.pull-right[
+...and **Arial** as a secondary font.
+
+```{r, echo=FALSE}
+knitr::include_graphics("img/font-arial.png")
+```
+]
+] <!--end of panel-->
+
+.panel[.panel-name[Other fonts]
+.pull-left-narrow[
+You can find a wide variety of fonts to use in your slides through [Google Fonts](https://fonts.google.com/):
+
+- Monospace
+- Serif
+- Sans-serif
+
+]
+
+.pull-right-wide[.center[
+```{r, echo=FALSE, out.width="85%"}
+knitr::include_graphics("img/google-fonts.png")
+```
+]]
+
+] <!--end of panel-->
+
+.panel[.panel-name[How-to: Part 1]
+
+**Step 1.** Select the font style(s) you're interested in using from Google Fonts
+.center[
+```{r, echo=FALSE}
+knitr::include_graphics("img/font-pick-scp.png")
+```
+]
+
+----
+
+.pull-left[**Step 2.** Copy the `@import` code for your selection:
+
+```{css, eval=FALSE}
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+```
+
+]
+
+.pull-right[
+.center[
+```{r, echo=FALSE}
+knitr::include_graphics("img/font-pick-scp-import.png")
+```
+]
+]
+] <!--end of panel-->
+
+.panel[.panel-name[How-to: Part 2]
+
+**Step 3.** Paste the `@import` code into the top of your `nhsr-fonts.css` file
+
+```{css, eval=FALSE}
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+```
+
+
+**Step 4.** Specify that you want to use the font by adding it to the `font-family` property
+
+```{css, eval=FALSE}
+.remark-code, .remark-inline-code {
+  font-family: 'Source Code Pro', 'Roboto Mono', monospace;
+}
+```
+
+
+] <!--end of panel-->
+
+] <!--end of panelset-->
+
+---
 background-image: url(img/party-theme.jpg)
 background-size: cover
 class: right, bottom
@@ -1183,42 +1318,6 @@ class: right, bottom
 ### .my-hot-pink[**to have fun**]
 ### .my-hot-pink[**and play around**]
 ### .my-hot-pink[**with modifications!**]
-
----
-
-## Let's talk colors<i class="fas fa-palette" style = "float: right"></i>
-
-.panelset[
-.panel[.panel-name[Light Palettes]
-```{r, echo=FALSE}
-knitr::include_url("https://coolors.co/palettes/trending")
-```
-[coolors.co/palettes/trending](https://coolors.co/palettes/trending)
-
-] <!--end of panel-->
-.panel[.panel-name[Dark Palettes]
-```{r, echo=FALSE}
-knitr::include_url("https://coolors.co/palettes/trending/dark")
-```
-[coolors.co/palettes/trending/dark](https://coolors.co/palettes/trending/dark)
-] <!--end of panel-->
-.panel[.panel-name[More resources]
-- Check your color combinations for contrast:
-  - https://coolors.co/contrast-checker)
-
-- Generate and save your own color palettes:
-  - https://coolors.co/generate
-  - https://mycolor.space
-
-- Quickly look up hex color codes:
-  - https://www.color-hex.com
-  - https://www.w3schools.com
-  
-] <!--end of panel-->
-
-.small[Thanks to Laurie Baker and Josie Browning for kindly adding resources to these lists]
-
-]
 
 ---
 class: goodbye-slide, inverse, left

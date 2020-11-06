@@ -104,7 +104,10 @@ hr {
 .fade { opacity: 0.5; }
 
 /*-- Small text --*/
-.small { font-size: 70% }
+.small {
+  font-size: 70%;
+  line-height: 1em !important;
+}
 /*-- Horizontal bars (inverse) --*/
 .inverse hr { background-color: var(--PaleGrey); }
 
