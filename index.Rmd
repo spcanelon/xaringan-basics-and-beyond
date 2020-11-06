@@ -121,7 +121,7 @@ devtools::install_github("ropenscilabs/icon")
 - Link to this website: [spcanelon.github.io/xaringan-basics-and-beyond](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html)
 - [RStudio Cloud workspace](https://bit.ly/3mfJM4k) and companion [source materials](https://github.com/spcanelon/xaringan-basics-and-beyond/tree/main/materials)
 - Day 1: The Basics: [Slides](slides/day-01-basics.html) | [Video](https://youtu.be/M3skTMQbCD0)
-- Day 2: The Beyond: [Slides](slides/day-02-beyond.html) | [Video](https://www.youtube.com/channel/UCMwM-3tg_-Pbx8hKO78q5EA)
+- Day 2: The Beyond: [Slides](slides/day-02-beyond.html) | [Video](https://youtu.be/cAtpZxW4bTI)
 
 # Acknowledgments {.appendix}
 
