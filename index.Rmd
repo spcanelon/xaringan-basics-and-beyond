@@ -26,15 +26,23 @@ knitr::opts_chunk$set(echo = FALSE)
 library(metathis)
 meta() %>%
   meta_general(
-    description = "An Introduction to Xaringan for Presentations: The Basics and Beyond",
+    description = "Course site for An Introduction to Xaringan for Presentations: The Basics and Beyond",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
-    title = "Sharing Your Work with Xaringan",
+    title = "Sharing Your Work with Xaringan: The Basics and Beyond",
+    description = paste(
+      "Course site for An Introduction to Xaringan for Presentations: The Basics and Beyond",
+      "Workshop presented at NHS-R Conference 2020."
+    ),
     url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
-    image = "https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png",
-    image_alt = "Title slide for the Sharing Your Work with Xaringan workshop series",
+    image = "",
+    image_alt = paste(
+      "Title slide of Sharing Your Work with Xaringan:",
+      "An Introduction to Xaringan for Presentations: The Basics and Beyond",
+      "Workshop presented by Silvia Canelon"
+      ),
     og_type = "website",
     og_author = "Silvia Canelon",
     twitter_card_type = "summary_large_image",
@@ -91,6 +99,10 @@ We will use the software listed below only as an important backup in the event w
 
 You can find step-by-step instructions for installing these here: [macOS](https://www.youtube.com/watch?v=GM88tYlEy_g), [Windows](https://www.youtube.com/watch?v=JRKmZK5-6aE).
 
+<aside>
+Thanks to<br/>Stephan Kadauke
+</aside>
+
 - Install the following packages:
 
 ```{r, eval=FALSE, echo=TRUE}
@@ -103,10 +115,6 @@ devtools::install_github("nhs-r-community/NHSRdatasets")
 devtools::install_github("gadenbuie/xaringanExtra")
 devtools::install_github("ropenscilabs/icon")
 ```
-
-<aside>
-Thanks to<br/>Stephan Kadauke
-</aside>
 
 # Links
 
