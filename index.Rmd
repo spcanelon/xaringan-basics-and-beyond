@@ -1,5 +1,5 @@
 ---
-title: "Sharing Your Work with Xaringan"
+title: "Sharing Your Work with xaringan"
 author: 
 - name: Silvia Canelón, Ph.D.
   url: https://silvia.rbind.io
@@ -7,7 +7,7 @@ author:
   affiliation_url: https://www.dbei.med.upenn.edu
 date: November 3rd, 2020
 description: |
-  An Introduction to Xaringan for Presentations: The Basics and Beyond
+  An Introduction to xaringan for Presentations: The Basics and Beyond
 site: distill::distill_website
 ---
 
@@ -26,21 +26,17 @@ knitr::opts_chunk$set(echo = FALSE)
 library(metathis)
 meta() %>%
   meta_general(
-    description = "Course site for An Introduction to Xaringan for Presentations: The Basics and Beyond",
+    description = "An Introduction to xaringan for Presentations: The Basics and Beyond",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
-    title = "Sharing Your Work with Xaringan: The Basics and Beyond",
-    description = paste(
-      "Course site for An Introduction to Xaringan for Presentations: The Basics and Beyond",
-      "Workshop presented at NHS-R Conference 2020."
-    ),
-    url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
-    image = "",
+    title = "Sharing Your Work with xaringan",
+    url = "https://bit.ly/xaringan-nhsr",
+    image = "https://repository-images.githubusercontent.com/304962818/5084b700-1df5-11eb-89c9-c68f142756c6",
     image_alt = paste(
-      "Title slide of Sharing Your Work with Xaringan:",
-      "An Introduction to Xaringan for Presentations: The Basics and Beyond",
+      "Title slide of Sharing Your Work with xaringan:",
+      "An Introduction to xaringan for Presentations: The Basics and Beyond",
       "Workshop presented by Silvia Canelon"
       ),
     og_type = "website",
@@ -52,7 +48,7 @@ meta() %>%
 
 # Welcome
 
-This is the course site for the _Sharing Your Work with Xaringan_ workshop created by Dr. Silvia Canelón for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/).
+This is the course site for the _Sharing Your Work with xaringan_ workshop created by Dr. Silvia Canelón for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/).
 
 <aside>
 ```{r, out.height=43}
@@ -72,7 +68,7 @@ Tuesday, Nov. 3<br/>3-5pm BST ([check your time zone](https://www.worldtimebuddy
 xaringanExtra::embed_xaringan(url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html", ratio = "16:9")
 ```
 
-- **Day 2** will cover how to take your slides to the next level with the [xaringanExtra](https://github.com/gadenbuie/xaringanExtra#xaringanextra) package and how to customize slides with CSS.
+- **Day 2** will cover how to take your slides to the next level with the [xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra) package and how to customize slides with CSS.
 
 <aside>
 Thursday, Nov. 5<br/>3-5pm BST ([check your time zone](https://www.worldtimebuddy.com/?qm=1&lid=2643743,5128581&h=5128581&date=2020-11-5&sln=10-12))
@@ -118,7 +114,7 @@ devtools::install_github("ropenscilabs/icon")
 
 # Links
 
-- Link to this website: [spcanelon.github.io/xaringan-basics-and-beyond](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html)
+- Link to this website: [bit.ly/xaringan-nhsr](https://bit.ly/xaringan-nhsr)
 - [RStudio Cloud workspace](https://bit.ly/3mfJM4k) and companion [source materials](https://github.com/spcanelon/xaringan-basics-and-beyond/tree/main/materials)
 - Day 1: The Basics: [Slides](slides/day-01-basics.html) | [Video](https://youtu.be/M3skTMQbCD0)
 - Day 2: The Beyond: [Slides](slides/day-02-beyond.html) | [Video](https://youtu.be/cAtpZxW4bTI)
