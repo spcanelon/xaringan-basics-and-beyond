@@ -33,7 +33,7 @@ meta() %>%
   meta_social(
     title = "Sharing Your Work with xaringan",
     url = "https://bit.ly/xaringan-nhsr",
-    image = "https://repository-images.githubusercontent.com/304962818/5084b700-1df5-11eb-89c9-c68f142756c6",
+    image = "https://repository-images.githubusercontent.com/304962818/38fb4600-20f5-11eb-9597-52659d721631",
     image_alt = paste(
       "Title slide of Sharing Your Work with xaringan:",
       "An Introduction to xaringan for Presentations: The Basics and Beyond",
