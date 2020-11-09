@@ -1,6 +1,6 @@
 ---
-title: "Sharing Your Work<br>with Xaringan"
-subtitle: "An Introduction to Xaringan:<br>The Basics"
+title: "Sharing Your Work<br>with xaringan"
+subtitle: "An Introduction to xaringan:<br>The Basics"
 session: "01"
 author: "Silvia Canelón, Ph.D."
 institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
@@ -31,15 +31,15 @@ output:
 library(metathis)
 meta() %>%
   meta_general(
-    description = "An Introduction to Xaringan for Presentations: The Basics and Beyond",
+    description = "An Introduction to xaringan for Presentations: The Basics and Beyond",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
-    title = "Sharing Your Work with Xaringan",
+    title = "Sharing Your Work with xaringan",
     url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
     image = "https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png",
-    image_alt = "Title slide for the Sharing Your Work with Xaringan workshop series",
+    image_alt = "Title slide for the Sharing Your Work with xaringan workshop series",
     og_type = "website",
     og_author = "Silvia Canelon",
     twitter_card_type = "summary_large_image",
@@ -357,26 +357,7 @@ More options for output `xaringan::moon_reader`
 ] <!---->
 
 ] <!--end of panelset-->
----
-# Testing things
 
-.pull-left[
-```
-# `r rmarkdown::metadata$title`
-### `r rmarkdown::metadata$subtitle`
-
-**`r rmarkdown::metadata$author`**<br>
-`r rmarkdown::metadata$date`
-```
-]
-
-.pull-right[
-# `r rmarkdown::metadata$title`
-### `r rmarkdown::metadata$subtitle`
-
-**`r rmarkdown::metadata$author`**<br>
-`r rmarkdown::metadata$date`
-]
 ---
 name: live-coding
 background-color: var(--my-yellow)
@@ -577,6 +558,7 @@ This content is also centered and in the middle of the slide
 ---
 ```
 
+.right[.my-coral[example on next slide `r icon::fa("arrow-circle-right")` ]]
 ]
 
 ---
@@ -618,6 +600,9 @@ class: center, middle
 
 ---
 ```
+
+.right[.my-coral[example on next slide `r icon::fa("arrow-circle-right")` ]]
+
 ]
 
 ---
@@ -639,7 +624,7 @@ template: placement
 
 Like the text above and<br>the hex sticker below
 
-![:scale 30%](img/hex-rmarkdown.png)
+![:scale 25%](img/hex-rmarkdown.png)
 ]
 
 --
@@ -679,7 +664,7 @@ And text is a little lighter
 - They are meant to be used together
 
 .center[
-![:scale 20%](img/hex-xaringan.png)]
+![:scale 15%](img/hex-xaringan.png)]
 ]
 
 ---
@@ -695,7 +680,10 @@ There are a variety of ways to add images to your slides!
 .panel[.panel-name[Markdown]
 .pull-left[
 
-`![](img/camera-green.jpg)`
+```{markdown, eval=FALSE, echo=TRUE}
+![](img/camera-green.jpg)
+```
+
 - simple
 - not very flexible
 - output size fully dependent on the size of the image, but scaling can be managed [using custom macros (JavaScript functions) ](https://slides.yihui.org/xaringan/#33)
@@ -713,15 +701,16 @@ Photo by [Annie Spratt](https://unsplash.com/@anniespratt)]
 
 .pull-left[
 
-`knitr::include_graphics("img/camera-green.jpg")`
+```{r picture-knitr, eval=TRUE, echo=TRUE, fig.show="hide"}
+knitr::include_graphics("img/camera-green.jpg")
+```
 - pretty flexible
 - a little bulky
 - more options [here](https://www.rdocumentation.org/packages/knitr/versions/1.30/topics/include_graphics)
 ]
 
 .pull-right[
-```{r, out.width="90%"}
-knitr::include_graphics("img/camera-green.jpg")
+```{r, ref.label="picture-knitr", out.width="90%"}
 ```
 ]
 
@@ -729,12 +718,18 @@ knitr::include_graphics("img/camera-green.jpg")
 
 .panel[.panel-name[HTML]
 .pull-left[
-`<img src="img/camera-green.jpg" width="90%"/>`
+```{html, eval=FALSE, echo=TRUE}
+<img src="img/camera-green.jpg" width="90%"/>
+```
 - most flexible
 - a bit unsightly
 - takes time to [get used to syntax](https://www.w3schools.com/html/html_images.asp)
 
-.small[To insert an avatar: `<img style="border-radius: 50%;" src="https://insertweblink.here" width="170px"/>`]
+.small[**Tip:** To insert an avatar: 
+```{html, eval=FALSE, echo=TRUE}
+<img src="https://insertweblink.here" width="170px" style="border-radius: 50%;"/>
+```
+]
 ]
 
 .pull-right[
@@ -743,26 +738,64 @@ knitr::include_graphics("img/camera-green.jpg")
 
 ] <!---->
 
-.panel[.panel-name[Background]
+---
+.panel[.panel-name[Image sources]
 
-You can use the [background-image property](https://github.com/gnab/remark/wiki/Markdown#background-image) just like classes
+Below you'll see a few places where you can find beautiful and free background images contributed by artists all over world.
+
+**Tip:** You can use the `.footnote[]` class to credit the source of the image ([example here](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html)) `r emo::ji("slightly_smiling_face")`
 
 .pull-left[
-- `background-image: url(https://some.pretty.picture)`
+- [unsplash.com](unsplash.com)
+- [rawpixel.com](rawpixel.com)
+- [pexels.com](https://www.pexels.com/)
+]
+
+.pull-right[
+> - In the public domain<br>
+  (no attribution necessary)
+> - Free with attribution<br>
+  (e.g. Photo by [Annie Spratt](https://unsplash.com/@anniespratt))
+]
+] <!---->
+
+.panel[.panel-name[Image paths]
+
+.pull-left[
+R Markdown and xaringan don't always agree on where images are located<br>(i.e. relative file paths). 
+
+You might find that `knitr::include_graphics()` produces an image from a code chunk in your Rmd, and that the same image may not show up when you render your xaringan slides. `r emo::ji("woman_shrugging")`
+]
+
+.pull-right[
+I recommend using this directory structure to help avoid confusion<br>(example file path: `img/camera-green.jpg`)
+
+```{r eval=FALSE, echo=TRUE}
+.
+├── css
+├── img #<<
+    ├── camera-green.jpg #<<
+├── libs
+├── my-slides.Rmd
+└── my-slides.html
+```
+]
+
+]
+.panel[.panel-name[Background]
+
+You can use the [background-image property](https://github.com/gnab/remark/wiki/Markdown#background-image) underneath the `---` slide separator
+
+- `background-image:` 
+  - `url(https://insertweblink.here)` --> image from the web
+  - `url(img/camera-green.jpg)` --> local image, using relative file paths
 - `background-size:`
     - `cover` --> rescales + crops with no empty space
     - `contain` --> rescales only
 - `background-position:` play with [this](https://css-tricks.com/almanac/properties/b/background-position/)
-]
 
-.pull-right[
-Image from a url:<br>`url(https://unsplash.com/photos/ihDcta7Kvqg)`
 
-Local image, use relative file paths: `url(img/camera-green.jpg)`
-
-.my-coral[now, let's see `background-size` examples in action! `r icon::fa("arrow-circle-right")` ]
-]
-
+.right[.my-coral[`background-size` examples in action! `r icon::fa("arrow-circle-right")` ]]
 ] <!---->
 
 ] <!--end of panelset-->
@@ -837,6 +870,7 @@ The easiest way to access them is with the icon `r emo::ji("package")`:<br>` r i
 .pull-right-wide[
 I haven't had as much luck with these, but you can use the icon `r emo::ji("package")` here as well: ` r icon::ii("ios-flask-outline")`
 ]
+
 ---
 name: your-turn
 background-color: var(--my-red)
@@ -898,8 +932,7 @@ template: tables
 ----
 
 ```{r, echo=TRUE}
-NHSRdatasets::LOS_model %>%
-  head()
+NHSRdatasets::LOS_model %>% head()
 ```
 
 .footnote[We're using the [NHSRdatasets `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRdatasets#nhs-r-community-datasets-) here! It was developed by Chris Mainey and contains a few datasets to use for practice.]
@@ -912,16 +945,14 @@ template: tables
 ----
 .pull-left[
 ```{r, echo=TRUE, eval=FALSE}
-NHSRdatasets::LOS_model %>%
-  head() %>%
+NHSRdatasets::LOS_model %>% head() %>%
   knitr::kable(format = "html")
 ```
 ]
 
 .pull-right[
 ```{r, echo=FALSE}
-NHSRdatasets::LOS_model %>%
-  head() %>%
+NHSRdatasets::LOS_model %>% head() %>%
   knitr::kable(format = "html")
 ```
 ]
@@ -934,8 +965,7 @@ template: tables
 ----
 
 ```{r, echo=TRUE}
-NHSRdatasets::LOS_model %>%
-  head() %>%
+NHSRdatasets::LOS_model %>% head() %>%
   DT::datatable()
 ```
 
@@ -948,16 +978,14 @@ template: tables
 
 .pull-left[
 ```{r, echo=TRUE, eval=FALSE}
-NHSRdatasets::LOS_model %>%
-  head() %>%
+NHSRdatasets::LOS_model %>% head() %>%
   gt::gt()
 ```
 ]
 
 .pull-right[
 ```{r, echo=FALSE}
-NHSRdatasets::LOS_model %>%
-  head() %>%
+NHSRdatasets::LOS_model %>% head() %>%
   gt::gt()
 ```
 ]
@@ -968,13 +996,14 @@ name: plots
 
 ---
 template: plots
+name: plot-right
 
 .pull-left[
 ### Code
 
 ----
 
-```{r plot-last, echo=TRUE, fig.show='hide'}
+```{r plot-right, echo=TRUE, fig.show='hide'}
 NHSRdatasets::LOS_model %>%
   ggplot(aes(x = Age, y = Organisation)) +
   geom_boxplot(aes(fill = Organisation)) +
@@ -988,7 +1017,7 @@ NHSRdatasets::LOS_model %>%
 
 ----
 
-```{r, ref.label="plot-last"}
+```{r, ref.label="plot-right"}
 ```
 
 ]
@@ -998,11 +1027,24 @@ NHSRdatasets::LOS_model %>%
 template: plots
 name: alison-tips
 
-### Great tips here from Alison Hill
+### Creating side-by-side code + plot
 
-```{r}
-knitr::include_url("https://rstudio-education.github.io/teaching-in-production/slides/index.html#46")
-```
+----
+
+Here's how to leverage code chunk options to avoid repeating your code<sup1/sup>:
+
+1. Code on left, plot on right ([example](#plot-right))
+
+  - Chunk 1: `{r plot-right, fig.show = 'hide'}`
+  - Chunk 2: `{r ref.label = 'plot-right', echo = FALSE}`
+
+2. Plot on left, code on right
+  - Chunk 1: `{r plot-left, echo = FALSE}`
+  - Chunk 2: `{r ref.label = 'plot-left', fig.show = 'hide'}`
+
+.small[
+These and more great tips in Alison Hill's [Teaching in Production](https://rstudio-education.github.io/teaching-in-production/slides/index.html#46)
+]
 
 ---
 name: your-turn

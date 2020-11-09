@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Sharing Your Work with Xaringan</title>
+    <title>Sharing Your Work with xaringan</title>
     <meta charset="utf-8" />
     <meta name="author" content="Silvia Canelón, Ph.D." />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <meta name="description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta name="description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta name="generator" content="xaringan and remark.js"/>
     <meta name="github-repo" content="spcanelon/xaringan-basics-and-beyond"/>
-    <meta name="twitter:title" content="Sharing Your Work with Xaringan"/>
-    <meta name="twitter:description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta name="twitter:title" content="Sharing Your Work with xaringan"/>
+    <meta name="twitter:description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta name="twitter:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
     <meta name="twitter:image:src" content="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png"/>
-    <meta name="twitter:image:alt" content="Title slide for the Sharing Your Work with Xaringan workshop series"/>
+    <meta name="twitter:image:alt" content="Title slide for the Sharing Your Work with xaringan workshop series"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:creator" content="@spcanelon"/>
     <meta name="twitter:site" content="@spcanelon"/>
-    <meta property="og:title" content="Sharing Your Work with Xaringan"/>
-    <meta property="og:description" content="An Introduction to Xaringan for Presentations: The Basics and Beyond"/>
+    <meta property="og:title" content="Sharing Your Work with xaringan"/>
+    <meta property="og:description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta property="og:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
     <meta property="og:image" content="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png"/>
-    <meta property="og:image:alt" content="Title slide for the Sharing Your Work with Xaringan workshop series"/>
+    <meta property="og:image:alt" content="Title slide for the Sharing Your Work with xaringan workshop series"/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="article:author" content="Silvia Canelon"/>
@@ -72,8 +72,8 @@ background-position: 90% 75%, 75% 75%
 background-size: 8%, cover
 
 .right-column[
-# Sharing Your Work&lt;br&gt;with Xaringan
-### An Introduction to Xaringan:&lt;br&gt;The Basics
+# Sharing Your Work&lt;br&gt;with xaringan
+### An Introduction to xaringan:&lt;br&gt;The Basics
 
 **Silvia Canelón, Ph.D.**&lt;br&gt;
 Nov. 3rd, 2020
@@ -342,37 +342,8 @@ More options for output `xaringan::moon_reader`
   + `arta`, `ascetic`, `dark`, `default`, `far`, `github`, `googlecode`,   `idea`, `ir-black`, `magula`, `monokai`, `rainbow`, `solarized-dark`, `solarized-light`, `sunburst`, `tomorrow`, `tomorrow-night-blue`, `tomorrow-night-bright`, `tomorrow-night`, `tomorrow-night-eighties`, `vs`, `zenburn`.
 ] &lt;!----&gt;
 
-.panel[.panel-name[syntax testing]
-```r
-# Sharing Your Work&lt;br&gt;with Xaringan
-### An Introduction to Xaringan:&lt;br&gt;The Basics
-
-**Silvia Canelón, Ph.D.**&lt;br&gt;
-Nov. 3rd, 2020
-```
-]
-
 ] &lt;!--end of panelset--&gt;
----
-# Testing things
 
-.pull-left[
-```
-# Sharing Your Work&lt;br&gt;with Xaringan
-### An Introduction to Xaringan:&lt;br&gt;The Basics
-
-**Silvia Canelón, Ph.D.**&lt;br&gt;
-Nov. 3rd, 2020
-```
-]
-
-.pull-right[
-# Sharing Your Work&lt;br&gt;with Xaringan
-### An Introduction to Xaringan:&lt;br&gt;The Basics
-
-**Silvia Canelón, Ph.D.**&lt;br&gt;
-Nov. 3rd, 2020
-]
 ---
 name: live-coding
 background-color: var(--my-yellow)
@@ -574,6 +545,7 @@ This content is also centered and in the middle of the slide
 ---
 ```
 
+.right[.my-coral[example on next slide <i class="fas  fa-arrow-circle-right "></i> ]]
 ]
 
 ---
@@ -615,6 +587,9 @@ class: center, middle
 
 ---
 ```
+
+.right[.my-coral[example on next slide <i class="fas  fa-arrow-circle-right "></i> ]]
+
 ]
 
 ---
@@ -636,7 +611,7 @@ template: placement
 
 Like the text above and&lt;br&gt;the hex sticker below
 
-![:scale 30%](img/hex-rmarkdown.png)
+![:scale 25%](img/hex-rmarkdown.png)
 ]
 
 --
@@ -676,7 +651,7 @@ And text is a little lighter
 - They are meant to be used together
 
 .center[
-![:scale 20%](img/hex-xaringan.png)]
+![:scale 15%](img/hex-xaringan.png)]
 ]
 
 ---
@@ -692,7 +667,11 @@ There are a variety of ways to add images to your slides!
 .panel[.panel-name[Markdown]
 .pull-left[
 
-`![](img/camera-green.jpg)`
+
+```markdown
+![](img/camera-green.jpg)
+```
+
 - simple
 - not very flexible
 - output size fully dependent on the size of the image, but scaling can be managed [using custom macros (JavaScript functions) ](https://slides.yihui.org/xaringan/#33)
@@ -710,7 +689,10 @@ Photo by [Annie Spratt](https://unsplash.com/@anniespratt)]
 
 .pull-left[
 
-`knitr::include_graphics("img/camera-green.jpg")`
+
+```r
+knitr::include_graphics("img/camera-green.jpg")
+```
 - pretty flexible
 - a little bulky
 - more options [here](https://www.rdocumentation.org/packages/knitr/versions/1.30/topics/include_graphics)
@@ -724,12 +706,20 @@ Photo by [Annie Spratt](https://unsplash.com/@anniespratt)]
 
 .panel[.panel-name[HTML]
 .pull-left[
-`&lt;img src="img/camera-green.jpg" width="90%"/&gt;`
+
+```html
+&lt;img src="img/camera-green.jpg" width="90%"/&gt;
+```
 - most flexible
 - a bit unsightly
 - takes time to [get used to syntax](https://www.w3schools.com/html/html_images.asp)
 
-.small[To insert an avatar: `&lt;img style="border-radius: 50%;" src="https://insertweblink.here" width="170px"/&gt;`]
+.small[**Tip:** To insert an avatar: 
+
+```html
+&lt;img src="https://insertweblink.here" width="170px" style="border-radius: 50%;"/&gt;
+```
+]
 ]
 
 .pull-right[
@@ -738,26 +728,65 @@ Photo by [Annie Spratt](https://unsplash.com/@anniespratt)]
 
 ] &lt;!----&gt;
 
-.panel[.panel-name[Background]
+---
+.panel[.panel-name[Image sources]
 
-You can use the [background-image property](https://github.com/gnab/remark/wiki/Markdown#background-image) just like classes
+Below you'll see a few places where you can find beautiful and free background images contributed by artists all over world.
+
+**Tip:** You can use the `.footnote[]` class to credit the source of the image ([example here](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html)) 🙂
 
 .pull-left[
-- `background-image: url(https://some.pretty.picture)`
+- [unsplash.com](unsplash.com)
+- [rawpixel.com](rawpixel.com)
+- [pexels.com](https://www.pexels.com/)
+]
+
+.pull-right[
+&gt; - In the public domain&lt;br&gt;
+  (no attribution necessary)
+&gt; - Free with attribution&lt;br&gt;
+  (e.g. Photo by [Annie Spratt](https://unsplash.com/@anniespratt))
+]
+] &lt;!----&gt;
+
+.panel[.panel-name[Image paths]
+
+.pull-left[
+R Markdown and xaringan don't always agree on where images are located&lt;br&gt;(i.e. relative file paths). 
+
+You might find that `knitr::include_graphics()` produces an image from a code chunk in your Rmd, and that the same image may not show up when you render your xaringan slides. 🤷‍♀
+]
+
+.pull-right[
+I recommend using this directory structure to help avoid confusion&lt;br&gt;(example file path: `img/camera-green.jpg`)
+
+
+```r
+.
+├── css
+*├── img
+*   ├── camera-green.jpg
+├── libs
+├── my-slides.Rmd
+└── my-slides.html
+```
+]
+
+]
+.panel[.panel-name[Background]
+
+You can use the [background-image property](https://github.com/gnab/remark/wiki/Markdown#background-image) underneath the `---` slide separator
+
+- `background-image:` 
+  - `url(https://insertweblink.here)` --&gt; image from the web
+  - `url(img/camera-green.jpg)` --&gt; local image, using relative file paths
 - `background-size:`
     - `cover` --&gt; rescales + crops with no empty space
     - `contain` --&gt; rescales only
 - `background-position:` play with [this](https://css-tricks.com/almanac/properties/b/background-position/)
-]
 
-.pull-right[
-Image from a url:&lt;br&gt;`url(https://unsplash.com/photos/ihDcta7Kvqg)`
 
-Local image, use relative file paths: `url(img/camera-green.jpg)`
-
-.my-coral[now, let's see `background-size` examples in action! <i class="fas  fa-arrow-circle-right "></i> ]
-]
-
+.right[.my-coral[`background-size` examples in action! <i class="fas  fa-arrow-circle-right "></i> ]]
 ] &lt;!----&gt;
 
 ] &lt;!--end of panelset--&gt;
@@ -832,6 +861,7 @@ The easiest way to access them is with the icon 📦:&lt;br&gt;` r icon::fa("orc
 .pull-right-wide[
 I haven't had as much luck with these, but you can use the icon 📦 here as well: ` r icon::ii("ios-flask-outline")`
 ]
+
 ---
 name: your-turn
 background-color: var(--my-red)
@@ -894,8 +924,7 @@ template: tables
 
 
 ```r
-NHSRdatasets::LOS_model %&gt;%
-  head()
+NHSRdatasets::LOS_model %&gt;% head()
 ## # A tibble: 6 x 5
 ##      ID Organisation   Age   LOS Death
 ##   &lt;int&gt; &lt;ord&gt;        &lt;int&gt; &lt;int&gt; &lt;int&gt;
@@ -918,8 +947,7 @@ template: tables
 .pull-left[
 
 ```r
-NHSRdatasets::LOS_model %&gt;%
-  head() %&gt;%
+NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   knitr::kable(format = "html")
 ```
 ]
@@ -991,13 +1019,12 @@ template: tables
 
 
 ```r
-NHSRdatasets::LOS_model %&gt;%
-  head() %&gt;%
+NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   DT::datatable()
 ```
 
-<div id="htmlwidget-b60dec8952b3eaea007f" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b60dec8952b3eaea007f">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f4bbc21f95b4c895b5b2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f4bbc21f95b4c895b5b2">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 template: tables
@@ -1009,8 +1036,7 @@ template: tables
 .pull-left[
 
 ```r
-NHSRdatasets::LOS_model %&gt;%
-  head() %&gt;%
+NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   gt::gt()
 ```
 ]
@@ -1020,7 +1046,7 @@ NHSRdatasets::LOS_model %&gt;%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wnmjstkkao .gt_table {
+#gjlrqgxgdj .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1043,7 +1069,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-left-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_heading {
+#gjlrqgxgdj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1055,7 +1081,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_title {
+#gjlrqgxgdj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1065,7 +1091,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-bottom-width: 0;
 }
 
-#wnmjstkkao .gt_subtitle {
+#gjlrqgxgdj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1075,13 +1101,13 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-width: 0;
 }
 
-#wnmjstkkao .gt_bottom_border {
+#gjlrqgxgdj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_col_headings {
+#gjlrqgxgdj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1096,7 +1122,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_col_heading {
+#gjlrqgxgdj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1116,7 +1142,7 @@ NHSRdatasets::LOS_model %&gt;%
   overflow-x: hidden;
 }
 
-#wnmjstkkao .gt_column_spanner_outer {
+#gjlrqgxgdj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1128,15 +1154,15 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 4px;
 }
 
-#wnmjstkkao .gt_column_spanner_outer:first-child {
+#gjlrqgxgdj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wnmjstkkao .gt_column_spanner_outer:last-child {
+#gjlrqgxgdj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wnmjstkkao .gt_column_spanner {
+#gjlrqgxgdj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1148,7 +1174,7 @@ NHSRdatasets::LOS_model %&gt;%
   width: 100%;
 }
 
-#wnmjstkkao .gt_group_heading {
+#gjlrqgxgdj .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1170,7 +1196,7 @@ NHSRdatasets::LOS_model %&gt;%
   vertical-align: middle;
 }
 
-#wnmjstkkao .gt_empty_group_heading {
+#gjlrqgxgdj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1185,19 +1211,19 @@ NHSRdatasets::LOS_model %&gt;%
   vertical-align: middle;
 }
 
-#wnmjstkkao .gt_striped {
+#gjlrqgxgdj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wnmjstkkao .gt_from_md > :first-child {
+#gjlrqgxgdj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wnmjstkkao .gt_from_md > :last-child {
+#gjlrqgxgdj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wnmjstkkao .gt_row {
+#gjlrqgxgdj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1216,7 +1242,7 @@ NHSRdatasets::LOS_model %&gt;%
   overflow-x: hidden;
 }
 
-#wnmjstkkao .gt_stub {
+#gjlrqgxgdj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1228,7 +1254,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-left: 12px;
 }
 
-#wnmjstkkao .gt_summary_row {
+#gjlrqgxgdj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1238,7 +1264,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 5px;
 }
 
-#wnmjstkkao .gt_first_summary_row {
+#gjlrqgxgdj .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1248,7 +1274,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_grand_summary_row {
+#gjlrqgxgdj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1258,7 +1284,7 @@ NHSRdatasets::LOS_model %&gt;%
   padding-right: 5px;
 }
 
-#wnmjstkkao .gt_first_grand_summary_row {
+#gjlrqgxgdj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1268,7 +1294,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_table_body {
+#gjlrqgxgdj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1277,7 +1303,7 @@ NHSRdatasets::LOS_model %&gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_footnotes {
+#gjlrqgxgdj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1291,13 +1317,13 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_footnote {
+#gjlrqgxgdj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#wnmjstkkao .gt_sourcenotes {
+#gjlrqgxgdj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1311,46 +1337,46 @@ NHSRdatasets::LOS_model %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#wnmjstkkao .gt_sourcenote {
+#gjlrqgxgdj .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#wnmjstkkao .gt_left {
+#gjlrqgxgdj .gt_left {
   text-align: left;
 }
 
-#wnmjstkkao .gt_center {
+#gjlrqgxgdj .gt_center {
   text-align: center;
 }
 
-#wnmjstkkao .gt_right {
+#gjlrqgxgdj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wnmjstkkao .gt_font_normal {
+#gjlrqgxgdj .gt_font_normal {
   font-weight: normal;
 }
 
-#wnmjstkkao .gt_font_bold {
+#gjlrqgxgdj .gt_font_bold {
   font-weight: bold;
 }
 
-#wnmjstkkao .gt_font_italic {
+#gjlrqgxgdj .gt_font_italic {
   font-style: italic;
 }
 
-#wnmjstkkao .gt_super {
+#gjlrqgxgdj .gt_super {
   font-size: 65%;
 }
 
-#wnmjstkkao .gt_footnote_marks {
+#gjlrqgxgdj .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="wnmjstkkao" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="gjlrqgxgdj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1416,6 +1442,7 @@ name: plots
 
 ---
 template: plots
+name: plot-right
 
 .pull-left[
 ### Code
@@ -1437,7 +1464,7 @@ NHSRdatasets::LOS_model %&gt;%
 
 ----
 
-![](day-01-basics_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+![](day-01-basics_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -1446,9 +1473,24 @@ NHSRdatasets::LOS_model %&gt;%
 template: plots
 name: alison-tips
 
-### Great tips here from Alison Hill
+### Creating side-by-side code + plot
 
-&lt;iframe src="https://rstudio-education.github.io/teaching-in-production/slides/index.html#46" width="100%" height="400px"&gt;&lt;/iframe&gt;
+----
+
+Here's how to leverage code chunk options to avoid repeating your code&lt;sup1/sup&gt;:
+
+1. Code on left, plot on right ([example](#plot-right))
+
+  - Chunk 1: `{r plot-right, fig.show = 'hide'}`
+  - Chunk 2: `{r ref.label = 'plot-right', echo = FALSE}`
+
+2. Plot on left, code on right
+  - Chunk 1: `{r plot-left, echo = FALSE}`
+  - Chunk 2: `{r ref.label = 'plot-left', fig.show = 'hide'}`
+
+.small[
+These and more great tips in Alison Hill's [Teaching in Production](https://rstudio-education.github.io/teaching-in-production/slides/index.html#46)
+]
 
 ---
 name: your-turn
