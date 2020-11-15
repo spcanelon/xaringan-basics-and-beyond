@@ -621,11 +621,32 @@ My go-to resource for looking up `selectors` or `property` options is the [CSS-T
 
 ---
 name: css-nhsr
-
-## The NHS-R theme's `nhsr.css`&lt;img style="float: right;" src="https://nhsrcommunity.com/wp-content/uploads/2018/02/logo.png" width="90px"/&gt;
+background-image: url(https://nhsrcommunity.com/wp-content/uploads/2018/02/logo.png)
+background-size: 90px
+background-position: 1020px 60px
 
 ---
 template: css-nhsr
+
+## The NHS-R theme's `nhsr.css`
+
+The following slides will incrementally walk through the modifications made to&lt;br&gt;the default xaringan theme.
+
+--
+
+Each slide will include:
+
+- The code as reflected in xaringan's `default.css` on the left&lt;br&gt;and the modified css used in the `nhsr.css` on the right.
+- A visual example of the modifications made&lt;br&gt;using example slides [from this slide deck](https://spcanelon.github.io/xaringan-basics-and-beyond/materials/nhsr-example-slides/nhsr-example-slides.html)
+
+.footnote[
+Presenting the material this way was [kindly suggested by Laurie Baker](https://github.com/spcanelon/xaringan-basics-and-beyond/issues/8#issue-737162464)]
+
+---
+template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Anchors/links:] `default.css`
@@ -639,8 +660,6 @@ a, a &gt; code {
 ```
 
 ]
-
---
 
 .pull-right[
 .my-coral[Anchors/links:] `nhsr.css`
@@ -659,8 +678,33 @@ a:hover {
 
 ]
 
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Anchors/links:] `nhsr.css`
+
+&lt;img src="img/css-ex-anchors-before.png" 
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+
+]
+.pull-right[
+.my-coral[Anchors/links:] `nhsr.css`
+
+&lt;img src="img/css-ex-anchors-after.png" 
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+
+]
+
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
 ---
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Headings:] `default.css`
@@ -677,8 +721,6 @@ template: css-nhsr
 - Type will scale with module, in `em`
 
 ]
-
---
 
 .pull-right[
 .my-coral[Headings:] `nhsr.css`
@@ -703,8 +745,34 @@ template: css-nhsr
 
 ]
 
+
+] &lt;!--end of panel--&gt;
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Headings:] `default.css`
+
+&lt;img src="img/css-ex-headings-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+.pull-right[
+.my-coral[Headings:] `nhsr.css`
+
+&lt;img src="img/css-ex-headings-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
+
 ---
 template: css-nhsr
+
+.panelset[
+
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Paragraph text:] `default.css`
@@ -725,9 +793,35 @@ template: css-nhsr
 ```
 
 ]
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Paragraph text:] `default.css`
+
+&lt;img src="img/css-ex-paragraph-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+
+]
+
+.pull-right[
+.my-coral[Paragraph text:] `nhsr.css`
+
+&lt;img src="img/css-ex-paragraph-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+
+]
+
+] &lt;!--end of panel--&gt;
+
+]&lt;!--end of panelset--&gt;
 
 ---
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Horizontal bars:] `default.css`
@@ -735,8 +829,6 @@ template: css-nhsr
 &gt; Standard values were used by xaringan.
 
 ]
-
---
 
 .pull-right[
 .my-coral[Horizontal bars:] `nhsr.css`
@@ -754,8 +846,30 @@ hr {
 
 ]
 
+] &lt;!--end of panel--&gt;
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Horizontal bars:] `default.css`
+
+&lt;img src="img/css-ex-horizontalbar-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+.pull-right[
+.my-coral[Horizontal bars:] `nhsr.css`
+
+&lt;img src="img/css-ex-horizontalbar-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
 ---
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Bottom of slide stuff:] `default.css`
@@ -774,8 +888,6 @@ template: css-nhsr
 How do we write comments in CSS?
 
 ]
-
---
 
 .pull-right[
 .my-coral[Bottom of slide stuff:] `nhsr.css`
@@ -799,15 +911,37 @@ How do we write comments in CSS?
 
 ]
 
+] &lt;!--end of panel--&gt;
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Bottom of slide stuff:] `default.css`
+
+&lt;img src="img/css-ex-footnote-pg-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+.pull-right[
+.my-coral[Bottom of slide stuff:] `nhsr.css`
+
+&lt;img src="img/css-ex-footnote-pg-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
 ---
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Inline code:] `default.css`
 
 
 ```css
-.remark-code-line-highlighted     { background-color: #ffff88; }
+.remark-code-line-highlighted { background-color: #ffff88; }
 ```
 
 
@@ -821,8 +955,6 @@ template: css-nhsr
 ```
 
 ]
-
---
 
 .pull-right[
 .my-coral[Inline code:] `nhsr.css`
@@ -847,19 +979,51 @@ template: css-nhsr
 
 ]
 
+] &lt;!--end of panel--&gt;
+
+
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Inline code:] `default.css`
+
+&lt;img src="img/css-ex-code-highlight-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+.pull-right[
+.my-coral[Inline code:] `nhsr.css`
+
+&lt;img src="img/css-ex-code-highlight-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
 ---
+
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Code chunks:] `default.css`
 
-&gt; Nothing specific in the xaringan default style sheet -- it's possible `highlightStyle` [in the YAML](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html?panelset1=yaml-2&amp;panelset4=remark.js2&amp;panelset5=nhsrtheme2&amp;panelset6=moon-reader2&amp;panelset7=markdown2#14) takes the lead on this 🤷‍♀
+&gt; Nothing specific in the xaringan default style sheet -- it's possible `highlightStyle` [in the YAML](https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html?panelset1=yaml-2&amp;panelset4=remark.js2&amp;panelset5=nhsrtheme2&amp;panelset6=moon-reader2&amp;panelset7=markdown2#14) takes the lead on this 🤔
 
-&lt;img src="img/recap-yaml-2.png" width="819" /&gt;
+&lt;!--&lt;img src="img/recap-yaml-2.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;--&gt;
 
+
+```yaml
+output:
+  xaringan::moon_reader:
+    nature:
+*     highlightStyle: googlecode
+```
 ]
-
---
 
 .pull-right[
 .my-coral[Code chunks:] `nhsr.css`
@@ -888,8 +1052,34 @@ pre code {
 ???
 Sometimes our code won't fit vertically! What can we do? We can make the `font-size` a little smaller **or** we can use xaringanExtra's [fit to screen extension](https://github.com/gadenbuie/xaringanExtra#-fit-to-screen)
 
+
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Code chunks:] `default.css`
+
+&lt;img src="img/css-ex-code-chunk-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+.pull-right[
+.my-coral[Code chunks:] `nhsr.css`
+
+&lt;img src="img/css-ex-code-chunk-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
+
 ---
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Tables:] `default.css`
@@ -913,8 +1103,6 @@ th, td { padding: 5px;
 
 ]
 
---
-
 .pull-right[
 .my-coral[Tables:] `nhsr.css`
 
@@ -936,9 +1124,33 @@ th, td { padding: 5px;
 ```
 
 ]
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Tables:] `default.css`
+
+&lt;img src="img/css-ex-tables-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+] 
+
+.pull-right[
+.my-coral[Tables:] `nhsr.css`
+
+&lt;img src="img/css-ex-tables-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
 
 ---
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Block quote:] `default.css`
@@ -955,8 +1167,6 @@ blockquote {
 
 ]
 
---
-
 .pull-right[
 .my-coral[Block quote:] `nhsr.css`
 
@@ -969,12 +1179,35 @@ blockquote {
   padding-left:        1em;
 }
 ```
-
-
 ]
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Block quote:] `default.css`
+
+&lt;img src="img/css-ex-quotes-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+.pull-right[
+.my-coral[Block quote:] `nhsr.css`
+
+&lt;img src="img/css-ex-quotes-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
 
 ---
 template: css-nhsr
+
+.panelset[
+
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Inverse class modifications:] `default.css`
@@ -993,7 +1226,6 @@ template: css-nhsr
 
 ]
 
---
 .pull-right[
 .my-coral[Inverse class modifications:] `nhsr.css`
 
@@ -1017,8 +1249,35 @@ template: css-nhsr
 
 ]
 
+
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Inverse class modifications:] `default.css`
+
+&lt;img src="img/css-ex-inverse-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+.pull-right[
+.my-coral[Inverse class modifications:] `nhsr.css`
+
+&lt;img src="img/css-ex-inverse-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+] &lt;!--end of panel--&gt;
+
+] &lt;!--end of panelset--&gt;
+
+
 ---
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Custom **title-slide** class:] `default.css`
@@ -1056,8 +1315,6 @@ class: title-slide, left, bottom
 --&gt;
 ]
 
---
-
 .pull-right[
 .my-coral[Custom **title-slide** class:] `nhsr.css`
 
@@ -1081,8 +1338,31 @@ class: title-slide, left, bottom
 
 ]
 
+
+] &lt;!--end of panel--&gt;
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Custom **title-slide** class:] `default.css`
+
+&lt;img src="img/css-ex-title-slide-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+.pull-right[
+.my-coral[Custom **title-slide** class:] `nhsr.css`
+
+&lt;img src="img/css-ex-title-slide-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
 ---
 template: css-nhsr
+
+.panelset[
+.panel[.panel-name[Code]
 
 .pull-left[
 .my-coral[Custom color classes:] `default.css`
@@ -1090,8 +1370,6 @@ template: css-nhsr
 &gt; None in the default style sheet
 
 ]
-
---
 
 .pull-right[
 .my-coral[Custom color classes:] `nhsr.css`
@@ -1115,6 +1393,27 @@ You can use these by writing something like this in your slides R Markdown:
 .pink[Some pink text here]
 
 ]
+] &lt;!--end of panel--&gt;
+
+.panel[.panel-name[Output]
+
+.pull-left[
+.my-coral[Custom color classes:] `default.css`
+
+&lt;img src="img/css-ex-textemphasis-before.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+.pull-right[
+.my-coral[Custom color classes:] `nhsr.css`
+
+&lt;img src="img/css-ex-textemphasis-after.png"
+width="100%" style="border:2px solid #E8EDEE"/&gt;
+]
+
+] &lt;!--end of panel--&gt;
+] &lt;!--end of panelset--&gt;
+
 
 ---
 name: your-turn
@@ -1171,7 +1470,7 @@ class: inverse
 ]]
 
 .pull-right[
-The [NHS identity guideline](https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/) colour hex codes 🎨
+The [NHS identity](https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/) colour hex codes 🎨
 
 
 ```

@@ -10,7 +10,6 @@ a:hover {
 }
 
 /*-- HEADINGS --*/
-
 .remark-slide-content h1 {
   color:              #005EB8;
   font-size:          45px;
@@ -80,7 +79,7 @@ hr {
 
 /*-- Code chunk background layer --*/
 pre {
-  --border: 2px solid rgba(204, 189, 204, 0.8); /* code chunk border */
+  /*border: 2px solid rgba(204, 189, 204, 0.8); /* code chunk border*/
   border:             none;
   box-shadow:         2px 2px 2px 2px #eee;
   padding:            0.1em;                    /* padding between code chunk and border */
@@ -89,7 +88,7 @@ pre {
   border-radius:      1px;                      /* modify rounding of corners*/
 }
 
-/*-- Code chunk foreground --*/
+/*--  --*/
 pre code {
   background:          none;
   font-size:           18px !important;
@@ -126,6 +125,7 @@ blockquote {
   color:              #FFFFFF;
   text-shadow:        none;
 }
+
 /*-- Headings (inverse) --*/
 .inverse h1, .inverse h2, .inverse h3 {
   color:              #FFFFFF;
@@ -171,4 +171,3 @@ blockquote {
 .pink       { color:   #AE2573 }
 .red        { color:   #DA291C }
 .warmyellow { color:   #FFB81C }
-

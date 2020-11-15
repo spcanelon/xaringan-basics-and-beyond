@@ -17,7 +17,7 @@ output:
       highlightLines: true
       highlightLanguage: ["r"]
       countIncrementalSlides: false
-      ratio: "16:9"
+      ratio: "4:3"
     includes:
       after_body: [css/insert-logo.html]
 ---
@@ -69,9 +69,22 @@ class: middle, center, hide-logo
 Hello! My name is NHS-R Community and I'm excited to be here promoting the use of R in the NHS.
 
 ---
+# About NHS-R Community
+
+The NHS-R community aims to support the learning, application and exploitation of R in the NHS through workshops, video tutorials and providing a platform for discussion and sharing of developing best practice solutions to NHS problems.
+
+With funding support from the Health Foundation’s Advancing Applied Analytics programme (which is aimed at improving analytical capability in support of health and care services.) The Improvement Academy & University of Bradford will lead this initiative  with support from NHS Improvement, NHS Midlands and Lancashire Commissioning Support Unit & NHS Wales Delivery Unit.
+
+
+.footnote[This excerpt comes from the NHS-R website: https://nhsrcommunity.com/about]
+
+
+---
 class: inverse, middle
 
 # Outline
+
+----
 
 .pull-left[
 
@@ -151,6 +164,8 @@ knitr::kable(head(LOS_model), format = 'html')
 ```
 ]
 
+--
+
 ### Quote
 
 > The NHS-R community aims to support the learning, application and exploitation of R in the NHS through workshops, video tutorials and providing a platform for discussion and sharing of developing best practice solutions to NHS problems.
@@ -158,30 +173,30 @@ knitr::kable(head(LOS_model), format = 'html')
 ---
 name: line-highlighting
 
-# Line highlighting
+# Code highlighting
 
-An example of using the trailing comment `#<<` to highlight lines:
+`This is what inline code looks like highlighted within text`
+
+Lines within code chunks can be highlighted using the trailing comment `#<<`, as seen below:
 
 ### Code
 
 ````markdown
-`r ''````{r tidy=FALSE}
-library(NHSRdatasets)
-ggplot(LOS_model) +
-  aes(Age, fill = Organisation) + 
-  geom_boxplot() +               #<<
-  nhsrtheme::scale_fill_nhs()    #<<
+`r ''````{r}
+NHSRdatasets::LOS_model %>%
+  ggplot(aes(x = Age, y = Organisation)) +
+  geom_boxplot(aes(fill = Organisation)) +    #<<
+  nhsrtheme::scale_fill_nhs("highlights")     #<<
 ```
 ````
 
 ### Output
 
-```{r tidy=FALSE, eval=FALSE, echo=TRUE}
-library(NHSRdatasets)
-ggplot(LOS_model) +
-  aes(Age, fill = Organisation) + 
-  geom_boxplot() +               #<<
-  nhsrtheme::scale_fill_nhs()    #<<
+```{r eval=FALSE, echo=TRUE}
+NHSRdatasets::LOS_model %>%
+  ggplot(aes(x = Age, y = Organisation)) +
+  geom_boxplot(aes(fill = Organisation)) +    #<<
+  nhsrtheme::scale_fill_nhs("highlights")     #<<
 ```
 
 ---

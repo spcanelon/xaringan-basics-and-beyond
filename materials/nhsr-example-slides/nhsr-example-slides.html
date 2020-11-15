@@ -5,8 +5,6 @@
     <meta charset="utf-8" />
     <meta name="author" content="Author Name" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-    <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
     <link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/nhsr.css" type="text/css" />
     <link rel="stylesheet" href="css/nhsr-fonts.css" type="text/css" />
@@ -46,9 +44,22 @@ class: middle, center, hide-logo
 Hello! My name is NHS-R Community and I'm excited to be here promoting the use of R in the NHS.
 
 ---
+# About NHS-R Community
+
+The NHS-R community aims to support the learning, application and exploitation of R in the NHS through workshops, video tutorials and providing a platform for discussion and sharing of developing best practice solutions to NHS problems.
+
+With funding support from the Health Foundation’s Advancing Applied Analytics programme (which is aimed at improving analytical capability in support of health and care services.) The Improvement Academy &amp; University of Bradford will lead this initiative  with support from NHS Improvement, NHS Midlands and Lancashire Commissioning Support Unit &amp; NHS Wales Delivery Unit.
+
+
+.footnote[This excerpt comes from the NHS-R website: https://nhsrcommunity.com/about]
+
+
+---
 class: inverse, middle
 
 # Outline
+
+----
 
 .pull-left[
 
@@ -180,6 +191,8 @@ Data were generated to learn Generalized Linear Models (GLM) concepts, modelling
 &lt;/table&gt;
 ]
 
+--
+
 ### Quote
 
 &gt; The NHS-R community aims to support the learning, application and exploitation of R in the NHS through workshops, video tutorials and providing a platform for discussion and sharing of developing best practice solutions to NHS problems.
@@ -187,19 +200,20 @@ Data were generated to learn Generalized Linear Models (GLM) concepts, modelling
 ---
 name: line-highlighting
 
-# Line highlighting
+# Code highlighting
 
-An example of using the trailing comment `#&lt;&lt;` to highlight lines:
+`This is what inline code looks like highlighted within text`
+
+Lines within code chunks can be highlighted using the trailing comment `#&lt;&lt;`, as seen below:
 
 ### Code
 
 ````markdown
-```{r tidy=FALSE}
-library(NHSRdatasets)
-ggplot(LOS_model) +
-  aes(Age, fill = Organisation) + 
-  geom_boxplot() +               #&lt;&lt;
-  nhsrtheme::scale_fill_nhs()    #&lt;&lt;
+```{r}
+NHSRdatasets::LOS_model %&gt;%
+  ggplot(aes(x = Age, y = Organisation)) +
+  geom_boxplot(aes(fill = Organisation)) +    #&lt;&lt;
+  nhsrtheme::scale_fill_nhs("highlights")     #&lt;&lt;
 ```
 ````
 
@@ -207,11 +221,10 @@ ggplot(LOS_model) +
 
 
 ```r
-library(NHSRdatasets)
-ggplot(LOS_model) +
-  aes(Age, fill = Organisation) + 
-* geom_boxplot() +
-* nhsrtheme::scale_fill_nhs()
+NHSRdatasets::LOS_model %&gt;%
+  ggplot(aes(x = Age, y = Organisation)) +
+* geom_boxplot(aes(fill = Organisation)) +
+* nhsrtheme::scale_fill_nhs("highlights")
 ```
 
 ---
@@ -251,7 +264,7 @@ I'm happy to take any questions, and if you'd like to get in touch, I've include
 "highlightLines": true,
 "highlightLanguage": "r",
 "countIncrementalSlides": false,
-"ratio": "16:9"
+"ratio": "4:3"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
