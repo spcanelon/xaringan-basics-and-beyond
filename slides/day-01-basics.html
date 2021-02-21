@@ -4,6 +4,7 @@
     <title>Sharing Your Work with xaringan</title>
     <meta charset="utf-8" />
     <meta name="author" content="Silvia Canelón, Ph.D." />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <meta name="description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta name="generator" content="xaringan and remark.js"/>
@@ -11,7 +12,7 @@
     <meta name="twitter:title" content="Sharing Your Work with xaringan"/>
     <meta name="twitter:description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta name="twitter:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
-    <meta name="twitter:image:src" content="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png"/>
+    <meta name="twitter:image:src" content="slides/day-01-cover-image.png"/>
     <meta name="twitter:image:alt" content="Title slide for the Sharing Your Work with xaringan workshop series"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:creator" content="@spcanelon"/>
@@ -19,7 +20,7 @@
     <meta property="og:title" content="Sharing Your Work with xaringan"/>
     <meta property="og:description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta property="og:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
-    <meta property="og:image" content="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png"/>
+    <meta property="og:image" content="slides/day-01-cover-image.png"/>
     <meta property="og:image:alt" content="Title slide for the Sharing Your Work with xaringan workshop series"/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en_US"/>
@@ -76,7 +77,7 @@ background-size: 8%, cover
 ### An Introduction to xaringan:&lt;br&gt;The Basics
 
 **Silvia Canelón, Ph.D.**&lt;br&gt;
-Nov. 3rd, 2020
+Nov. 3rd, 2020 &amp;#8212; Day 1
 ]
 
 .palegrey[.left[.footnote[Graphic by [Vernon Adams](https://www.rawpixel.com/image/575297/artistic-canvas-background-template)]]]
@@ -102,9 +103,9 @@ class: about-me-slide, inverse, middle, center
 
 .fade[University of Pennsylvania&lt;br&gt;Philadelphia, PA, USA]
 
-[<i class="fas  fa-link "></i> silvia.rbind.io](https://silvia.rbind.io)
-[<i class="fab  fa-twitter "></i> @spcanelon](https://twitter.com/spcanelon)
-[<i class="fab  fa-github "></i> @spcanelon](https://github.com/spcanelon)
+[`&lt;i class="fas  fa-link "&gt;&lt;/i&gt;`{=html} silvia.rbind.io](https://silvia.rbind.io)
+[`&lt;i class="fab  fa-twitter "&gt;&lt;/i&gt;`{=html} @spcanelon](https://twitter.com/spcanelon)
+[`&lt;i class="fab  fa-github "&gt;&lt;/i&gt;`{=html} @spcanelon](https://github.com/spcanelon)
 
 ---
 layout: true
@@ -138,7 +139,7 @@ class: top
 --
 
 .pull-left-narrow[.center[
-<i class="fas  fa-smile fa-3x " style="color:#e5bf00;"></i>]]
+`&lt;i class="fas  fa-smile fa-3x " style="color:#e5bf00;"&gt;&lt;/i&gt;`{=html}]]
 
 .pull-right-wide[
 - [xaringan 📦](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
@@ -178,7 +179,7 @@ class: inverse, middle, center
 ---
 template: question
 
-<i class="fas  fa-images fa-3x "></i>
+`&lt;i class="fas  fa-images fa-3x "&gt;&lt;/i&gt;`{=html}
 # How do we make&lt;br&gt;cool HTML5 slides?
 
 ---
@@ -284,7 +285,7 @@ library(nhsrtheme)
 ]
 
 .pull-right[
-3\. From Template <i class="fas  fa-angle-double-right "></i> NHS-R Presentation&lt;br&gt;4. Give your slide deck a name!
+3\. From Template `&lt;i class="fas  fa-angle-double-right "&gt;&lt;/i&gt;`{=html} NHS-R Presentation&lt;br&gt;4. Give your slide deck a name!
 ![:scale 85%](img/nhsrtheme-template.png)
 ]
 ]&lt;!----&gt;
@@ -292,11 +293,11 @@ library(nhsrtheme)
 .panel[.panel-name[Directory]
 The new directory in the "Files" pane contains
 .left[
-+ <i class="fas  fa-file-code "></i> the new Rmd file (i.e. `my-slides.Rmd`)
++ `&lt;i class="fas  fa-file-code "&gt;&lt;/i&gt;`{=html} the new Rmd file (i.e. `my-slides.Rmd`)
 
-+ <i class="fas  fa-folder-open "></i> the `img` folder containing logo files
++ `&lt;i class="fas  fa-folder-open "&gt;&lt;/i&gt;`{=html} the `img` folder containing logo files
 
-+ <i class="fas  fa-folder-open "></i> the `css` folder containing the custom `nhsr` theme files&lt;br&gt;.small[and an HTML file in charge of [adding the NHS logo to each slide](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides)]
++ `&lt;i class="fas  fa-folder-open "&gt;&lt;/i&gt;`{=html} the `css` folder containing the custom `nhsr` theme files&lt;br&gt;.small[and an HTML file in charge of [adding the NHS logo to each slide](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides)]
 ]
 ] &lt;!----&gt;
 
@@ -349,13 +350,13 @@ name: live-coding
 background-color: var(--my-yellow)
 class: middle, center
 
-<i class="fas  fa-code fa-3x " style="color:#122140;"></i>&lt;br&gt;
+`&lt;i class="fas  fa-code fa-3x " style="color:#122140;"&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 # Let's try it live together
 
 ---
 ## Our first few slides
 
-<i class="fas  fa-star " style="color:#e5bf00;"></i> Slide content starts immediately after the YAML `---`
+`&lt;i class="fas  fa-star " style="color:#e5bf00;"&gt;&lt;/i&gt;`{=html} Slide content starts immediately after the YAML `---`
 
 .pull-left-narrow[
 The .my-coral[nhsrtheme] xaringan template comes pre-loaded with a few things
@@ -472,7 +473,7 @@ Please type your answers in the chat box.
 ---
 template: question
 
-<i class="fas  fa-magic fa-3x "></i>
+`&lt;i class="fas  fa-magic fa-3x "&gt;&lt;/i&gt;`{=html}
 # How can we make our slides&lt;br&gt;look more interesting???
 
 --
@@ -480,7 +481,7 @@ template: question
 ----
 
 .left-col[.center[
-<i class="fas  fa-th-large fa-2x "></i>
+`&lt;i class="fas  fa-th-large fa-2x "&gt;&lt;/i&gt;`{=html}
 ### with placement
 ]]
 
@@ -488,7 +489,7 @@ template: question
 
 .center-col[
 .center[
-<i class="fas  fa-image fa-2x "></i>
+`&lt;i class="fas  fa-image fa-2x "&gt;&lt;/i&gt;`{=html}
 ### pretty pictures
 ]]
 
@@ -545,7 +546,7 @@ This content is also centered and in the middle of the slide
 ---
 ```
 
-.right[.my-coral[example on next slide <i class="fas  fa-arrow-circle-right "></i> ]]
+.right[.my-coral[example on next slide `&lt;i class="fas  fa-arrow-circle-right "&gt;&lt;/i&gt;`{=html} ]]
 ]
 
 ---
@@ -588,7 +589,7 @@ class: center, middle
 ---
 ```
 
-.right[.my-coral[example on next slide <i class="fas  fa-arrow-circle-right "></i> ]]
+.right[.my-coral[example on next slide `&lt;i class="fas  fa-arrow-circle-right "&gt;&lt;/i&gt;`{=html} ]]
 
 ]
 
@@ -786,7 +787,7 @@ You can use the [background-image property](https://github.com/gnab/remark/wiki/
 - `background-position:` play with [this](https://css-tricks.com/almanac/properties/b/background-position/)
 
 
-.right[.my-coral[`background-size` examples in action! <i class="fas  fa-arrow-circle-right "></i> ]]
+.right[.my-coral[`background-size` examples in action! `&lt;i class="fas  fa-arrow-circle-right "&gt;&lt;/i&gt;`{=html} ]]
 ] &lt;!----&gt;
 
 ] &lt;!--end of panelset--&gt;
@@ -845,7 +846,7 @@ Use the [icon 📦](https://slides.mitchelloharawild.com/icon/): ` r icon::fa("b
 --
 
 .pull-left-narrow[.center[
-<i class="ai  ai-orcid "></i>&lt;br&gt;
+`&lt;i class="ai  ai-orcid "&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 [Academicons](https://jpswalsh.github.io/academicons/)
 ]]
 .pull-right-wide[
@@ -855,7 +856,7 @@ The easiest way to access them is with the icon 📦:&lt;br&gt;` r icon::fa("orc
 --
 
 .pull-left-narrow[.center[
-<i class="ion  ion-ios-flask-outline "></i>&lt;br&gt;
+`&lt;i class="ion  ion-ios-flask-outline "&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 [Ionicons](https://ionicons.com/)
 ]]
 .pull-right-wide[
@@ -868,7 +869,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn&lt;br&gt;<i class="fas  fa-edit "></i>&lt;br&gt;
+## Your turn&lt;br&gt;`&lt;i class="fas  fa-edit "&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 ### .my-pink[10:00 mins]
 ]
 
@@ -891,7 +892,7 @@ Here are some options to consider
 ---
 template: question
 
-<i class="fab  fa-r-project fa-3x "></i>
+`&lt;i class="fab  fa-r-project fa-3x "&gt;&lt;/i&gt;`{=html}
 # What about R content?
 
 --
@@ -899,7 +900,7 @@ template: question
 ----
 
 .pull-left[.center[
-<i class="fas  fa-table fa-2x "></i>
+`&lt;i class="fas  fa-table fa-2x "&gt;&lt;/i&gt;`{=html}
 ### tables
 ]]
 
@@ -907,7 +908,7 @@ template: question
 
 .pull-right[
 .center[
-<i class="fas  fa-chart-bar fa-2x "></i>
+`&lt;i class="fas  fa-chart-bar fa-2x "&gt;&lt;/i&gt;`{=html}
 ### plots
 ]]
 
@@ -1023,8 +1024,10 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   DT::datatable()
 ```
 
-<div id="htmlwidget-f4bbc21f95b4c895b5b2" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f4bbc21f95b4c895b5b2">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>ID<\/th>\n      <th>Organisation<\/th>\n      <th>Age<\/th>\n      <th>LOS<\/th>\n      <th>Death<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+```{=html}
+&lt;div id="htmlwidget-74932c98a2e6cb30943a" style="width:100%;height:auto;" class="datatables html-widget"&gt;&lt;/div&gt;
+&lt;script type="application/json" data-for="htmlwidget-74932c98a2e6cb30943a"&gt;{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[1,2,3,4,5,6],["Trust1","Trust2","Trust3","Trust4","Trust5","Trust6"],[55,27,93,45,70,60],[2,1,12,3,11,7],[0,0,0,1,0,0]],"container":"&lt;table class=\"display\"&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;ID&lt;\/th&gt;\n      &lt;th&gt;Organisation&lt;\/th&gt;\n      &lt;th&gt;Age&lt;\/th&gt;\n      &lt;th&gt;LOS&lt;\/th&gt;\n      &lt;th&gt;Death&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;","options":{"columnDefs":[{"className":"dt-right","targets":[1,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}&lt;/script&gt;
+```
 
 ---
 template: tables
@@ -1042,11 +1045,13 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
 ]
 
 .pull-right[
-<style>html {
+
+```{=html}
+&lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#gjlrqgxgdj .gt_table {
+#eufrpfbehd .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1069,7 +1074,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-left-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_heading {
+#eufrpfbehd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1081,7 +1086,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_title {
+#eufrpfbehd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1091,7 +1096,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-bottom-width: 0;
 }
 
-#gjlrqgxgdj .gt_subtitle {
+#eufrpfbehd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1101,13 +1106,13 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-top-width: 0;
 }
 
-#gjlrqgxgdj .gt_bottom_border {
+#eufrpfbehd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_col_headings {
+#eufrpfbehd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1122,7 +1127,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_col_heading {
+#eufrpfbehd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1142,7 +1147,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   overflow-x: hidden;
 }
 
-#gjlrqgxgdj .gt_column_spanner_outer {
+#eufrpfbehd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1154,15 +1159,15 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   padding-right: 4px;
 }
 
-#gjlrqgxgdj .gt_column_spanner_outer:first-child {
+#eufrpfbehd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gjlrqgxgdj .gt_column_spanner_outer:last-child {
+#eufrpfbehd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gjlrqgxgdj .gt_column_spanner {
+#eufrpfbehd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1174,7 +1179,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   width: 100%;
 }
 
-#gjlrqgxgdj .gt_group_heading {
+#eufrpfbehd .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1196,7 +1201,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   vertical-align: middle;
 }
 
-#gjlrqgxgdj .gt_empty_group_heading {
+#eufrpfbehd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1211,19 +1216,19 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   vertical-align: middle;
 }
 
-#gjlrqgxgdj .gt_striped {
+#eufrpfbehd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gjlrqgxgdj .gt_from_md > :first-child {
+#eufrpfbehd .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#gjlrqgxgdj .gt_from_md > :last-child {
+#eufrpfbehd .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#gjlrqgxgdj .gt_row {
+#eufrpfbehd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1242,7 +1247,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   overflow-x: hidden;
 }
 
-#gjlrqgxgdj .gt_stub {
+#eufrpfbehd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1254,7 +1259,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   padding-left: 12px;
 }
 
-#gjlrqgxgdj .gt_summary_row {
+#eufrpfbehd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1264,7 +1269,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   padding-right: 5px;
 }
 
-#gjlrqgxgdj .gt_first_summary_row {
+#eufrpfbehd .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1274,7 +1279,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_grand_summary_row {
+#eufrpfbehd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1284,7 +1289,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   padding-right: 5px;
 }
 
-#gjlrqgxgdj .gt_first_grand_summary_row {
+#eufrpfbehd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1294,7 +1299,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_table_body {
+#eufrpfbehd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1303,7 +1308,7 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_footnotes {
+#eufrpfbehd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1317,13 +1322,13 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_footnote {
+#eufrpfbehd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#gjlrqgxgdj .gt_sourcenotes {
+#eufrpfbehd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1337,103 +1342,104 @@ NHSRdatasets::LOS_model %&gt;% head() %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#gjlrqgxgdj .gt_sourcenote {
+#eufrpfbehd .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#gjlrqgxgdj .gt_left {
+#eufrpfbehd .gt_left {
   text-align: left;
 }
 
-#gjlrqgxgdj .gt_center {
+#eufrpfbehd .gt_center {
   text-align: center;
 }
 
-#gjlrqgxgdj .gt_right {
+#eufrpfbehd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gjlrqgxgdj .gt_font_normal {
+#eufrpfbehd .gt_font_normal {
   font-weight: normal;
 }
 
-#gjlrqgxgdj .gt_font_bold {
+#eufrpfbehd .gt_font_bold {
   font-weight: bold;
 }
 
-#gjlrqgxgdj .gt_font_italic {
+#eufrpfbehd .gt_font_italic {
   font-style: italic;
 }
 
-#gjlrqgxgdj .gt_super {
+#eufrpfbehd .gt_super {
   font-size: 65%;
 }
 
-#gjlrqgxgdj .gt_footnote_marks {
+#eufrpfbehd .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
-</style>
-<div id="gjlrqgxgdj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+&lt;/style&gt;
+&lt;div id="eufrpfbehd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"&gt;&lt;table class="gt_table"&gt;
   
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">ID</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Organisation</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Age</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">LOS</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Death</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_center">1</td>
-      <td class="gt_row gt_center">Trust1</td>
-      <td class="gt_row gt_center">55</td>
-      <td class="gt_row gt_center">2</td>
-      <td class="gt_row gt_center">0</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">2</td>
-      <td class="gt_row gt_center">Trust2</td>
-      <td class="gt_row gt_center">27</td>
-      <td class="gt_row gt_center">1</td>
-      <td class="gt_row gt_center">0</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">3</td>
-      <td class="gt_row gt_center">Trust3</td>
-      <td class="gt_row gt_center">93</td>
-      <td class="gt_row gt_center">12</td>
-      <td class="gt_row gt_center">0</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">4</td>
-      <td class="gt_row gt_center">Trust4</td>
-      <td class="gt_row gt_center">45</td>
-      <td class="gt_row gt_center">3</td>
-      <td class="gt_row gt_center">1</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">5</td>
-      <td class="gt_row gt_center">Trust5</td>
-      <td class="gt_row gt_center">70</td>
-      <td class="gt_row gt_center">11</td>
-      <td class="gt_row gt_center">0</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_center">6</td>
-      <td class="gt_row gt_center">Trust6</td>
-      <td class="gt_row gt_center">60</td>
-      <td class="gt_row gt_center">7</td>
-      <td class="gt_row gt_center">0</td>
-    </tr>
-  </tbody>
+  &lt;thead class="gt_col_headings"&gt;
+    &lt;tr&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;ID&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;Organisation&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;Age&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;LOS&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;Death&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class="gt_table_body"&gt;
+    &lt;tr&gt;
+      &lt;td class="gt_row gt_center"&gt;1&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;Trust1&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;55&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;2&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="gt_row gt_center"&gt;2&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;Trust2&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;27&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;1&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="gt_row gt_center"&gt;3&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;Trust3&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;93&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;12&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="gt_row gt_center"&gt;4&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;Trust4&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;45&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;3&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="gt_row gt_center"&gt;5&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;Trust5&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;70&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;11&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td class="gt_row gt_center"&gt;6&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;Trust6&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;60&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;7&lt;/td&gt;
+      &lt;td class="gt_row gt_center"&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
   
   
-</table></div>
+&lt;/table&gt;&lt;/div&gt;
+```
 ]
 .footnote[Make sure to check out the [GT package workshop](https://github.com/nhs-r-community/Conference_2020#workshop-sessions) tomorrow!]
 ---
@@ -1498,7 +1504,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn&lt;br&gt;<i class="fas  fa-edit "></i>&lt;br&gt;
+## Your turn&lt;br&gt;`&lt;i class="fas  fa-edit "&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 ### .my-pink[10:00 mins]
 ]
 
@@ -1528,10 +1534,11 @@ class: goodbye-slide, inverse, middle, left
 ### Here's where you can find me...
 
 .right[
-[silvia.rbind.io <i class="fas  fa-link "></i>](https://silvia.rbind.io)&lt;br/&gt;
-[@spcanelon <i class="fab  fa-twitter "></i>](https://twitter.com/spcanelon)&lt;br/&gt;
-[@spcanelon <i class="fab  fa-github "></i>](https://github.com/spcanelon)&lt;br/&gt;
+[silvia.rbind.io `&lt;i class="fas  fa-link "&gt;&lt;/i&gt;`{=html}](https://silvia.rbind.io)&lt;br/&gt;
+[@spcanelon `&lt;i class="fab  fa-twitter "&gt;&lt;/i&gt;`{=html}](https://twitter.com/spcanelon)&lt;br/&gt;
+[@spcanelon `&lt;i class="fab  fa-github "&gt;&lt;/i&gt;`{=html}](https://github.com/spcanelon)&lt;br/&gt;
 ]]
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

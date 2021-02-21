@@ -4,6 +4,7 @@
     <title>Sharing Your Work with xaringan</title>
     <meta charset="utf-8" />
     <meta name="author" content="Silvia Canelón, Ph.D." />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <meta name="description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta name="generator" content="xaringan and remark.js"/>
@@ -11,7 +12,7 @@
     <meta name="twitter:title" content="Sharing Your Work with xaringan"/>
     <meta name="twitter:description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta name="twitter:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
-    <meta name="twitter:image:src" content="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png"/>
+    <meta name="twitter:image:src" content="slides/day-02-cover-image.png"/>
     <meta name="twitter:image:alt" content="Title slide for the Sharing Your Work with xaringan workshop series"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:creator" content="@spcanelon"/>
@@ -19,7 +20,7 @@
     <meta property="og:title" content="Sharing Your Work with xaringan"/>
     <meta property="og:description" content="An Introduction to xaringan for Presentations: The Basics and Beyond"/>
     <meta property="og:url" content="https://spcanelon.github.io/xaringan-basics-and-beyond"/>
-    <meta property="og:image" content="https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png"/>
+    <meta property="og:image" content="slides/day-02-cover-image.png"/>
     <meta property="og:image:alt" content="Title slide for the Sharing Your Work with xaringan workshop series"/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en_US"/>
@@ -59,7 +60,7 @@ background-size: 8%, cover
 ### An Introduction to xaringan:&lt;br&gt;The Beyond
 
 **Silvia Canelón, Ph.D.**&lt;br&gt;
-Nov. 5th, 2020
+Nov. 5th, 2020 &amp;#8212; Day 2
 ]
 
 .palegrey[.left[.footnote[Graphic by [Vernon Adams](https://www.rawpixel.com/image/575297/artistic-canvas-background-template)]]]
@@ -85,9 +86,9 @@ class: about-me-slide, inverse, middle, center
 
 .fade[University of Pennsylvania&lt;br&gt;Philadelphia, PA, USA]
 
-[<i class="fas  fa-link "></i> silvia.rbind.io](https://silvia.rbind.io)
-[<i class="fab  fa-twitter "></i> @spcanelon](https://twitter.com/spcanelon)
-[<i class="fab  fa-github "></i> @spcanelon](https://github.com/spcanelon)
+[`&lt;i class="fas  fa-link "&gt;&lt;/i&gt;`{=html} silvia.rbind.io](https://silvia.rbind.io)
+[`&lt;i class="fab  fa-twitter "&gt;&lt;/i&gt;`{=html} @spcanelon](https://twitter.com/spcanelon)
+[`&lt;i class="fab  fa-github "&gt;&lt;/i&gt;`{=html} @spcanelon](https://github.com/spcanelon)
 
 ---
 layout: true
@@ -121,7 +122,7 @@ class: top
 --
 
 .pull-left-narrow[.center[
-<i class="fas  fa-smile fa-3x " style="color:#e5bf00;"></i>]]
+`&lt;i class="fas  fa-smile fa-3x " style="color:#e5bf00;"&gt;&lt;/i&gt;`{=html}]]
 
 .pull-right-wide[
 - [xaringan 📦](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
@@ -183,7 +184,7 @@ template: question
 ----
 
 .left-col[.center[
-<i class="fas  fa-th fa-2x "></i>
+`&lt;i class="fas  fa-th fa-2x "&gt;&lt;/i&gt;`{=html}
 ### slide overview
 ]]
 
@@ -191,14 +192,14 @@ template: question
 
 .center-col[
 .center[
-<i class="fas  fa-share-square fa-2x "></i>
+`&lt;i class="fas  fa-share-square fa-2x "&gt;&lt;/i&gt;`{=html}
 ### slide embedding
 ]]
 
 --
 
 .right-col[.center[
-<i class="fas  fa-folder fa-2x "></i>
+`&lt;i class="fas  fa-folder fa-2x "&gt;&lt;/i&gt;`{=html}
 ### slide panels
 ]]
 
@@ -304,7 +305,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn&lt;br&gt;<i class="fas  fa-edit "></i>&lt;br&gt;
+## Your turn&lt;br&gt;`&lt;i class="fas  fa-edit "&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 ### [.my-pink[5:00 mins]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -352,7 +353,7 @@ xaringanExtra::use_panelset()
 ] &lt;!--end of panel--&gt;
 ] &lt;!--end of panelset--&gt;
 ```
-.small[.right[See this example in the next slide <i class="fas  fa-arrow-circle-right "></i>]]
+.small[.right[See this example in the next slide `&lt;i class="fas  fa-arrow-circle-right "&gt;&lt;/i&gt;`{=html}]]
 ]
 
 ⭐ **Tip:** The nested class brackets can get a little confusing, so I like to add a comment to signal the "end" of a set of brackets. Comments in html are written like this: `&lt;!----&gt;`
@@ -377,7 +378,7 @@ name: live-coding
 background-color: var(--my-yellow)
 class: middle, center
 
-<i class="fas  fa-code fa-3x " style="color:#122140;"></i>&lt;br&gt;
+`&lt;i class="fas  fa-code fa-3x " style="color:#122140;"&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 # Let's try it live together
 
 ---
@@ -386,7 +387,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn&lt;br&gt;<i class="fas  fa-edit "></i>&lt;br&gt;
+## Your turn&lt;br&gt;`&lt;i class="fas  fa-edit "&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 ### [.my-pink[5:00 mins]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -422,7 +423,7 @@ class: top, right
 ---
 template: question
 
-<i class="fab  fa-css3 fa-3x "></i>
+`&lt;i class="fab  fa-css3 fa-3x "&gt;&lt;/i&gt;`{=html}
 # So how about that CSS???
 
 --
@@ -470,7 +471,7 @@ The CSS basics we'll cover today can be used&lt;br&gt;to better understand how _
 .right-column[
 ### A little CSS know-how can go a long way.
 
-Here are examples of <i class="fab  fa-r-project "></i> places I've managed to apply what I've learned:
+Here are examples of `&lt;i class="fab  fa-r-project "&gt;&lt;/i&gt;`{=html} places I've managed to apply what I've learned:
 
 - Personal [blogdown](https://bookdown.org/yihui/blogdown/) website
 
@@ -558,7 +559,7 @@ h1 {
 }
 ```
 
-.small[**Note**: Unlike with many <i class="fab  fa-r-project "></i> functions, `color` cannot be replaced with `colour` in CSS land 😞]
+.small[**Note**: Unlike with many `&lt;i class="fab  fa-r-project "&gt;&lt;/i&gt;`{=html} functions, `color` cannot be replaced with `colour` in CSS land 😞]
 ]
 ] &lt;!--end of panel--&gt;
 
@@ -1421,7 +1422,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn&lt;br&gt;<i class="fas  fa-edit "></i>&lt;br&gt;
+## Your turn&lt;br&gt;`&lt;i class="fas  fa-edit "&gt;&lt;/i&gt;`{=html}&lt;br&gt;
 ### [.my-pink[1:00 min]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -1474,14 +1475,12 @@ The [NHS identity](https://www.england.nhs.uk/nhsidentity/identity-guidelines/co
 
 
 ```
-#   DarkBlue       Blue BrightBlue  LightBlue   AquaBlue      Black 
-#  "#003087"  "#005EB8"  "#0072CE"  "#41B6E6"  "#00A9CE"  "#231f20" 
-#   DarkGrey    MidGrey   PaleGrey  DarkGreen      Green LightGreen 
-#  "#425563"  "#768692"  "#E8EDEE"  "#006747"  "#009639"  "#78BE20" 
-#  AquaGreen     Purple   DarkPink       Pink    DarkRed        Red 
-#  "#00A499"  "#330072"  "#7C2855"  "#AE2573"  "#8A1538"  "#DA291C" 
-#     Orange WarmYellow     Yellow 
-#  "#ED8B00"  "#FFB81C"  "#FAE100"
+#   DarkBlue       Blue BrightBlue  LightBlue   AquaBlue      Black   DarkGrey    MidGrey   PaleGrey  DarkGreen 
+#  "#003087"  "#005EB8"  "#0072CE"  "#41B6E6"  "#00A9CE"  "#231f20"  "#425563"  "#768692"  "#E8EDEE"  "#006747" 
+#      Green LightGreen  AquaGreen     Purple   DarkPink       Pink    DarkRed        Red     Orange WarmYellow 
+#  "#009639"  "#78BE20"  "#00A499"  "#330072"  "#7C2855"  "#AE2573"  "#8A1538"  "#DA291C"  "#ED8B00"  "#FFB81C" 
+#     Yellow 
+#  "#FAE100"
 ```
 
 ]
@@ -1617,9 +1616,9 @@ class: goodbye-slide, inverse, left
 ### Here's where you can find me...
 
 .right[
-[silvia.rbind.io <i class="fas  fa-link "></i>](https://silvia.rbind.io)&lt;br/&gt;
-[@spcanelon <i class="fab  fa-twitter "></i>](https://twitter.com/spcanelon)&lt;br/&gt;
-[@spcanelon <i class="fab  fa-github "></i>](https://github.com/spcanelon)&lt;br/&gt;
+[silvia.rbind.io `&lt;i class="fas  fa-link "&gt;&lt;/i&gt;`{=html}](https://silvia.rbind.io)&lt;br/&gt;
+[@spcanelon `&lt;i class="fab  fa-twitter "&gt;&lt;/i&gt;`{=html}](https://twitter.com/spcanelon)&lt;br/&gt;
+[@spcanelon `&lt;i class="fab  fa-github "&gt;&lt;/i&gt;`{=html}](https://github.com/spcanelon)&lt;br/&gt;
 ]]]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

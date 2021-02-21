@@ -4,7 +4,7 @@ subtitle: "An Introduction to xaringan:<br>The Beyond"
 session: "02"
 author: "Silvia Canelón, Ph.D."
 institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
-date: "Nov. 5th, 2020"
+date: "Nov. 5th, 2020 &#8212; Day 2"
 output:
   xaringan::moon_reader:
     css: 
@@ -18,7 +18,8 @@ output:
       highlightStyle: googlecode
       highlightLines: true
       countIncrementalSlides: false
-      ratio: "16:9"
+      ratio: 16:9
+      #ratio: 191:100
       beforeInit: "macros.js"
       slideNumberFormat: |
         <div class="progress-bar-container">
@@ -38,7 +39,7 @@ meta() %>%
   meta_social(
     title = "Sharing Your Work with xaringan",
     url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
-    image = "https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png",
+    image = "slides/day-02-cover-image.png",
     image_alt = "Title slide for the Sharing Your Work with xaringan workshop series",
     og_type = "website",
     og_author = "Silvia Canelon",
@@ -1483,7 +1484,7 @@ knitr::include_graphics("img/coolors-dark-palettes.png")
 The [NHS identity](https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/) colour hex codes `r emo::ji("paint")`
 
 ```{r, echo=FALSE, collapse = FALSE}
-nhsrtheme::getNhsColours()
+nhsrtheme::get_nhs_colours()
 ```
 
 ]
