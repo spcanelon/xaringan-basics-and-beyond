@@ -32,14 +32,14 @@ output:
 library(metathis)
 meta() %>%
   meta_general(
-    description = "An Introduction to xaringan for Presentations: The Basics and Beyond",
+    description = "An Introduction to xaringan for Presentations: The Basics",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
     title = "Sharing Your Work with xaringan &#8212; Day 1",
-    url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html#1",
-    image = "slides/day-01-cover-image.png",
+    url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html",
+    image = "https://raw.githubusercontent.com/spcanelon/xaringan-basics-and-beyond/main/slides/day-01-cover-image.png",
     image_alt = "Title slide for the Sharing Your Work with xaringan workshop series",
     og_type = "website",
     og_author = "Silvia Canelon",
