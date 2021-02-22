@@ -172,14 +172,14 @@ class: left
 
 --
 
-.pull-left-narrow[.center[
-<i class="far fa-grin-stars fa-2x"></i>]]
+.pull-left-narrow[
+.center[`r icon::icon_style(icon::fontawesome("grin-stars"), scale = 2)`]]
 .pull-right-wide[### you've seen pretty slides in the wild]
 
 --
 
-.pull-left-narrow[.center[
-<i class="fas fa-images fa-2x"></i>]]
+.pull-left-narrow[
+.center[`r icon::icon_style(icon::fontawesome("images"), scale = 2)`]]
 .pull-right-wide[### .my-gold[**you want to make your own pretty slides**]] 
 
 ---
