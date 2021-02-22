@@ -521,10 +521,8 @@ template: question
 
 ---
 name: placement
-<i class="fas fa-th-large"></i>
-## Placement <i class="fas fa-th-large" style = "float: right"></i>
 
-<i class="fas fa-th-large"></i>
+## Placement <i class="fas fa-th-large" style = "float: right"></i>
 
 ---
 template: placement
