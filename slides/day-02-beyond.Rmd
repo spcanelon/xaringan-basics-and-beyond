@@ -1,5 +1,5 @@
 ---
-title: "Sharing Your Work<br>with xaringan"
+title: "Sharing Your Work<br>with xaringan &#8212; Day 2"
 subtitle: "An Introduction to xaringan:<br>The Beyond"
 session: "02"
 author: "Silvia Canelón, Ph.D."
@@ -32,15 +32,15 @@ output:
 library(metathis)
 meta() %>%
   meta_general(
-    description = "An Introduction to xaringan for Presentations: The Basics and Beyond",
+    description = "An Introduction to xaringan for Presentations: The Beyond",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
-    title = "Sharing Your Work with xaringan",
-    url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
-    image = "slides/day-02-cover-image.png",
-    image_alt = "Title slide for the Sharing Your Work with xaringan workshop series",
+    title = "Sharing Your Work with xaringan &#8212; Day 2",
+    url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html#1",
+    image = "https://raw.githubusercontent.com/spcanelon/xaringan-basics-and-beyond/main/slides/day-02-cover-image.png",
+    image_alt = "Title slide for the day 2 slides of the Sharing Your Work with xaringan workshop series",
     og_type = "website",
     og_author = "Silvia Canelon",
     twitter_card_type = "summary_large_image",
