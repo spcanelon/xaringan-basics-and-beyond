@@ -38,7 +38,7 @@ meta() %>%
   meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
     title = "Sharing Your Work with xaringan &#8212; Day 1",
-    url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html",
+    url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html#1",
     image = "https://raw.githubusercontent.com/spcanelon/xaringan-basics-and-beyond/main/slides/day-01-cover-image.png",
     image_alt = "Title slide for the Sharing Your Work with xaringan workshop series",
     og_type = "website",
