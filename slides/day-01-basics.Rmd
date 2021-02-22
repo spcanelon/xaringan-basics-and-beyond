@@ -171,8 +171,7 @@ class: left
 
 .pull-left-narrow[
 .center[`r icon::icon_style(icon::fontawesome("markdown"), scale = 2)`]]
-.pull-right-wide[.middle[### you know Markdown
-]]
+.pull-right-wide[### you know Markdown]
 
 --
 
@@ -184,8 +183,7 @@ class: left
 
 .pull-left-narrow[
 .center[`r icon::icon_style(icon::fontawesome("html5"), scale = 2)`]]
-.pull-right-wide[.middle[### .my-gold[**you want to know about cool HTML5 slides**]
-]] 
+.pull-right-wide[### .my-gold[**you want to know about cool HTML5 slides**]] 
 
 ---
 
