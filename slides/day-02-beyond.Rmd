@@ -13,7 +13,7 @@ output:
       - css/mytheme-fonts.css
     lib_dir: libs
     seal: false
-    self_contained: true
+    self_contained: false
     nature:
       highlightStyle: googlecode
       highlightLines: true
@@ -116,9 +116,9 @@ class: about-me-slide, inverse, middle, center
 
 .fade[University of Pennsylvania<br>Philadelphia, PA, USA]
 
-[`r icon::fontawesome("link")` silvia.rbind.io](https://silvia.rbind.io)
-[`r icon::fontawesome("twitter")` @spcanelon](https://twitter.com/spcanelon)
-[`r icon::icon_style(icon::fontawesome("github"), scale = 1)` @spcanelon](https://github.com/spcanelon)
+[`r icons::fontawesome("link")` silvia.rbind.io](https://silvia.rbind.io)
+[`r icons::fontawesome("twitter")` @spcanelon](https://twitter.com/spcanelon)
+[`r icons::icon_style(icons::fontawesome("github"), scale = 1)` @spcanelon](https://github.com/spcanelon)
 
 ---
 layout: true
@@ -152,7 +152,7 @@ class: top
 --
 
 .pull-left-narrow[.center[
-`r icon::icon_style(icon::fontawesome("smile"), scale = 3, color = "#e5bf00")`]]
+`r icons::icon_style(icons::fontawesome("smile"), scale = 3, color = "#e5bf00")`]]
 
 .pull-right-wide[
 - [xaringan `r emo::ji("package")`](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
@@ -173,13 +173,13 @@ class: left
 --
 
 .pull-left-narrow[
-.center[`r icon::icon_style(icon::fontawesome("grin-stars"), scale = 2)`]]
+.center[`r icons::icon_style(icons::fontawesome("grin-stars"), scale = 2)`]]
 .pull-right-wide[### you've seen pretty slides in the wild]
 
 --
 
 .pull-left-narrow[
-.center[`r icon::icon_style(icon::fontawesome("images"), scale = 2)`]]
+.center[`r icons::icon_style(icons::fontawesome("images"), scale = 2)`]]
 .pull-right-wide[### .my-gold[**you want to make your own pretty slides**]] 
 
 ---
@@ -214,7 +214,7 @@ template: question
 ----
 
 .left-col[.center[
-`r icon::icon_style(icon::fontawesome("th"), scale = 2)`
+`r icons::icon_style(icons::fontawesome("th"), scale = 2)`
 ### slide overview
 ]]
 
@@ -222,14 +222,14 @@ template: question
 
 .center-col[
 .center[
-`r icon::icon_style(icon::fontawesome("share-square"), scale = 2)`
+`r icons::icon_style(icons::fontawesome("share-square"), scale = 2)`
 ### slide embedding
 ]]
 
 --
 
 .right-col[.center[
-`r icon::icon_style(icon::fontawesome("folder"), scale = 2)`
+`r icons::icon_style(icons::fontawesome("folder"), scale = 2)`
 ### slide panels
 ]]
 
@@ -334,7 +334,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icon::fontawesome("edit")`<br>
+## Your turn<br>`r icons::fontawesome("edit")`<br>
 ### [.my-pink[5:00 mins]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -383,7 +383,7 @@ xaringanExtra::use_panelset()
 ] <!--end of panel-->
 ] <!--end of panelset-->
 ```
-.small[.right[See this example in the next slide `r icon::fontawesome("arrow-circle-right")`]]
+.small[.right[See this example in the next slide `r icons::fontawesome("arrow-circle-right")`]]
 ]
 
 `r emo::ji("star")` **Tip:** The nested class brackets can get a little confusing, so I like to add a comment to signal the "end" of a set of brackets. Comments in html are written like this: `<!---->`
@@ -408,7 +408,7 @@ name: live-coding
 background-color: var(--my-yellow)
 class: middle, center
 
-`r icon::icon_style(icon::fontawesome("code"), scale = 3, color = "#122140")`<br>
+`r icons::icon_style(icons::fontawesome("code"), scale = 3, color = "#122140")`<br>
 # Let's try it live together
 
 ---
@@ -417,7 +417,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icon::fontawesome("edit")`<br>
+## Your turn<br>`r icons::fontawesome("edit")`<br>
 ### [.my-pink[5:00 mins]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -453,7 +453,7 @@ class: top, right
 ---
 template: question
 
-`r icon::icon_style(icon::fontawesome("css3"), scale = 3)`
+`r icons::icon_style(icons::fontawesome("css3"), scale = 3)`
 # So how about that CSS???
 
 --
@@ -501,7 +501,7 @@ The CSS basics we'll cover today can be used<br>to better understand how _any we
 .right-column[
 ### A little CSS know-how can go a long way.
 
-Here are examples of `r icon::fontawesome("r-project")` places I've managed to apply what I've learned:
+Here are examples of `r icons::fontawesome("r-project")` places I've managed to apply what I've learned:
 
 - Personal [blogdown](https://bookdown.org/yihui/blogdown/) website
 
@@ -588,7 +588,7 @@ h1 {
 }
 ```
 
-.small[**Note**: Unlike with many `r icon::fontawesome("r-project")` functions, `color` cannot be replaced with `colour` in CSS land `r emo::ji("disappointed")`]
+.small[**Note**: Unlike with many `r icons::fontawesome("r-project")` functions, `color` cannot be replaced with `colour` in CSS land `r emo::ji("disappointed")`]
 ]
 ] <!--end of panel-->
 
@@ -1430,7 +1430,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icon::fontawesome("edit")`<br>
+## Your turn<br>`r icons::fontawesome("edit")`<br>
 ### [.my-pink[1:00 min]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -1627,7 +1627,7 @@ class: goodbye-slide, inverse, left
 ### Here's where you can find me...
 
 .right[
-[silvia.rbind.io `r icon::fontawesome("link")`](https://silvia.rbind.io)<br/>
-[@spcanelon `r icon::fontawesome("twitter")`](https://twitter.com/spcanelon)<br/>
-[@spcanelon `r icon::fontawesome("github")`](https://github.com/spcanelon)<br/>
+[silvia.rbind.io `r icons::fontawesome("link")`](https://silvia.rbind.io)<br/>
+[@spcanelon `r icons::fontawesome("twitter")`](https://twitter.com/spcanelon)<br/>
+[@spcanelon `r icons::fontawesome("github")`](https://github.com/spcanelon)<br/>
 ]]]
