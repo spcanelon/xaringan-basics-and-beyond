@@ -55,6 +55,7 @@ library(tidyverse)
 library(xaringanExtra)
 library(nhsrtheme)
 library(NHSRdatasets)
+library(icons)
 # set default options
 opts_chunk$set(echo=FALSE,
                collapse = TRUE,
