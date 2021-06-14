@@ -23,10 +23,18 @@ output:
 ---
 
 ```{r setup, include = FALSE}
+# install packages from GitHub (if necessary)
+# remotes::install_github('nhs-r-community/nhsrtheme')
+# remotes::install_github("https://github.com/nhs-r-community/NHSRdatasets")
+# remotes::install_github("mitchelloharawild/icons") as of 03/21/2021
+
+# load packages
 library(knitr)
 library(tidyverse)
 library(nhsrtheme)
 library(NHSRdatasets)
+library(icons)
+
 # set default options
 opts_chunk$set(echo = FALSE,
                fig.width = 7.252,
@@ -60,10 +68,10 @@ class: middle, center, hide-logo
 
 --
 
-[`r icon::fa("link")` nhsrcommunity.com](https://nhsrcommunity.com/)<br/>
-[`r icon::fa("twitter")` @NHSrCommunity](https://twitter.com/NHSrCommunity)<br/>
-[`r icon::fa("github")` @nhs-r-community](https://github.com/nhs-r-community)<br/>
-[`r icon::fa("paper-plane")` nhs.rcommunity@nhs.net](mailto:nhs.rcommunity@nhs.net)
+[`r icons::fontawesome("link")` nhsrcommunity.com](https://nhsrcommunity.com/)<br/>
+[`r icons::fontawesome("twitter")` @NHSrCommunity](https://twitter.com/NHSrCommunity)<br/>
+[`r icons::fontawesome("github")` @nhs-r-community](https://github.com/nhs-r-community)<br/>
+[`r icons::fontawesome("paper-plane", style = "solid")` nhs.rcommunity@nhs.net](mailto:nhs.rcommunity@nhs.net)
 
 ???
 Hello! My name is NHS-R Community and I'm excited to be here promoting the use of R in the NHS.
@@ -218,10 +226,10 @@ class: middle, inverse
 <img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/53170984?s=200&v=4" width="150px"/>
 
 
-[`r icon::fa("link")` nhsrcommunity.com](https://nhsrcommunity.com/)<br/>
-[`r icon::fa("twitter")` @NHSrCommunity](https://twitter.com/NHSrCommunity)<br/>
-[`r icon::fa("github")` @nhs-r-community](https://github.com/nhs-r-community)<br/>
-[`r icon::fa("paper-plane")` nhs.rcommunity@nhs.net](mailto:nhs.rcommunity@nhs.net)
+[`r icons::fontawesome("link")` nhsrcommunity.com](https://nhsrcommunity.com/)<br/>
+[`r icons::fontawesome("twitter")` @NHSrCommunity](https://twitter.com/NHSrCommunity)<br/>
+[`r icons::fontawesome("github")` @nhs-r-community](https://github.com/nhs-r-community)<br/>
+[`r icons::fontawesome("paper-plane", style = "solid")` nhs.rcommunity@nhs.net](mailto:nhs.rcommunity@nhs.net)
 ]
 ]
 

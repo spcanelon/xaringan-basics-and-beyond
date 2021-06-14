@@ -108,10 +108,10 @@ Thanks to<br/>Stephan Kadauke
 install.packages("xaringan")
 
 # From GitHub
-devtools::install_github("nhs-r-community/nhsrtheme")
-devtools::install_github("nhs-r-community/NHSRdatasets")
-devtools::install_github("gadenbuie/xaringanExtra")
-devtools::install_github("ropenscilabs/icon")
+remotes::install_github("nhs-r-community/nhsrtheme")
+remotes::install_github("nhs-r-community/NHSRdatasets")
+remotes::install_github("gadenbuie/xaringanExtra")
+remotes::install_github("mitchelloharawild/icons")
 ```
 
 # Resources

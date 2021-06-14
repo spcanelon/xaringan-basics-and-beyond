@@ -4,7 +4,7 @@ subtitle: "An Introduction to xaringan:<br>The Beyond"
 session: "02"
 author: "Silvia Canelón, Ph.D."
 institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
-date: "Nov. 5th, 2020"
+date: "Nov. 5th, 2020 &#8212; Day 2"
 output:
   xaringan::moon_reader:
     css: 
@@ -13,12 +13,13 @@ output:
       - css/mytheme-fonts.css
     lib_dir: libs
     seal: false
-    self_contained: true
+    self_contained: false
     nature:
       highlightStyle: googlecode
       highlightLines: true
       countIncrementalSlides: false
-      ratio: "16:9"
+      ratio: 16:9
+      #ratio: 191:100
       beforeInit: "macros.js"
       slideNumberFormat: |
         <div class="progress-bar-container">
@@ -31,15 +32,15 @@ output:
 library(metathis)
 meta() %>%
   meta_general(
-    description = "An Introduction to xaringan for Presentations: The Basics and Beyond",
+    description = "An Introduction to xaringan for Presentations: The Beyond",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
-    title = "Sharing Your Work with xaringan",
-    url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
-    image = "https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png",
-    image_alt = "Title slide for the Sharing Your Work with xaringan workshop series",
+    title = "Sharing Your Work with xaringan &#8212; Day 2",
+    url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html#1",
+    image = "https://raw.githubusercontent.com/spcanelon/xaringan-basics-and-beyond/main/slides/day-02-cover-image.png",
+    image_alt = "Title slide for the day 2 slides of the Sharing Your Work with xaringan workshop series",
     og_type = "website",
     og_author = "Silvia Canelon",
     twitter_card_type = "summary_large_image",
@@ -54,6 +55,7 @@ library(tidyverse)
 library(xaringanExtra)
 library(nhsrtheme)
 library(NHSRdatasets)
+library(icons)
 # set default options
 opts_chunk$set(collapse = TRUE,
                dpi = 300,
@@ -115,9 +117,9 @@ class: about-me-slide, inverse, middle, center
 
 .fade[University of Pennsylvania<br>Philadelphia, PA, USA]
 
-[`r icon::fa("link")` silvia.rbind.io](https://silvia.rbind.io)
-[`r icon::fa("twitter")` @spcanelon](https://twitter.com/spcanelon)
-[`r icon::fa("github", size = 1)` @spcanelon](https://github.com/spcanelon)
+[`r icons::fontawesome("link")` silvia.rbind.io](https://silvia.rbind.io)
+[`r icons::fontawesome("twitter")` @spcanelon](https://twitter.com/spcanelon)
+[`r icons::icon_style(icons::fontawesome("github"), scale = 1)` @spcanelon](https://github.com/spcanelon)
 
 ---
 layout: true
@@ -151,7 +153,7 @@ class: top
 --
 
 .pull-left-narrow[.center[
-`r icon::fa("smile", size = 3, color = "#e5bf00")`]]
+`r icons::icon_style(icons::fontawesome("smile"), scale = 3, color = "#e5bf00")`]]
 
 .pull-right-wide[
 - [xaringan `r emo::ji("package")`](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
@@ -171,14 +173,14 @@ class: left
 
 --
 
-.pull-left-narrow[.center[
-<i class="far fa-grin-stars fa-2x"></i>]]
+.pull-left-narrow[
+.center[`r icons::icon_style(icons::fontawesome("grin-stars"), scale = 2)`]]
 .pull-right-wide[### you've seen pretty slides in the wild]
 
 --
 
-.pull-left-narrow[.center[
-<i class="fas fa-images fa-2x"></i>]]
+.pull-left-narrow[
+.center[`r icons::icon_style(icons::fontawesome("images"), scale = 2)`]]
 .pull-right-wide[### .my-gold[**you want to make your own pretty slides**]] 
 
 ---
@@ -213,7 +215,7 @@ template: question
 ----
 
 .left-col[.center[
-`r icon::fa("th", size = 2)`
+`r icons::icon_style(icons::fontawesome("th"), scale = 2)`
 ### slide overview
 ]]
 
@@ -221,14 +223,14 @@ template: question
 
 .center-col[
 .center[
-`r icon::fa("share-square", size = 2)`
+`r icons::icon_style(icons::fontawesome("share-square"), scale = 2)`
 ### slide embedding
 ]]
 
 --
 
 .right-col[.center[
-`r icon::fa("folder", size = 2)`
+`r icons::icon_style(icons::fontawesome("folder"), scale = 2)`
 ### slide panels
 ]]
 
@@ -333,7 +335,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icon::fa("edit")`<br>
+## Your turn<br>`r icons::fontawesome("edit")`<br>
 ### [.my-pink[5:00 mins]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -382,7 +384,7 @@ xaringanExtra::use_panelset()
 ] <!--end of panel-->
 ] <!--end of panelset-->
 ```
-.small[.right[See this example in the next slide `r icon::fa("arrow-circle-right")`]]
+.small[.right[See this example in the next slide `r icons::fontawesome("arrow-circle-right")`]]
 ]
 
 `r emo::ji("star")` **Tip:** The nested class brackets can get a little confusing, so I like to add a comment to signal the "end" of a set of brackets. Comments in html are written like this: `<!---->`
@@ -407,7 +409,7 @@ name: live-coding
 background-color: var(--my-yellow)
 class: middle, center
 
-`r icon::fa("code", size = 3, color = "#122140")`<br>
+`r icons::icon_style(icons::fontawesome("code"), scale = 3, color = "#122140")`<br>
 # Let's try it live together
 
 ---
@@ -416,7 +418,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icon::fa("edit")`<br>
+## Your turn<br>`r icons::fontawesome("edit")`<br>
 ### [.my-pink[5:00 mins]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -452,7 +454,7 @@ class: top, right
 ---
 template: question
 
-`r icon::fa("css3", size = 3)`
+`r icons::icon_style(icons::fontawesome("css3"), scale = 3)`
 # So how about that CSS???
 
 --
@@ -500,7 +502,7 @@ The CSS basics we'll cover today can be used<br>to better understand how _any we
 .right-column[
 ### A little CSS know-how can go a long way.
 
-Here are examples of `r icon::fa("r-project")` places I've managed to apply what I've learned:
+Here are examples of `r icons::fontawesome("r-project")` places I've managed to apply what I've learned:
 
 - Personal [blogdown](https://bookdown.org/yihui/blogdown/) website
 
@@ -587,7 +589,7 @@ h1 {
 }
 ```
 
-.small[**Note**: Unlike with many `r icon::fa("r-project")` functions, `color` cannot be replaced with `colour` in CSS land `r emo::ji("disappointed")`]
+.small[**Note**: Unlike with many `r icons::fontawesome("r-project")` functions, `color` cannot be replaced with `colour` in CSS land `r emo::ji("disappointed")`]
 ]
 ] <!--end of panel-->
 
@@ -1429,7 +1431,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icon::fa("edit")`<br>
+## Your turn<br>`r icons::fontawesome("edit")`<br>
 ### [.my-pink[1:00 min]](https://apps.garrickadenbuie.com/countdown/)
 ]
 
@@ -1483,7 +1485,7 @@ knitr::include_graphics("img/coolors-dark-palettes.png")
 The [NHS identity](https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/) colour hex codes `r emo::ji("paint")`
 
 ```{r, echo=FALSE, collapse = FALSE}
-nhsrtheme::getNhsColours()
+nhsrtheme::get_nhs_colours()
 ```
 
 ]
@@ -1626,7 +1628,7 @@ class: goodbye-slide, inverse, left
 ### Here's where you can find me...
 
 .right[
-[silvia.rbind.io `r icon::fa("link")`](https://silvia.rbind.io)<br/>
-[@spcanelon `r icon::fa("twitter")`](https://twitter.com/spcanelon)<br/>
-[@spcanelon `r icon::fa("github")`](https://github.com/spcanelon)<br/>
+[silvia.rbind.io `r icons::fontawesome("link")`](https://silvia.rbind.io)<br/>
+[@spcanelon `r icons::fontawesome("twitter")`](https://twitter.com/spcanelon)<br/>
+[@spcanelon `r icons::fontawesome("github")`](https://github.com/spcanelon)<br/>
 ]]]

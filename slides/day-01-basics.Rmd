@@ -4,7 +4,7 @@ subtitle: "An Introduction to xaringan:<br>The Basics"
 session: "01"
 author: "Silvia Canelón, Ph.D."
 institute: "University of Pennsylvania | Dept. of Biostatistics, Epidemiology, and Informatics"
-date: "Nov. 3rd, 2020"
+date: "Nov. 3rd, 2020 &#8212; Day 1"
 output:
   xaringan::moon_reader:
     css: 
@@ -13,12 +13,13 @@ output:
       - css/mytheme-fonts.css
     lib_dir: libs
     seal: false
-    self_contained: true
+    self_contained: false
     nature:
       highlightStyle: googlecode
       highlightLines: true
       countIncrementalSlides: false
-      ratio: "16:9"
+      ratio: 16:9
+      #ratio: 191:100
       beforeInit: "macros.js"
       slideNumberFormat: |
         <div class="progress-bar-container">
@@ -31,15 +32,15 @@ output:
 library(metathis)
 meta() %>%
   meta_general(
-    description = "An Introduction to xaringan for Presentations: The Basics and Beyond",
+    description = "An Introduction to xaringan for Presentations: The Basics",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "spcanelon/xaringan-basics-and-beyond") %>% 
   meta_social(
-    title = "Sharing Your Work with xaringan",
-    url = "https://spcanelon.github.io/xaringan-basics-and-beyond",
-    image = "https://github.com/spcanelon/xaringan-basics-and-beyond/blob/main/xaringan-nhsr-general.png",
-    image_alt = "Title slide for the Sharing Your Work with xaringan workshop series",
+    title = "Sharing Your Work with xaringan &#8212; Day 1",
+    url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html#1",
+    image = "https://raw.githubusercontent.com/spcanelon/xaringan-basics-and-beyond/main/slides/day-01-cover-image.png",
+    image_alt = "Title slide for the day 1 slides of the Sharing Your Work with xaringan workshop series",
     og_type = "website",
     og_author = "Silvia Canelon",
     twitter_card_type = "summary_large_image",
@@ -54,12 +55,16 @@ library(tidyverse)
 library(xaringanExtra)
 library(nhsrtheme)
 library(NHSRdatasets)
+library(icons)
 # set default options
 opts_chunk$set(echo=FALSE,
                collapse = TRUE,
                fig.width = 7.252,
                fig.height = 4,
                dpi = 300)
+
+# set engines
+knitr::knit_engines$set("markdown")
 
 xaringanExtra::use_tile_view()
 xaringanExtra::use_panelset()
@@ -114,9 +119,9 @@ class: about-me-slide, inverse, middle, center
 
 .fade[University of Pennsylvania<br>Philadelphia, PA, USA]
 
-[`r icon::fa("link")` silvia.rbind.io](https://silvia.rbind.io)
-[`r icon::fa("twitter")` @spcanelon](https://twitter.com/spcanelon)
-[`r icon::fa("github", size = 1)` @spcanelon](https://github.com/spcanelon)
+[`r icons::fontawesome("link")` silvia.rbind.io](https://silvia.rbind.io)
+[`r icons::fontawesome("twitter")` @spcanelon](https://twitter.com/spcanelon)
+[`r icons::icon_style(icons::fontawesome("github"), scale = 1)` @spcanelon](https://github.com/spcanelon)
 
 ---
 layout: true
@@ -150,7 +155,7 @@ class: top
 --
 
 .pull-left-narrow[.center[
-`r icon::fa("smile", size = 3, color = "#e5bf00")`]]
+`r icons::icon_style(icons::fontawesome("smile"), scale = 3, color = "#e5bf00")`]]
 
 .pull-right-wide[
 - [xaringan `r emo::ji("package")`](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
@@ -164,8 +169,9 @@ class: left
 # About you
 
 --
-.pull-left-narrow[.center[
-<i class="fab fa-markdown fa-2x"></i>]]
+
+.pull-left-narrow[
+.center[`r icons::icon_style(icons::fontawesome("markdown"), scale = 2)`]]
 .pull-right-wide[### you know Markdown]
 
 --
@@ -176,8 +182,8 @@ class: left
 
 --
 
-.pull-left-narrow[.center[
-<i class="fab fa-html5 fa-2x"></i>]]
+.pull-left-narrow[
+.center[`r icons::icon_style(icons::fontawesome("html5"), scale = 2)`]]
 .pull-right-wide[### .my-gold[**you want to know about cool HTML5 slides**]] 
 
 ---
@@ -190,7 +196,7 @@ class: inverse, middle, center
 ---
 template: question
 
-`r icon::fa("images", size = 3)`
+`r icons::icon_style(icons::fontawesome("images"), scale = 3)`
 # How do we make<br>cool HTML5 slides?
 
 ---
@@ -300,7 +306,7 @@ library(nhsrtheme)
 ]
 
 .pull-right[
-3\. From Template `r icon::fa("angle-double-right")` NHS-R Presentation<br>4. Give your slide deck a name!
+3\. From Template `r icons::fontawesome("angle-double-right")` NHS-R Presentation<br>4. Give your slide deck a name!
 ![:scale 85%](img/nhsrtheme-template.png)
 ]
 ]<!---->
@@ -308,11 +314,11 @@ library(nhsrtheme)
 .panel[.panel-name[Directory]
 The new directory in the "Files" pane contains
 .left[
-+ `r icon::fa("file-code")` the new Rmd file (i.e. `my-slides.Rmd`)
++ `r icons::fontawesome("file-code")` the new Rmd file (i.e. `my-slides.Rmd`)
 
-+ `r icon::fa("folder-open")` the `img` folder containing logo files
++ `r icons::fontawesome("folder-open")` the `img` folder containing logo files
 
-+ `r icon::fa("folder-open")` the `css` folder containing the custom `nhsr` theme files<br>.small[and an HTML file in charge of [adding the NHS logo to each slide](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides)]
++ `r icons::fontawesome("folder-open")` the `css` folder containing the custom `nhsr` theme files<br>.small[and an HTML file in charge of [adding the NHS logo to each slide](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides)]
 ]
 ] <!---->
 
@@ -363,13 +369,13 @@ name: live-coding
 background-color: var(--my-yellow)
 class: middle, center
 
-`r icon::fa("code", size = 3, color = "#122140")`<br>
+`r icons::icon_style(icons::fontawesome("code"), scale = 3, color = "#122140")`<br>
 # Let's try it live together
 
 ---
 ## Our first few slides
 
-`r icon::fa("star", color = "#e5bf00")` Slide content starts immediately after the YAML `---`
+`r icons::icon_style(icons::fontawesome("star"), color = "#e5bf00")` Slide content starts immediately after the YAML `---`
 
 .pull-left-narrow[
 The .my-coral[nhsrtheme] xaringan template comes pre-loaded with a few things
@@ -485,7 +491,7 @@ Please type your answers in the chat box.
 ---
 template: question
 
-`r icon::fa("magic", size = 3)`
+`r icons::icon_style(icons::fontawesome("magic"), scale = 3)`
 # How can we make our slides<br>look more interesting???
 
 --
@@ -493,7 +499,7 @@ template: question
 ----
 
 .left-col[.center[
-`r icon::fa("th-large", size = 2)`
+`r icons::icon_style(icons::fontawesome("th-large"), scale = 2)`
 ### with placement
 ]]
 
@@ -501,19 +507,20 @@ template: question
 
 .center-col[
 .center[
-`r icon::fa("image", size = 2)`
+`r icons::icon_style(icons::fontawesome("image"), scale = 2)`
 ### pretty pictures
 ]]
 
 --
 
 .right-col[.center[
-<i class="fas fa-star fa-2x"></i>
+`r icons::icon_style(icons::fontawesome("star", style = "solid"), scale = 2)`
 ### and icons
 ]]
 
 ---
 name: placement
+
 ## Placement <i class="fas fa-th-large" style = "float: right"></i>
 
 ---
@@ -558,7 +565,7 @@ This content is also centered and in the middle of the slide
 ---
 ```
 
-.right[.my-coral[example on next slide `r icon::fa("arrow-circle-right")` ]]
+.right[.my-coral[example on next slide `r icons::fontawesome("arrow-circle-right")` ]]
 ]
 
 ---
@@ -601,7 +608,7 @@ class: center, middle
 ---
 ```
 
-.right[.my-coral[example on next slide `r icon::fa("arrow-circle-right")` ]]
+.right[.my-coral[example on next slide `r icons::fontawesome("arrow-circle-right")` ]]
 
 ]
 
@@ -795,7 +802,7 @@ You can use the [background-image property](https://github.com/gnab/remark/wiki/
 - `background-position:` play with [this](https://css-tricks.com/almanac/properties/b/background-position/)
 
 
-.right[.my-coral[`background-size` examples in action! `r icon::fa("arrow-circle-right")` ]]
+.right[.my-coral[`background-size` examples in action! `r icons::fontawesome("arrow-circle-right")` ]]
 ] <!---->
 
 ] <!--end of panelset-->
@@ -848,27 +855,27 @@ Icon on the left: ` r emo::ji("smile")` (surrounded by backticks `)
 
 .pull-right-wide[
 Copy and paste html directly from the website:<br>`<i class="fas fa-brain"></i>`<br>
-Use the [icon `r emo::ji("package")`](https://slides.mitchelloharawild.com/icon/): ` r icon::fa("brain")`,<br>or the [fontawesome `r emo::ji("package")`](https://github.com/rstudio/fontawesome#the-fontawesome-package): ` r fontawesome:fa("brain")`
+Use the [icon `r emo::ji("package")`](https://slides.mitchelloharawild.com/icon/): ` r icons::fontawesome("brain")`,<br>or the [fontawesome `r emo::ji("package")`](https://github.com/rstudio/fontawesome#the-fontawesome-package): ` r icons::fontawesome("brain")`
 ]
 
 --
 
 .pull-left-narrow[.center[
-`r icon::ai("orcid")`<br>
+`r icons::academicons("orcid")`<br>
 [Academicons](https://jpswalsh.github.io/academicons/)
 ]]
 .pull-right-wide[
-The easiest way to access them is with the icon `r emo::ji("package")`:<br>` r icon::fa("orcid")`
+The easiest way to access them is with the icon `r emo::ji("package")`:<br>` r icons::fontawesome("orcid")`
 ]
 
 --
 
 .pull-left-narrow[.center[
-`r icon::ii("ios-flask-outline")`<br>
+`r icons::ionicons("flask")`<br>
 [Ionicons](https://ionicons.com/)
 ]]
 .pull-right-wide[
-I haven't had as much luck with these, but you can use the icon `r emo::ji("package")` here as well: ` r icon::ii("ios-flask-outline")`
+I haven't had as much luck with these, but you can use the icon `r emo::ji("package")` here as well: ` r icons::ionicons("flask")`
 ]
 
 ---
@@ -877,7 +884,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icon::fa("edit")`<br>
+## Your turn<br>`r icons::fontawesome("edit")`<br>
 ### .my-pink[10:00 mins]
 ]
 
@@ -900,7 +907,7 @@ Here are some options to consider
 ---
 template: question
 
-`r icon::fa("r-project", size = 3)`
+`r icons::icon_style(icons::fontawesome("r-project"), scale = 3)`
 # What about R content?
 
 --
@@ -908,7 +915,7 @@ template: question
 ----
 
 .pull-left[.center[
-`r icon::fa("table", size = 2)`
+`r icons::icon_style(icons::fontawesome("table"), scale = 2)`
 ### tables
 ]]
 
@@ -916,7 +923,7 @@ template: question
 
 .pull-right[
 .center[
-`r icon::fa("chart-bar", size = 2)`
+`r icons::icon_style(icons::fontawesome("chart-bar"), scale = 2)`
 ### plots
 ]]
 
@@ -971,6 +978,7 @@ NHSRdatasets::LOS_model %>% head() %>%
 
 ---
 template: tables
+exclude: true
 
 ### GT table
 
@@ -989,6 +997,7 @@ NHSRdatasets::LOS_model %>% head() %>%
   gt::gt()
 ```
 ]
+
 .footnote[Make sure to check out the [GT package workshop](https://github.com/nhs-r-community/Conference_2020#workshop-sessions) tomorrow!]
 ---
 name: plots
@@ -1052,7 +1061,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icon::fa("edit")`<br>
+## Your turn<br>`r icons::fontawesome("edit")`<br>
 ### .my-pink[10:00 mins]
 ]
 
@@ -1082,8 +1091,8 @@ class: goodbye-slide, inverse, middle, left
 ### Here's where you can find me...
 
 .right[
-[silvia.rbind.io `r icon::fa("link")`](https://silvia.rbind.io)<br/>
-[@spcanelon `r icon::fa("twitter")`](https://twitter.com/spcanelon)<br/>
-[@spcanelon `r icon::fa("github")`](https://github.com/spcanelon)<br/>
+[silvia.rbind.io `r icons::fontawesome("link")`](https://silvia.rbind.io)<br/>
+[@spcanelon `r icons::fontawesome("twitter")`](https://twitter.com/spcanelon)<br/>
+[@spcanelon `r icons::fontawesome("github")`](https://github.com/spcanelon)<br/>
 ]]
 
