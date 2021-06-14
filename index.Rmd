@@ -46,6 +46,10 @@ meta() %>%
   )
 ```
 
+```{r cover-image, echo=FALSE, fig.align="center", fig.cap=NULL, fig.alt="Cover image for the two day workshop with the title (same as this page) and the subtitle 'An Introduction to xaringan: the Basics and Beyond'. My name is listed as well as the dates November 3rd and 5th of 2020. The image features some blue, red, and yellow artwork in the background and the hex logo for the xaringan package in the lower right corner."}
+knitr::include_graphics("cover-image.png")
+```
+
 # Welcome
 
 This is the course site for the _Sharing Your Work with xaringan_ workshop created by Dr. Silvia Canelón for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/).
@@ -64,7 +68,7 @@ This four-hour hands-on workshop will be a gentle introduction to the [xaringan]
 Tuesday, Nov. 3<br/>3-5pm BST ([check your time zone](https://www.worldtimebuddy.com/?qm=1&lid=2643743,5128581&h=5128581&date=2020-11-3&sln=10-12))
 </aside>
 
-```{r embed-xaringan-01, echo=FALSE}
+```{r embed-xaringan-01, echo=FALSE, eval=FALSE}
 xaringanExtra::embed_xaringan(url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-01-basics.html", ratio = "16:9")
 ```
 
@@ -74,20 +78,18 @@ xaringanExtra::embed_xaringan(url = "https://spcanelon.github.io/xaringan-basics
 Thursday, Nov. 5<br/>3-5pm BST ([check your time zone](https://www.worldtimebuddy.com/?qm=1&lid=2643743,5128581&h=5128581&date=2020-11-5&sln=10-12))
 </aside>
 
-```{r embed-xaringan-02, echo=FALSE}
+```{r embed-xaringan-02, echo=FALSE, eval=FALSE}
 xaringanExtra::embed_xaringan(url = "https://spcanelon.github.io/xaringan-basics-and-beyond/slides/day-02-beyond.html", ratio = "16:9")
 ```
 
 This workshop is designed for R users already familiar with R Markdown and GitHub.
 
-# Prework
-
-## Essential
+# Prework: Essential
 
 - The workshop will take place within an RStudio Cloud project, please sign up for a free RStudio Cloud account here: https://rstudio.cloud.
 - We will be utilizing Zoom for this workshop, please download and install [the latest version beforehand](https://zoom.us/download).
 
-## Optional
+# Prework: Optional
 
 We will use the software listed below only as an important backup in the event we experience technical difficulties with RStudio Cloud.
 
@@ -112,7 +114,7 @@ devtools::install_github("gadenbuie/xaringanExtra")
 devtools::install_github("ropenscilabs/icon")
 ```
 
-# Links
+# Resources
 
 - Link to this website: [bit.ly/xaringan-nhsr](https://bit.ly/xaringan-nhsr)
 - [RStudio Cloud workspace](https://bit.ly/3mfJM4k) and companion [source materials](https://github.com/spcanelon/xaringan-basics-and-beyond/tree/main/materials)
