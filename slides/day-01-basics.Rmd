@@ -53,7 +53,7 @@ options(htmltools.dir.version = FALSE)
 library(knitr)
 library(tidyverse)
 library(xaringanExtra)
-library(nhsrtheme)
+library(NHSRtheme)
 library(NHSRdatasets)
 library(icons)
 # set default options
@@ -148,7 +148,7 @@ class: top
 
 .pull-right-wide[
 [NHS-R Community](https://nhsrcommunity.com/) for the opportunity to provide this workshop
-- [nhsrtheme `r emo::ji("package")`](https://github.com/nhs-r-community/nhsrtheme) developed by Tom Jemmett
+- [NHSRtheme `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRtheme) developed by Tom Jemmett
 - [NHSRdatasets `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRdatasets) developed by Chris Mainey
 ]
 
@@ -277,7 +277,7 @@ knitr::include_url("https://spcanelon.github.io/xaringan-basics-and-beyond/nhsr-
 .pull-right[
 I designed a custom CSS theme for the NHS-R Community following the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/) `r emo::ji("rocket")`. 
 
-[Tom Jemmett](https://github.com/tomjemmett) helped me incorporate it into the [nhsrtheme `r emo::ji("package")`](https://github.com/nhs-r-community/nhsrtheme#nhs-r-theme-) in preparation for this workshop.
+[Tom Jemmett](https://github.com/tomjemmett) helped me incorporate it into the [NHSRtheme `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRtheme#nhs-r-theme-) in preparation for this workshop.
 ]
 
 ---
@@ -285,16 +285,16 @@ I designed a custom CSS theme for the NHS-R Community following the [NHS identit
 ## Getting started
 
 .panelset[
-.panel[.panel-name[nhsrtheme]
-**Step 1.** Install the `nhsrtheme` package from GitHub
+.panel[.panel-name[NHSRtheme]
+**Step 1.** Install the `NHSRtheme` package from GitHub
 ```{r, eval=FALSE, echo=TRUE}
 # install.packages("devtools")
-devtools::install_github("nhs-r-community/nhsrtheme")
+devtools::install_github("nhs-r-community/NHSRtheme")
 ```
 
-**Step 2.** Load the `nhsrtheme` package
+**Step 2.** Load the `NHSRtheme` package
 ```{r, eval=FALSE, echo=TRUE}
-library(nhsrtheme)
+library(NHSRtheme)
 ```
 ] <!---->
 
@@ -307,7 +307,7 @@ library(nhsrtheme)
 
 .pull-right[
 3\. From Template `r icons::fontawesome("angle-double-right")` NHS-R Presentation<br>4. Give your slide deck a name!
-![:scale 85%](img/nhsrtheme-template.png)
+![:scale 85%](img/NHSRtheme-template.png)
 ]
 ]<!---->
 
@@ -378,7 +378,7 @@ class: middle, center
 `r icons::icon_style(icons::fontawesome("star"), color = "#e5bf00")` Slide content starts immediately after the YAML `---`
 
 .pull-left-narrow[
-The .my-coral[nhsrtheme] xaringan template comes pre-loaded with a few things
+The .my-coral[NHSRtheme] xaringan template comes pre-loaded with a few things
 ]
 .pull-right-wide[
 - .my-coral[A `setup` chunk] with a few libraries and some chunk options set for the whole slide deck
@@ -470,7 +470,7 @@ Please type your answers in the chat box.
 - Headings (#, ##, ###)
 - **Bold** and _italic_ type
 - Links and images with `![]()`
-- Bullet points can be added<br>with `-`, `+`, or `-`
+- Bullet points can be added<br>with `-`, `+`, or `*`
 - Numbered lists can be created<br>with `1.`
 ]
 
@@ -603,7 +603,7 @@ class: center, middle
 
 *.left[We can start writing a sentence on the left...]
 
-*.right[and end on the right.]
+*.right[...and finish it on the right.]
 
 ---
 ```
@@ -855,7 +855,7 @@ Icon on the left: ` r emo::ji("smile")` (surrounded by backticks `)
 
 .pull-right-wide[
 Copy and paste html directly from the website:<br>`<i class="fas fa-brain"></i>`<br>
-Use the [icon `r emo::ji("package")`](https://slides.mitchelloharawild.com/icon/): ` r icons::fontawesome("brain")`,<br>or the [fontawesome `r emo::ji("package")`](https://github.com/rstudio/fontawesome#the-fontawesome-package): ` r icons::fontawesome("brain")`
+Use the [icons `r emo::ji("package")`](https://pkg.mitchelloharawild.com/icons/): ` r icons::fontawesome("brain")`,<br>or the [fontawesome `r emo::ji("package")`](https://github.com/rstudio/fontawesome#the-fontawesome-package): ` r fontawesome::fa("brain")`
 ]
 
 --
@@ -1016,7 +1016,7 @@ name: plot-right
 NHSRdatasets::LOS_model %>%
   ggplot(aes(x = Age, y = Organisation)) +
   geom_boxplot(aes(fill = Organisation)) +
-  nhsrtheme::scale_fill_nhs("highlights")
+  NHSRtheme::scale_fill_nhs("highlights")
 ```
 ]
 
@@ -1031,7 +1031,7 @@ NHSRdatasets::LOS_model %>%
 
 ]
 
-.footnote[Note the use of the [nhsrtheme `r emo::ji("package")`](https://github.com/nhs-r-community/nhsrtheme#nhs-r-theme-) here! It was developed by Tom Jemmett and contains a few different colour palettes based on the NHS identity guidelines]
+.footnote[Note the use of the [NHSRtheme `r emo::ji("package")`](https://github.com/nhs-r-community/NHSRtheme#nhs-r-theme-) here! It was developed by Tom Jemmett and contains a few different colour palettes based on the NHS identity guidelines]
 ---
 template: plots
 name: alison-tips
