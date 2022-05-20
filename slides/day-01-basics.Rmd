@@ -119,9 +119,9 @@ class: about-me-slide, inverse, middle, center
 
 .fade[University of Pennsylvania<br>Philadelphia, PA, USA]
 
-[`r icons::fontawesome("link")` silvia.rbind.io](https://silvia.rbind.io)
-[`r icons::fontawesome("twitter")` @spcanelon](https://twitter.com/spcanelon)
-[`r icons::icon_style(icons::fontawesome("github"), scale = 1)` @spcanelon](https://github.com/spcanelon)
+[`r fontawesome::fa("link")` silvia.rbind.io](https://silvia.rbind.io)
+[`r fontawesome::fa("twitter", a11y = "sem")` @spcanelon](https://twitter.com/spcanelon)
+[`r fontawesome::fa("github", a11y = "sem")` @spcanelon](https://github.com/spcanelon)
 
 ---
 layout: true
@@ -155,7 +155,8 @@ class: top
 --
 
 .pull-left-narrow[.center[
-`r icons::icon_style(icons::fontawesome("smile"), scale = 3, color = "#e5bf00")`]]
+<br>`r fontawesome::fa("smile", stroke = "#e5bf00", stroke_width = "20px", fill_opacity = 0, height = "3em")`
+]]
 
 .pull-right-wide[
 - [xaringan `r emo::ji("package")`](https://github.com/yihui/xaringan#xaringan) developed by Yihui Xie
@@ -171,7 +172,7 @@ class: left
 --
 
 .pull-left-narrow[
-.center[`r icons::icon_style(icons::fontawesome("markdown"), scale = 2)`]]
+.center[`r fontawesome::fa("markdown", height = "2em")`]]
 .pull-right-wide[### you know Markdown]
 
 --
@@ -183,7 +184,7 @@ class: left
 --
 
 .pull-left-narrow[
-.center[`r icons::icon_style(icons::fontawesome("html5"), scale = 2)`]]
+.center[`r fontawesome::fa("html5", height = "2em")`]]
 .pull-right-wide[### .my-gold[**you want to know about cool HTML5 slides**]] 
 
 ---
@@ -196,7 +197,7 @@ class: inverse, middle, center
 ---
 template: question
 
-`r icons::icon_style(icons::fontawesome("images"), scale = 3)`
+`r fontawesome::fa("images", height = "3em")`
 # How do we make<br>cool HTML5 slides?
 
 ---
@@ -207,12 +208,12 @@ template: question
 .panel[.panel-name[remark.js]
 .pull-left[
 .center[
-<i class="fab fa-js fa-3x"></i><br>
+`r fontawesome::fa("js", height = "3em")`<br>
 JavaScript
 
 **and**
 
-<i class="fab fa-markdown fa-3x"></i><br>
+`r fontawesome::fa("markdown", height = "3em")`<br>
 Markdown
 ]
 ]
@@ -306,7 +307,7 @@ library(NHSRtheme)
 ]
 
 .pull-right[
-3\. From Template `r icons::fontawesome("angle-double-right")` NHS-R Presentation<br>4. Give your slide deck a name!
+3\. From Template `r fontawesome::fa("angle-double-right")` NHS-R Presentation<br>4. Give your slide deck a name!
 ![:scale 85%](img/NHSRtheme-template.png)
 ]
 ]<!---->
@@ -314,11 +315,11 @@ library(NHSRtheme)
 .panel[.panel-name[Directory]
 The new directory in the "Files" pane contains
 .left[
-+ `r icons::fontawesome("file-code")` the new Rmd file (i.e. `my-slides.Rmd`)
++ `r fontawesome::fa("file-code")` the new Rmd file (i.e. `my-slides.Rmd`)
 
-+ `r icons::fontawesome("folder-open")` the `img` folder containing logo files
++ `r fontawesome::fa("folder-open")` the `img` folder containing logo files
 
-+ `r icons::fontawesome("folder-open")` the `css` folder containing the custom `nhsr` theme files<br>.small[and an HTML file in charge of [adding the NHS logo to each slide](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides)]
++ `r fontawesome::fa("folder-open")` the `css` folder containing the custom `nhsr` theme files<br>.small[and an HTML file in charge of [adding the NHS logo to each slide](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides)]
 ]
 ] <!---->
 
@@ -369,13 +370,13 @@ name: live-coding
 background-color: var(--my-yellow)
 class: middle, center
 
-`r icons::icon_style(icons::fontawesome("code"), scale = 3, color = "#122140")`<br>
+`r fontawesome::fa("code", height = "3em")`
 # Let's try it live together
 
 ---
 ## Our first few slides
 
-`r icons::icon_style(icons::fontawesome("star"), color = "#e5bf00")` Slide content starts immediately after the YAML `---`
+`r fontawesome::fa("star", fill = "#e5bf00")` Slide content starts immediately after the YAML `---`
 
 .pull-left-narrow[
 The .my-coral[NHSRtheme] xaringan template comes pre-loaded with a few things
@@ -469,7 +470,7 @@ Please type your answers in the chat box.
 
 - Headings (#, ##, ###)
 - **Bold** and _italic_ type
-- Links and images with `![]()`
+- Links and images with `[]()` and `![]()`
 - Bullet points can be added<br>with `-`, `+`, or `*`
 - Numbered lists can be created<br>with `1.`
 ]
@@ -491,7 +492,7 @@ Please type your answers in the chat box.
 ---
 template: question
 
-`r icons::icon_style(icons::fontawesome("magic"), scale = 3)`
+`r fontawesome::fa("magic", height = "3em")`
 # How can we make our slides<br>look more interesting???
 
 --
@@ -499,7 +500,7 @@ template: question
 ----
 
 .left-col[.center[
-`r icons::icon_style(icons::fontawesome("th-large"), scale = 2)`
+`r fontawesome::fa("th-large", height = "2em")`
 ### with placement
 ]]
 
@@ -507,14 +508,14 @@ template: question
 
 .center-col[
 .center[
-`r icons::icon_style(icons::fontawesome("image"), scale = 2)`
+`r fontawesome::fa("image", height = "2em")`
 ### pretty pictures
 ]]
 
 --
 
 .right-col[.center[
-`r icons::icon_style(icons::fontawesome("star", style = "solid"), scale = 2)`
+`r fontawesome::fa("star", height = "2em")`
 ### and icons
 ]]
 
@@ -565,7 +566,7 @@ This content is also centered and in the middle of the slide
 ---
 ```
 
-.right[.my-coral[example on next slide `r icons::fontawesome("arrow-circle-right")` ]]
+.right[.my-coral[example on next slide `r fontawesome::fa("arrow-circle-right")` ]]
 ]
 
 ---
@@ -608,7 +609,7 @@ class: center, middle
 ---
 ```
 
-.right[.my-coral[example on next slide `r icons::fontawesome("arrow-circle-right")` ]]
+.right[.my-coral[example on next slide `r fontawesome::fa("arrow-circle-right")` ]]
 
 ]
 
@@ -802,7 +803,7 @@ You can use the [background-image property](https://github.com/gnab/remark/wiki/
 - `background-position:` play with [this](https://css-tricks.com/almanac/properties/b/background-position/)
 
 
-.right[.my-coral[`background-size` examples in action! `r icons::fontawesome("arrow-circle-right")` ]]
+.right[.my-coral[`background-size` examples in action! `r fontawesome::fa("arrow-circle-right")` ]]
 ] <!---->
 
 ] <!--end of panelset-->
@@ -842,30 +843,29 @@ name: icons
 ]]
 .pull-right-wide[
 Use the [emo(ji) `r emo::ji("package")`](https://github.com/hadley/emo#emoji):<br>
-Icon on the left: ` r emo::ji("smile")` (surrounded by backticks `)
+Icon on the left: ` r emo::ji("smile")` (surrounded by backticks ` `` `)
 ]
 
 --
 
 .pull-left-narrow[.center[
-<i class="fas fa-brain"></i>
+`r fontawesome::fa("brain")`
 <br>
 [FontAwesome](https://fontawesome.com/icons?d=gallery&c=medical&m=free)
 ]]
 
 .pull-right-wide[
-Copy and paste html directly from the website:<br>`<i class="fas fa-brain"></i>`<br>
-Use the [icons `r emo::ji("package")`](https://pkg.mitchelloharawild.com/icons/): ` r icons::fontawesome("brain")`,<br>or the [fontawesome `r emo::ji("package")`](https://github.com/rstudio/fontawesome#the-fontawesome-package): ` r fontawesome::fa("brain")`
+Use the [fontawesome `r emo::ji("package")`](https://rstudio.github.io/fontawesome/index.html): ` r fontawesome::fa("brain")`
 ]
 
 --
 
 .pull-left-narrow[.center[
-`r icons::academicons("orcid")`<br>
+`r icons::academicons("pubmed")`<br>
 [Academicons](https://jpswalsh.github.io/academicons/)
 ]]
 .pull-right-wide[
-The easiest way to access them is with the icon `r emo::ji("package")`:<br>` r icons::fontawesome("orcid")`
+The easiest way to access them is with the [icons `r emo::ji("package")`](https://pkg.mitchelloharawild.com/icons/):<br>` r icons::academicons("pubmed")`
 ]
 
 --
@@ -875,7 +875,7 @@ The easiest way to access them is with the icon `r emo::ji("package")`:<br>` r i
 [Ionicons](https://ionicons.com/)
 ]]
 .pull-right-wide[
-I haven't had as much luck with these, but you can use the icon `r emo::ji("package")` here as well: ` r icons::ionicons("flask")`
+I haven't had as much luck with these, but you can use the icons `r emo::ji("package")` here as well: ` r icons::ionicons("flask")`
 ]
 
 ---
@@ -884,7 +884,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icons::fontawesome("edit")`<br>
+## Your turn<br>`r fontawesome::fa("edit")`<br>
 ### .my-pink[10:00 mins]
 ]
 
@@ -907,7 +907,7 @@ Here are some options to consider
 ---
 template: question
 
-`r icons::icon_style(icons::fontawesome("r-project"), scale = 3)`
+`r fontawesome::fa("r-project", height = "3em")`
 # What about R content?
 
 --
@@ -915,7 +915,7 @@ template: question
 ----
 
 .pull-left[.center[
-`r icons::icon_style(icons::fontawesome("table"), scale = 2)`
+`r fontawesome::fa("table", height = "2em")`
 ### tables
 ]]
 
@@ -923,7 +923,7 @@ template: question
 
 .pull-right[
 .center[
-`r icons::icon_style(icons::fontawesome("chart-bar"), scale = 2)`
+`r fontawesome::fa("chart-bar", height = "2em")`
 ### plots
 ]]
 
@@ -1061,7 +1061,7 @@ background-color: var(--my-red)
 class: inverse
 
 .left-column[
-## Your turn<br>`r icons::fontawesome("edit")`<br>
+## Your turn<br>`r fontawesome::fa("edit")`<br>
 ### .my-pink[10:00 mins]
 ]
 
@@ -1091,8 +1091,8 @@ class: goodbye-slide, inverse, middle, left
 ### Here's where you can find me...
 
 .right[
-[silvia.rbind.io `r icons::fontawesome("link")`](https://silvia.rbind.io)<br/>
-[@spcanelon `r icons::fontawesome("twitter")`](https://twitter.com/spcanelon)<br/>
-[@spcanelon `r icons::fontawesome("github")`](https://github.com/spcanelon)<br/>
+[silvia.rbind.io `r fontawesome::fa("link")`](https://silvia.rbind.io)<br/>
+[@spcanelon `r fontawesome::fa("twitter", a11y = "sem")`](https://twitter.com/spcanelon)<br/>
+[@spcanelon `r fontawesome::fa("github", a11y = "sem")`](https://github.com/spcanelon)<br/>
 ]]
 
